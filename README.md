@@ -22,5 +22,7 @@ git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 
 #### [交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)
 
+来[爱发电](https://afdian.net/a/Nwflower)羞辱我
+
 #### 版权提示
 本图鉴目前仅供学习交流使用，素材版权为米哈游所有，您不得以任何方式转载、二改侵犯原作者权益，否则，我将立即停止所有图鉴制作并关闭图鉴的开源状态，不再提供更新支持。
