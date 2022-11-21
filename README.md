@@ -9,12 +9,12 @@
 使用github获取（可能无法获取）
 在Yunzai-Bot根目录下，运行
 ```
-git clone --depth=1 https://github.com/Nwflower/Atlas ./plugins/Atlas/
+git clone --depth=1 https://github.com/Nwflower/atlas ./plugins/Atlas/
 ```
 
 使用gitee镜像源
 ```
-git clone --depth=1 https://gitee.com/Nwflower/Atlas ./plugins/Atlas/
+git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 ```
 
 #### 如何获取资源
