@@ -33,12 +33,29 @@ export class atlas extends plugin {
   async atlas (e) {
     let msg
     try {
-      msg = e.msg.replace(/#|角色|材料|图鉴/g, '').trim()
+      msg = e.msg.replaceAll(/#|图鉴/g, '').trim()
     } catch (e) {
       logger.info(e)
       return false
     }
     if (fs.existsSync(`${this._path}/plugins/Atlas/Genshin-Atlas`)) {
+      let p = JSON.parse(fs.readFileSync(`${this._path}/plugins/Atlas/Genshin-Atlas/path.json`, 'utf-8'))
+      for (let key in p) {
+        for (let word of p[key]) {
+          if (msg.includes(word)) {
+            msg = msg.replaceAll(word, '').trim()
+            let Dir = fs.statSync(`${this._path}/plugins/Atlas/Genshin-Atlas/${key}`)
+            if (Dir.isDirectory()) {
+              let path = `${this._path}/plugins/Atlas/Genshin-Atlas/${key}/${await this.getName(msg, key)}.png`
+              if (fs.existsSync(path)) {
+                e.reply(segment.image(path))
+                this.islog = true
+                return this.islog
+              }
+            }
+          }
+        }
+      }
       const syncFiles = fs
         .readdirSync(`${this._path}/plugins/Atlas/Genshin-Atlas`)
         .filter(function (item, index, arr) {
