@@ -33,7 +33,7 @@
 
 #### 如何获取
 
-使用github获取（可能无法获取）
+使用github获取
 在Yunzai-Bot根目录下，运行
 ```
 git clone --depth=1 https://github.com/Nwflower/atlas ./plugins/Atlas/
@@ -45,11 +45,21 @@ git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 ```
 
 #### 如何获取资源
-发送`#图鉴升级`即可获取最新图鉴包
+注意，该仓库仅为代码部分，安装后需要通过`#图鉴升级`获取图鉴图片才能正常使用。（`#图鉴更新`不可用，测试发现会和其他插件口令冲突）
+代码部分的更新请使用yunzai自带的`#全部更新`来更新本插件。
+
+本插件非传统性质的plugin插件包，占用内存较少。
 
 #### [交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)
 
 来[爱发电](https://afdian.net/a/Nwflower)羞辱我
 
+#### 发电榜
+
+| 名单| 发电量 |
+|---------|------|
+| 归来？汐去 | 20 |
+
 #### 版权提示
 本图鉴目前仅供小小小小小小范围学习或带有科学研究性质交流非商业性且不得带有任何牟利性质地适当性使用，素材版权为米哈游所有，您不得以任何方式转载、二改侵犯原作者权益，否则，我将立即停止所有图鉴制作并关闭图鉴的开源状态，且不再公开提供更新支持。
+注意，您不得以任何方式转载、二改侵犯原作者权益，公开发表需要征得图片设计者许可。否则，一切可能造成的后果由你承担。
