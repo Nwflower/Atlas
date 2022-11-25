@@ -50,8 +50,8 @@ export class atlas extends plugin {
               if (fs.existsSync(path)) {
                 e.reply(segment.image(path))
                 this.islog = true
-                return this.islog
               }
+              return this.islog
             }
           }
         }
@@ -80,8 +80,8 @@ export class atlas extends plugin {
     if (fs.existsSync(syncPath)) {
       let YamlObject = YAML.parse(fs.readFileSync(syncPath, 'utf8'))
       for (let element in YamlObject) {
-        // if (YamlObject[element].includes(originName)) {
-        if (YamlObject[element] === originName) {
+        if (YamlObject[element].includes(originName)) {
+        // if (YamlObject[element] === originName) {
           return element
         }
       }
