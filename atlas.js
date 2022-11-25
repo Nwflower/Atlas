@@ -80,7 +80,8 @@ export class atlas extends plugin {
     if (fs.existsSync(syncPath)) {
       let YamlObject = YAML.parse(fs.readFileSync(syncPath, 'utf8'))
       for (let element in YamlObject) {
-        if (YamlObject[element].includes(originName)) {
+        // if (YamlObject[element].includes(originName)) {
+        if (YamlObject[element] === originName) {
           return element
         }
       }
