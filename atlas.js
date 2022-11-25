@@ -7,20 +7,14 @@ import YAML from 'yaml'
 export class atlas extends plugin {
   constructor () {
     let rule = {
-      /** 命令正则匹配 */
-      reg: '#.*',
-      /** 执行方法 */
+      reg: '#?.*(图鉴)*',
       fnc: 'atlas'
     }
     super({
-      /** 功能名称 */
       name: '图鉴',
-      /** 功能描述 */
-      dsc: '简单开发示例',
-      /** https://oicqjs.github.io/oicq/#events */
+      dsc: '原神圣遗物、武器图鉴与角色材料，支持热更新',
       event: 'message',
-      /** 优先级，数字越小等级越高 */
-      priority: 2,
+      priority: 10,
       rule: [rule]
     })
     this._path = process.cwd().replace(/\\/g, '/')
@@ -33,38 +27,24 @@ export class atlas extends plugin {
   async atlas (e) {
     let msg
     try {
-      msg = e.msg.replaceAll(/#|图鉴/g, '').trim()
+      msg = e.msg.replaceAll(/图鉴/g, '').trim()
     } catch (e) {
       logger.info(e)
       return false
     }
     if (fs.existsSync(`${this._path}/plugins/Atlas/Genshin-Atlas`)) {
-      let p = JSON.parse(fs.readFileSync(`${this._path}/plugins/Atlas/Genshin-Atlas/path.json`, 'utf-8'))
-      for (let key in p) {
-        for (let word of p[key]) {
-          if (msg.includes(word)) {
-            msg = msg.replaceAll(word, '').trim()
-            let Dir = fs.statSync(`${this._path}/plugins/Atlas/Genshin-Atlas/${key}`)
-            if (Dir.isDirectory()) {
-              let path = `${this._path}/plugins/Atlas/Genshin-Atlas/${key}/${await this.getName(msg, key)}.png`
-              if (fs.existsSync(path)) {
-                e.reply(segment.image(path))
-                this.islog = true
-              }
-              return this.islog
-            }
-          }
-        }
-      }
       const syncFiles = fs
         .readdirSync(`${this._path}/plugins/Atlas/Genshin-Atlas`)
         .filter(function (item, index, arr) {
           return item !== '.git'
         })
       for (let sync of syncFiles) {
+        let pickrule = await this.getRule(sync)
+        if (!pickrule.reg.test(msg)) { continue }
+        let Tmpmsg = msg.replaceAll(pickrule.reg, '').trim()
         let Dir = fs.statSync(`${this._path}/plugins/Atlas/Genshin-Atlas/${sync}`)
         if (Dir.isDirectory()) {
-          let path = `${this._path}/plugins/Atlas/Genshin-Atlas/${sync}/${await this.getName(msg, sync)}.png`
+          let path = `${this._path}/plugins/Atlas/Genshin-Atlas/${sync}/${await this.getName(Tmpmsg, sync, pickrule.mode)}.png`
           if (fs.existsSync(path)) {
             e.reply(segment.image(path))
             this.islog = true
@@ -75,13 +55,34 @@ export class atlas extends plugin {
     return this.islog
   }
 
-  async getName (originName, sync) {
-    let syncPath = `${this._path}/plugins/Atlas/yaml/${sync}.yaml`
+  // 获取匹配规则
+  async getRule (sync) {
+    let syncPath = `${this._path}/plugins/Atlas/resource/rule/${sync}.yaml`
+    if (!fs.existsSync(syncPath)) { syncPath = `${this._path}/plugins/Atlas/resource/rule/config.yaml` }
+    let YamlObject = YAML.parse(fs.readFileSync(syncPath, 'utf8'))
+    let reg = /(#|图鉴)*/g
+    if (YamlObject.condition) {
+      if (YamlObject.condition === 1) {
+        reg = /^#/g
+      } else if (YamlObject.condition === 2) {
+        reg = new RegExp(`(${YamlObject.pick.join('|')})+`, 'g')
+      } else {
+        YamlObject.pick.push('#')
+        reg = new RegExp(`(${YamlObject.pick.join('|')})+`, 'g')
+      }
+    }
+    return {
+      mode: YamlObject.mode,
+      reg
+    }
+  }
+
+  async getName (originName, sync, mode) {
+    let syncPath = `${this._path}/plugins/Atlas/resource/othername/${sync}.yaml`
     if (fs.existsSync(syncPath)) {
       let YamlObject = YAML.parse(fs.readFileSync(syncPath, 'utf8'))
       for (let element in YamlObject) {
         if (YamlObject[element].includes(originName)) {
-        // if (YamlObject[element] === originName) {
           return element
         }
       }
