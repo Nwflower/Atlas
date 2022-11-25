@@ -22,6 +22,12 @@ export class atlas extends plugin {
     Object.defineProperty(rule, 'log', {
       get: () => this.islog
     })
+    this.version = '3.3'
+  }
+
+  async init () {
+    logger.info('---------QAQ---------')
+    logger.info(`Atlas图鉴${this.version}很高兴为您服务~`)
   }
 
   async atlas (e) {
