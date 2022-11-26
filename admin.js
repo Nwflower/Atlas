@@ -7,7 +7,7 @@ export class admin extends plugin {
   constructor () {
     let rule = {
       /** 命令正则匹配 */
-      reg: '#*图鉴升级',
+      reg: '^#*图鉴升级$',
       /** 执行方法 */
       fnc: 'updata'
     }
@@ -27,6 +27,7 @@ export class admin extends plugin {
   }
 
   async updata (e) {
+    if (!e.isMaster) { return true }
     let command = ''
     if (fs.existsSync(this.pluginPath)) {
       e.reply('开始尝试更新，请耐心等待~')
