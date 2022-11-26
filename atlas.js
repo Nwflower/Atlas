@@ -7,7 +7,7 @@ import YAML from 'yaml'
 export class atlas extends plugin {
   constructor () {
     let rule = {
-      reg: '#?.*(图鉴)*',
+      reg: '#?[\u4e00-\u9fa5]+(图鉴)*',
       fnc: 'atlas'
     }
     super({
