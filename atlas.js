@@ -3,7 +3,6 @@ import fs from 'node:fs'
 import { segment } from 'oicq'
 import YAML from 'yaml'
 import gsCfg from '../genshin/model/gsCfg.js'
-import { isArray } from 'lodash'
 
 // 插件制作 西北一枝花(1679659) 首发群240979646，不准搬，一旦在其他群看到本插件立刻停止所有插件制作
 export class atlas extends plugin {
@@ -44,19 +43,18 @@ export class atlas extends plugin {
       })
       for (let sync of syncFiles) {
         let pickrule = await this.getRule(sync)
-        if (isArray(pickrule.pickreg)) {
+        if (Array.isArray(pickrule.pickreg)) {
           let flag = false
           pickrule.pickreg.forEach((val) => { if (!val.test(msg)) { flag = true } })
           if (flag) { continue }
-        }
-        if (!pickrule.pickreg.test(msg)) { continue }
+        } else { if (!pickrule.pickreg.test(msg)) { continue } }
         let Tmpmsg = msg.replaceAll(pickrule.reg, '').trim()
         let Dir = fs.statSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas/${sync}`)
         if (Dir.isDirectory()) {
           // 角色材料特殊处理
           if (sync === 'material for role') {
             let rolename = gsCfg.getRole(Tmpmsg, '突破|材料|素材|更新')
-            if (!rolename) return false
+            if (!rolename) continue
             if (['10000005', '10000007', '20000000'].includes(String(rolename.roleId))) { return await this.e.reply('暂无主角素材') }
             Tmpmsg = rolename.name
           }
