@@ -23,11 +23,15 @@ export class atlas extends plugin {
       get: () => this.islog
     })
     this.version = '3.3'
+    this.pluginName = 'Atlas'
   }
 
   async init () {
     logger.info('---------QAQ---------')
     logger.info(`Atlas图鉴${this.version}很高兴为您服务~`)
+    if (!fs.existsSync(`./plugins/${this.pluginName}`)) {
+      this.pluginName = this.pluginName.toLowerCase()
+    }
   }
 
   async atlas (e) {
@@ -38,9 +42,9 @@ export class atlas extends plugin {
       logger.info(e)
       return false
     }
-    if (fs.existsSync(`${this._path}/plugins/Atlas/Genshin-Atlas`)) {
+    if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
       const syncFiles = fs
-        .readdirSync(`${this._path}/plugins/Atlas/Genshin-Atlas`)
+        .readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)
         .filter(function (item, index, arr) {
           return item !== '.git'
         })
@@ -48,9 +52,9 @@ export class atlas extends plugin {
         let pickrule = await this.getRule(sync)
         if (!pickrule.reg.test(msg)) { continue }
         let Tmpmsg = msg.replaceAll(pickrule.reg, '').trim()
-        let Dir = fs.statSync(`${this._path}/plugins/Atlas/Genshin-Atlas/${sync}`)
+        let Dir = fs.statSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas/${sync}`)
         if (Dir.isDirectory()) {
-          let path = `${this._path}/plugins/Atlas/Genshin-Atlas/${sync}/${await this.getName(Tmpmsg, sync, pickrule.mode)}.png`
+          let path = `${this._path}/plugins/${this.pluginName}/Genshin-Atlas/${sync}/${await this.getName(Tmpmsg, sync, pickrule.mode)}.png`
           if (fs.existsSync(path)) {
             e.reply(segment.image(path))
             this.islog = true
@@ -63,8 +67,8 @@ export class atlas extends plugin {
 
   // 获取匹配规则
   async getRule (sync) {
-    let syncPath = `${this._path}/plugins/Atlas/resource/rule/${sync}.yaml`
-    if (!fs.existsSync(syncPath)) { syncPath = `${this._path}/plugins/Atlas/resource/rule/config.yaml` }
+    let syncPath = `${this._path}/plugins/${this.pluginName}/resource/rule/${sync}.yaml`
+    if (!fs.existsSync(syncPath)) { syncPath = `${this._path}/plugins/${this.pluginName}/resource/rule/config.yaml` }
     let YamlObject = YAML.parse(fs.readFileSync(syncPath, 'utf8'))
     let reg = /(#|图鉴)*/g
     if (YamlObject.condition) {
@@ -84,7 +88,7 @@ export class atlas extends plugin {
   }
 
   async getName (originName, sync, mode) {
-    let syncPath = `${this._path}/plugins/Atlas/resource/othername/${sync}.yaml`
+    let syncPath = `${this._path}/plugins/${this.pluginName}/resource/othername/${sync}.yaml`
     if (fs.existsSync(syncPath)) {
       let YamlObject = YAML.parse(fs.readFileSync(syncPath, 'utf8'))
       for (let element in YamlObject) {
