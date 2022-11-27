@@ -39,6 +39,12 @@ export class atlas extends plugin {
       logger.debug(e)
       return false
     }
+    let re = YAML.parse(fs.readFileSync(`${this._path}/plugins/${this.pluginName}/resource/text/card.yaml`, 'utf8'))
+    for (let element in re) {
+      if (msg.replaceAll('#', '') === element) {
+        this.reply('请选择：\n七圣' + re[element].join('\n七圣'))
+      }
+    }
     if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
       const syncFiles = fs.readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`).filter(function (item, index, arr) { return item !== '.git' })
       for (let sync of syncFiles) {
