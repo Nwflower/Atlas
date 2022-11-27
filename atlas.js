@@ -22,13 +22,16 @@ export class atlas extends plugin {
     this.islog = false
     Object.defineProperty(rule, 'log', { get: () => this.islog })
     this.version = '3.3'
-    this.pluginName = 'Atlas'
+  }
+
+  get pluginName () {
+    if (!fs.existsSync('./plugins/Atlas')) { return 'atlas' }
+    return 'Atlas'
   }
 
   async init () {
     logger.info('---------QAQ---------')
     logger.info(`Atlas图鉴${this.version}很高兴为您服务~`)
-    if (!fs.existsSync(`./plugins/${this.pluginName}`)) { this.pluginName = this.pluginName.toLowerCase() }
   }
 
   async atlas (e) {

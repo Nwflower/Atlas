@@ -23,7 +23,7 @@ export class admin extends plugin {
       rule: [rule]
     })
     this._path = process.cwd().replace(/\\/g, '/')
-    this.pluginPath = `${this._path}/plugins/Atlas/Genshin-Atlas/`
+    this.pluginPath = `${this._path}/plugins/atlas/Genshin-Atlas/`
   }
 
   async updata (e) {
