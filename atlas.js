@@ -82,7 +82,7 @@ export class atlas extends plugin {
     if (YamlObject.condition) {
       if (YamlObject.condition === 1) {
         reg = /#/g
-        pickreg = /^#*/g
+        pickreg = /^#+/g
       } else if (YamlObject.condition === 2) {
         pickreg = new RegExp(`(${YamlObject.pick.join('|')})+`, 'g')
         YamlObject.pick.push('#')
