@@ -91,7 +91,7 @@ export class atlas extends plugin {
     }
     // 角色材料特殊处理
     if (sync === 'material for role') {
-      let rolename = gsCfg.getRole(originName, '突破|材料|素材|更新')
+      let rolename = gsCfg.getRole(originName, '突破|材料|素材')
       if (rolename) return rolename.name
     }
     return originName
