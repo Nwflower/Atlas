@@ -70,7 +70,7 @@ export class admin extends plugin {
         }
       })
     } else {
-      command = `git clone https://gitee.com/Nwflower/genshin-atlas "${this.pluginPath}"`
+      command = `git clone --depth=1 https://gitee.com/Nwflower/genshin-atlas "${this.pluginPath}"`
       e.reply('开始尝试安装图鉴升级包，可能会需要一段时间，请耐心等待~')
       exec(command, function (error, stdout, stderr) {
         if (error) {
