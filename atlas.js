@@ -73,7 +73,7 @@ export class atlas extends plugin {
             sendmsg.push(`\n${Number(i) + 1}、${divi}${re[element][i]}`)
             re[element][i] = divi + re[element][i]
           }
-          this.reply(sendmsg, true, { recallMsg: 10 })
+          this.reply(sendmsg, true, { recallMsg: rule.recallMsg })
           context[this.e.user_id] = re[element]
           return true
         }
