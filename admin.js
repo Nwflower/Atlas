@@ -24,6 +24,12 @@ export class admin extends plugin {
     })
     this._path = process.cwd().replace(/\\/g, '/')
     this.pluginPath = `${this._path}/plugins/atlas/Genshin-Atlas/`
+    this.version = '3.3.1'
+  }
+
+  async init () {
+    logger.info('---------QAQ---------')
+    logger.info(`Atlas图鉴${this.version}很高兴为您服务~`)
   }
 
   async updata (e) {
