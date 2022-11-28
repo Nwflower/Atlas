@@ -22,17 +22,11 @@ export class atlas extends plugin {
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
 
-  get pluginName () {
-    if (!fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'atlas' }
-    return 'Atlas'
-  }
+  get pluginName () { if (!fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'atlas' } else { return 'Atlas' } }
 
-  async atlas (e) {
+  async atlas () {
     let msg
-    try { msg = e.msg.trim() } catch (e) {
-      logger.debug(e)
-      return false
-    }
+    try { msg = this.e.msg.trim() } catch (e) { return false }
     if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
       const syncFiles = fs.readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`).filter(function (item, index, arr) { return item !== '.git' })
       for (let sync of syncFiles) {
@@ -112,9 +106,8 @@ export class atlas extends plugin {
       let YamlObject = YAML.parse(fs.readFileSync(`${this._path}/plugins/${this.pluginName}/resource/othername/${sync}.yaml`, 'utf8'))
       for (let element in YamlObject) { if (pickmode) { if (pickmode === 1) { for (let Elementword of YamlObject[element]) { if (Elementword.includes(originName)) { return element } } } else { for (let Elementword of YamlObject[element]) { if (originName.includes(Elementword)) { return element } } } } else { if (YamlObject[element].includes(originName)) { return element } } }
     }
-    // 角色材料特殊处理
-    if (sync === 'material for role') {
-      let rolename = gsCfg.getRole(originName, '突破|材料|素材')
+    if (sync.includes('role')) {
+      let rolename = gsCfg.getRole(originName)
       if (rolename) return rolename.name
     }
     return originName
