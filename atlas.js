@@ -4,6 +4,7 @@ import { segment } from 'oicq'
 import YAML from 'yaml'
 import gsCfg from '../genshin/model/gsCfg.js'
 // 插件制作 西北一枝花(1679659) 首发群240979646，不准搬，一旦在其他群看到本插件立刻停止所有插件制作
+let context = {}
 export class atlas extends plugin {
   constructor () {
     let rule = {
@@ -24,9 +25,10 @@ export class atlas extends plugin {
 
   get pluginName () { if (!fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'atlas' } else { return 'Atlas' } }
 
-  async atlas () {
+  async atlas (e) {
     let msg
-    try { msg = this.e.msg.trim() } catch (e) { return false }
+    try { msg = e.msg.trim() } catch (e) { return false }
+    if (context[this.e.user_id]) { await this.select(e) }
     if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
       const syncFiles = fs.readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`).filter(function (item, index, arr) { return item !== '.git' })
       for (let sync of syncFiles) {
@@ -53,25 +55,38 @@ export class atlas extends plugin {
       let re = YAML.parse(fs.readFileSync(respath, 'utf8'))
       for (let element in re) {
         if (key === element) {
-          let divi = '\n'
+          let divi = ''
           switch (rule.condition) {
             case 1:
             case 3:
-              divi = '\n#'
+              divi = '#'
               break
             case 2:
-              divi = `\n${rule.pick[0]}`
+              divi = `${rule.pick[0]}`
               break
             case 4:
-              divi = `\n#${rule.pick[0]}`
+              divi = `#${rule.pick[0]}`
               break
           }
-          this.reply(`请选择：${divi}${re[element].join(divi)}`)
+          let sendmsg = ['请选择序号或发送指令：']
+          for (let i in re[element]) {
+            sendmsg.push(`\n${Number(i) + 1}、${divi}${re[element][i]}`)
+            re[element][i] = divi + re[element][i]
+          }
+          this.reply(sendmsg, true, { recallMsg: 10 })
+          context[this.e.user_id] = re[element]
           return true
         }
       }
     }
     return false
+  }
+
+  async select (e) {
+    let i = Number(this.e.msg.trim())
+    if (isNaN(i)) { return false } else { e.msg = context[this.e.user_id][i - 1] }
+    delete context[this.e.user_id]
+    return this.atlas(e)
   }
 
   async getRule (sync) {
