@@ -23,9 +23,15 @@ export class admin extends plugin {
       rule: [rule]
     })
     this._path = process.cwd().replace(/\\/g, '/')
-    this.pluginPath = `${this._path}/plugins/atlas/Genshin-Atlas/`
     this.version = '3.3.1'
   }
+
+  get pluginName () {
+    if (!fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'atlas' }
+    return 'Atlas'
+  }
+
+  get pluginPath () { return `${this._path}/plugins/${this.pluginName}/Genshin-Atlas/` }
 
   async init () {
     logger.info('---------QAQ---------')
