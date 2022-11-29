@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Source Han Sans CN Bold';
+    src: url("SourceHanSansSC-Bold.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    max-width: 300px;
+    transform-origin: 0 0;
+    position: relative;
+}
+
+.container {
+    width: 300px;
+    background: #f2efe9;
+    overflow: hidden;
+    position: relative;
+}
+
+.text{
+    color: #40342d;
+    font-size: 24px;
+    font-family: 'Source Han Sans CN Bold', serif;
+    z-index: 1000;
+}

@@ -3,6 +3,7 @@ import fs from 'node:fs'
 import { segment } from 'oicq'
 import YAML from 'yaml'
 import gsCfg from '../genshin/model/gsCfg.js'
+import puppeteer from '../../lib/puppeteer/puppeteer.js'
 // 插件制作 西北一枝花(1679659) 首发群240979646，不准搬，一旦在其他群看到本插件立刻停止所有插件制作
 let context = {}
 export class atlas extends plugin {
@@ -23,7 +24,7 @@ export class atlas extends plugin {
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
 
-  get pluginName () { if (!fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'atlas' } else { return 'Atlas' } }
+  get pluginName () { if (fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'Atlas' } else { return 'atlas' } }
 
   async atlas (e) {
     let msg
@@ -80,6 +81,34 @@ export class atlas extends plugin {
       }
     }
     return false
+  }
+
+  /** 消息风控处理 */
+  async reply (msgs, quote, data) {
+    if (!msgs) return false
+    if (!Array.isArray(msgs)) msgs = [msgs]
+    let result = await super.reply(msgs, quote, data)
+    if (!result || !result.message_id) {
+      let isxml = false
+      for (let msg of msgs) {
+        if (msg && msg?.type === 'xml' && msg?.data) {
+          msg.data = msg.data.replace(/^<\?xml.*version=.*?>/g, '<?xml version="1.0" encoding="utf-8" ?>')
+          isxml = true
+        }
+      }
+      if (isxml) { result = await super.reply(msgs, quote, data) } else {
+        let base64 = await puppeteer.screenshot('sysCfg', {
+          tplFile: `${this._path}/plugins/${this.pluginName}/resource/massage/text.html`,
+          pluResPath: `${this._path}/plugins/${this.pluginName}/resource/`,
+          saveId: 'sysCfg',
+          imgType: 'png',
+          massage: msgs
+        })
+        result = await super.reply(base64, quote, data)
+      }
+      if (!result || !result.message_id) { logger.error('风控消息处理失败，请登录手机QQ查看是否可手动解除风控！') }
+    }
+    return result
   }
 
   async select (e) {
