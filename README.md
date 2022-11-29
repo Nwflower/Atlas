@@ -26,9 +26,18 @@ git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 
 本插件非传统性质的plugin插件包，占用内存较少。
 
-## [交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)
+## 致谢
+| Nickname| Contribution |
+|---------|------|
+| [xiaoyao-cvs-plugin](https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin) | 参考武器、圣遗物别名 |
+| [Yunzai-Bot小飞插件](https://gitee.com/xfdown/xiaofei-plugin) | 参考消息发送风控处理代码 |
 
-来[爱发电](https://afdian.net/a/Nwflower)羞辱我
+## 其他
+最后给个star或者[爱发电](https://afdian.net/a/Nwflower)，你的支持不会获得额外内容，但会提高本项目的更新积极性
+
+严禁用于任何商业用途和非法行为
+
+点击加入[Atlas交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)
 ### 发电榜
 | 名单| 发电量 |
 |---------|------|

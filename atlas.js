@@ -114,7 +114,6 @@ export class atlas extends plugin {
   async select (e) {
     let i = Number(this.e.msg.trim())
     if (isNaN(i)) { return false } else { e.msg = context[this.e.user_id][i - 1] }
-    delete context[this.e.user_id]
     return this.atlas(e)
   }
 
