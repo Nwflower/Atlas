@@ -16,6 +16,11 @@ export class admin extends plugin {
     })
     this._path = process.cwd().replace(/\\/g, '/')
     this.version = '3.3.2'
+    this.task = {
+      cron: '0 0 3 * * ?',
+      name: '自动更新最新图鉴图片-凌晨3-4点之间某一刻自动执行',
+      fnc: () => this.updataTask()
+    }
   }
 
   get pluginName () { if (!fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'atlas' } else { return 'Atlas' } }
@@ -27,6 +32,18 @@ export class admin extends plugin {
   async init () {
     logger.info('---------QAQ---------')
     logger.info(`Atlas图鉴${this.version}很高兴为您服务~`)
+  }
+
+  async updataTask () {
+    let pluginResourcePath = this.pluginResourcePath
+    setTimeout(async function () {
+      if (fs.existsSync(pluginResourcePath)) {
+        exec('git pull', { cwd: pluginResourcePath }, function (error, stdout, stderr) {
+          let numRet = /(\d*) files changed,/.exec(stdout)
+          if (numRet && numRet[1]) { logger.info(`图鉴资源自动更新成功，此次更新了${numRet[1]}个图片~`) } else if (error) { logger.info('图片资源更新失败！\nError code: ' + error.code + '\n' + error.stack + '\n 将于明日重试') }
+        })
+      }
+    }, Math.floor(Math.random() * 3600000 + 1))
   }
 
   async updata (e) {
