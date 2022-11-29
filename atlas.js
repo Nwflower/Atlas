@@ -106,7 +106,7 @@ export class atlas extends plugin {
         })
         result = await super.reply(base64, false, data)
       }
-      if (!result || !result.message_id) { logger.error('风控消息处理失败，请登录手机QQ查看是否可手动解除风控！') }
+      if (!result || !result.message_id) { logger.error('Atlas处理图鉴列表时处理失败，请检查账号是否被风控') }
     }
     return result
   }
