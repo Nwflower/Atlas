@@ -118,8 +118,12 @@ export class atlas extends plugin {
   }
 
   async getRule (sync) {
-    let syncPath = `${this._path}/plugins/${this.pluginName}/resource/rule/${sync}.yaml`
-    if (!fs.existsSync(syncPath)) { syncPath = `${this._path}/plugins/${this.pluginName}/resource/rule/config.yaml` }
+    let path = `${this._path}/plugins/${this.pluginName}/resource/rule/`
+    let pathDef = `${this._path}/plugins/${this.pluginName}/resource/rule_default/`
+    const files = fs.readdirSync(pathDef).filter(file => file.endsWith('.yaml'))
+    for (let file of files) { if (!fs.existsSync(`${path}${file}`)) { fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`) } }
+    let syncPath = `${path}${sync}.yaml`
+    if (!fs.existsSync(syncPath)) { syncPath = `${path}config.yaml` }
     return YAML.parse(fs.readFileSync(syncPath, 'utf8'))
   }
 
