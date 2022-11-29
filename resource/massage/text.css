@@ -13,13 +13,16 @@
 }
 
 body {
-    max-width: 300px;
+    max-width: 340px;
     transform-origin: 0 0;
     position: relative;
 }
 
 .container {
-    width: 300px;
+    width: 100%;
+    height: 130%;
+    background-size: 100% ;
+    padding: 20px;
     background: #f2efe9;
     overflow: hidden;
     position: relative;
