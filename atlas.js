@@ -6,6 +6,7 @@ import gsCfg from '../genshin/model/gsCfg.js'
 import puppeteer from '../../lib/puppeteer/puppeteer.js'
 // 插件制作 西北一枝花(1679659) 首发群240979646，不准搬，一旦在其他群看到本插件立刻停止所有插件制作
 let context = {}
+let num = {}
 export class atlas extends plugin {
   constructor () {
     let rule = {
@@ -29,7 +30,7 @@ export class atlas extends plugin {
   async atlas (e) {
     let msg
     try { msg = e.msg.trim() } catch (e) { return false }
-    if (context[this.e.user_id]) { await this.select(e) }
+    if (context[this.e.user_id]) { if (await this.select(e)) { delete num[this.e.user_id] } }
     if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
       const syncFiles = fs.readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`).filter(function (item, index, arr) { return item !== '.git' })
       for (let sync of syncFiles) {
@@ -112,6 +113,12 @@ export class atlas extends plugin {
   }
 
   async select (e) {
+    if (num[this.e.user_id]) { num[this.e.user_id]++ } else { num[this.e.user_id] = 1 }
+    if (num >= 3) {
+      delete context[this.e.user_id]
+      delete num[this.e.user_id]
+      return false
+    }
     let i = Number(this.e.msg.trim())
     if (isNaN(i)) { return false } else { e.msg = context[this.e.user_id][i - 1] }
     return this.atlas(e)
