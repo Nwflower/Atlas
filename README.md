@@ -8,13 +8,15 @@ Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴插件包，可通过
 关于介绍内容，可前往[Genshin-Atlas](https://gitee.com/Nwflower/genshin-atlas)查看
 ## 如何获取
 ### 1、下载插件本体
-使用github获取
-在Yunzai-Bot根目录下，运行
+
+使用github获取插件
+
+在Yunzai-Bot根目录下，运行cmd，输入以下指令
 ```
 git clone --depth=1 https://github.com/Nwflower/atlas ./plugins/Atlas/
 ```
 
-使用gitee镜像源
+如果运行失败，可以使用gitee镜像源，指令如下
 ```
 git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 ```
