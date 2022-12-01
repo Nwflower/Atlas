@@ -23,7 +23,7 @@ export class admin extends plugin {
     }
   }
 
-  get pluginName () { if (!fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'atlas' } else { return 'Atlas' } }
+  get pluginName () { return !fs.existsSync(`${this._path}/plugins/Atlas`) ? 'atlas' : 'Atlas' }
 
   get pluginPath () { return `${this._path}/plugins/${this.pluginName}/` }
 

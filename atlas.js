@@ -25,7 +25,7 @@ export class atlas extends plugin {
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
 
-  get pluginName () { if (fs.existsSync(`${this._path}/plugins/Atlas`)) { return 'Atlas' } else { return 'atlas' } }
+  get pluginName () { return fs.existsSync(`${this._path}/plugins/Atlas`) ? 'Atlas' : 'atlas' }
 
   async atlas (e) {
     let msg
@@ -88,25 +88,16 @@ export class atlas extends plugin {
   async reply (msgs, quote, data) {
     if (!msgs) return false
     if (!Array.isArray(msgs)) msgs = [msgs]
-    let result = await super.reply(msgs, quote, data)
+    let result = (this.e.isGroup && msgs.length > 10) ? false : await super.reply(msgs, quote, data)
     if (!result || !result.message_id) {
-      let isxml = false
-      for (let msg of msgs) {
-        if (msg && msg?.type === 'xml' && msg?.data) {
-          msg.data = msg.data.replace(/^<\?xml.*version=.*?>/g, '<?xml version="1.0" encoding="utf-8" ?>')
-          isxml = true
-        }
-      }
-      if (isxml) { result = await super.reply(msgs, quote, data) } else {
-        let base64 = await puppeteer.screenshot('sysCfg', {
-          tplFile: `${this._path}/plugins/${this.pluginName}/resource/massage/text.html`,
-          pluResPath: `${this._path}/plugins/${this.pluginName}/resource/`,
-          saveId: 'sysCfg',
-          imgType: 'png',
-          massage: msgs
-        })
-        result = await super.reply(base64, false, data)
-      }
+      let base64 = await puppeteer.screenshot('sysCfg', {
+        tplFile: `${this._path}/plugins/${this.pluginName}/resource/massage/text.html`,
+        pluResPath: `${this._path}/plugins/${this.pluginName}/resource/`,
+        saveId: 'sysCfg',
+        imgType: 'png',
+        massage: msgs
+      })
+      result = await super.reply(base64, false, data)
       if (!result || !result.message_id) { logger.error('Atlas处理图鉴列表时处理失败，请检查账号是否被风控') }
     }
     return result
