@@ -114,7 +114,7 @@ export class atlas extends plugin {
 
   async select (e) {
     if (num[this.e.user_id]) { num[this.e.user_id]++ } else { num[this.e.user_id] = 1 }
-    if (num >= 3) {
+    if (num[this.e.user_id] >= 3) {
       delete context[this.e.user_id]
       delete num[this.e.user_id]
       return false
