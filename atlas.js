@@ -4,9 +4,9 @@ import { segment } from 'oicq'
 import YAML from 'yaml'
 import gsCfg from '../genshin/model/gsCfg.js'
 import puppeteer from '../../lib/puppeteer/puppeteer.js'
-// 插件制作 西北一枝花(1679659) 首发群240979646，不准搬，一旦在其他群看到本插件立刻停止所有插件制作
-let context = {}
-let num = {}
+
+let context = {} // 索引表
+let num = {} // 计数器
 export class atlas extends plugin {
   constructor () {
     let rule = {
@@ -22,6 +22,7 @@ export class atlas extends plugin {
     })
     this._path = process.cwd().replace(/\\/g, '/')
     this.islog = false
+    this.ignore = ['.git', 'role', 'food', 'specialty', 'weekboss']
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
 
@@ -32,7 +33,8 @@ export class atlas extends plugin {
     try { msg = e.msg.trim() } catch (e) { return false }
     if (context[this.e.user_id]) { if (await this.select(e)) { delete num[this.e.user_id] } }
     if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
-      const syncFiles = fs.readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`).filter(function (item, index, arr) { return item !== '.git' })
+      let ignore = this.ignore
+      const syncFiles = fs.readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`).filter(function (item, index, arr) { return !ignore.includes(item) })
       for (let sync of syncFiles) {
         let rule = await this.getRule(sync)
         let Tmpmsg = await this.PickRule(msg, rule)
@@ -43,6 +45,7 @@ export class atlas extends plugin {
             if (fs.existsSync(path)) {
               this.reply(segment.image(path))
               this.islog = true
+              return this.islog
             }
           }
         }
