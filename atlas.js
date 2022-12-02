@@ -22,7 +22,7 @@ export class atlas extends plugin {
     })
     this._path = process.cwd().replace(/\\/g, '/')
     this.islog = false
-    this.ignore = ['.git', 'role', 'food', 'specialty', 'weekboss']
+    this.ignore = ['.git', 'role', 'food', 'weekboss']
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
 
@@ -108,7 +108,7 @@ export class atlas extends plugin {
 
   async select (e) {
     if (num[this.e.user_id]) { num[this.e.user_id]++ } else { num[this.e.user_id] = 1 }
-    if (num[this.e.user_id] >= 3) {
+    if (num[this.e.user_id] >= 4) {
       delete context[this.e.user_id]
       delete num[this.e.user_id]
       return false
