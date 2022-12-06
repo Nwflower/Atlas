@@ -1,4 +1,11 @@
 @font-face {
+    font-family: "tttgbnumber";
+    src: url("../../../../resources/font/tttgbnumber.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Source Han Sans CN Bold';
     src: url("SourceHanSansSC-Bold.otf");
     font-weight: normal;
@@ -13,24 +20,104 @@
 }
 
 body {
-    max-width: 340px;
+    font-size: 16px;
+    transform: scale(1.5);
+    font-family: 'tttgbnumber','Source Han Sans CN Bold', serif;
     transform-origin: 0 0;
+    color: #1e1f20;
+    /* max-width: 340px; */
     position: relative;
 }
 
 .container {
-    width: 100%;
-    height: 130%;
-    background-size: 100% ;
-    padding: 20px;
-    background: #f2efe9;
+    width: 400px;
+    background: #f0eae3;
+    padding: 5px;
     overflow: hidden;
     position: relative;
 }
 
 .text{
-    color: #40342d;
-    font-size: 24px;
-    font-family: 'Source Han Sans CN Bold', serif;
+    color: #504c49;
+    font-size: 20px;
     z-index: 1000;
+}
+
+.littleTest {
+    color: #504c49;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.title {
+    display: flex;
+    position: relative;
+    margin-bottom: 12px;
+    color: #504c49;
+}
+.title .id {
+    flex: 1;
+    line-height: 18px;
+    padding-left: 10px;
+}
+.title .id:before {
+    content: " ";
+    position: absolute;
+    width: 5px;
+    height: 24px;
+    border-radius: 1px;
+    left: 0;
+    top: -3px;
+    background: #d3bc8d;
+}
+.title .day {
+    line-height: 18px;
+}
+.item {
+    border: 1px solid #dfd8d1;
+    display: flex;
+    height: 35px;
+    margin-top: 5px;
+}
+.item .main {
+    display: flex;
+    flex: 1;
+    background-color: #f5f1eb;
+    position: relative;
+    /* font-weight: bold; */
+}
+.item .main .icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px 20px 5px 0;
+}
+.item .main .info {
+    padding-top: 8px;
+}
+.item .main .info .name {
+    font-size: 16px;
+    /* color: #5f5f5d; */
+    line-height: 1;
+    margin: 0 0 0 15px;
+}
+.item .main .info .time {
+    font-size: 12px;
+    /* font-weight: 400; */
+    color: #5f5f5d;
+    line-height: 1;
+}
+.item .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 100%;
+    background-color: #ece3d8;
+    font-size: 16px;
+    color: #504c49;
+    line-height: 55px;
+}
+
+.item .right .red{
+    color: #f24e4c;
 }

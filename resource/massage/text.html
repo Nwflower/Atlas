@@ -2,13 +2,29 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="{{pluResPath}}massage/text.css" />
+    <link rel="stylesheet" type="text/css" href="../../../plugins/Atlas/resource/massage/text.css" />
   </head>
   <body>
     <div class="container" id="container">
-      <div class="text">消息较长，为避免刷屏已转成图片发送</div>
+      <div class="title">
+        <div class="id">
+          <span>ID：{{name}}</span>
+        </div>
+      </div>
+      <div class="littleTest">消息较长，为避免风控已转成图片发送</div>
+      <div class="littleTest">请选择序号或发送指令：</div>
       {{each massage}}
-        <div class="text">{{$value}}</div>
+      <div class="item">
+        <div class="right">
+          <span>{{$value.Num}}</span>
+        </div>
+        <div class="main">
+          <div class="bg"></div>
+          <div class="info">
+            <div class="name">{{$value.name}}</div>
+          </div>
+        </div>
+      </div>
       {{/each}}
     </div>
   </body>

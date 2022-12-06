@@ -31,6 +31,7 @@ export class atlas extends plugin {
   async atlas (e) {
     let msg
     try { msg = e.msg.trim() } catch (e) { return false }
+    if ((typeof msg!='string')||msg.constructor!==String) { return false }
     if (context[this.e.user_id]) { if (await this.select(e)) { delete num[this.e.user_id] } }
     if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
       let ignore = this.ignore
@@ -73,12 +74,21 @@ export class atlas extends plugin {
               divi = `#${rule.pick[0]}`
               break
           }
-          let sendmsg = ['请选择序号或发送指令：']
+          let sendmsg = []
+          let MsgArray = []
           for (let i in re[element]) {
-            sendmsg.push(`\n${Number(i) + 1}、${divi}${re[element][i]}`)
             re[element][i] = divi + re[element][i]
+            sendmsg.push({
+              name: re[element][i],
+              Num: Number(i)+1
+            })
+            MsgArray.push({
+              message: `${Number(i)+1}、${re[element][i]}`,
+              nickname: Bot.nickname,
+              user_id: Bot.uin
+            })
           }
-          this.reply(sendmsg, true, { recallMsg: rule.recallMsg })
+          this.reply(sendmsg, true, {MsgArray})
           context[this.e.user_id] = re[element]
           return true
         }
@@ -90,17 +100,28 @@ export class atlas extends plugin {
   /** 消息风控处理 */
   async reply (msgs, quote, data) {
     if (!msgs) return false
-    if (!Array.isArray(msgs)) msgs = [msgs]
-    let result = (this.e.isGroup && msgs.length > 10) ? false : await super.reply(msgs, quote, data)
+    let result
+    if (!Array.isArray(msgs)) {
+      msgs = [msgs]
+      result = await super.reply(msgs, quote)
+    } else {
+      let forwardMsg = await Bot.makeForwardMsg(data.MsgArray);
+      forwardMsg.data = forwardMsg.data
+        .replace('<?xml version="1.0" encoding="utf-8"?>','<?xml version="1.0" encoding="utf-8" ?>')
+        .replace(/\n/g, '')
+        .replace(/<title color="#777777" size="26">(.+?)<\/title>/g, '___')
+        .replace(/___+/, '<title color="#777777" size="26">请点击查看内容</title>');
+      result = await super.reply(forwardMsg, quote)
+    }
     if (!result || !result.message_id) {
-      let base64 = await puppeteer.screenshot('sysCfg', {
+      let base64 = await puppeteer.screenshot('AtlasIndex', {
         tplFile: `${this._path}/plugins/${this.pluginName}/resource/massage/text.html`,
         pluResPath: `${this._path}/plugins/${this.pluginName}/resource/`,
-        saveId: 'sysCfg',
         imgType: 'png',
-        massage: msgs
+        massage: msgs,
+        name: this.e.nickname
       })
-      result = await super.reply(base64, false, data)
+      result = await super.reply(base64)
       if (!result || !result.message_id) { logger.error('Atlas处理图鉴列表时处理失败，请检查账号是否被风控') }
     }
     return result
