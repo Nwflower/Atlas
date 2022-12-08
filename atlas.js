@@ -154,18 +154,18 @@ export class atlas extends plugin {
     if ('pick' in Rule) { pickreg = new RegExp(`(${Rule.pick.join('|')})`, 'g') }
     switch (Rule.condition) {
       case 0:// 去除可能的前缀#
-        return msg.replaceAll('#', '').trim()
+        return msg.replace(/^#*/g, '').trim()
       case 1:// 匹配前缀#并去除
-        if (/^#.*$/g.test(msg)) { return msg.replaceAll('#', '').trim() }
+        if (/^#.*$/g.test(msg)) { return msg.replace(/^#*/g, '').trim() }
         return false
       case 2:// 匹配关键字并去除
-        if (pickreg.test(msg)) { return msg.replaceAll('#', '').replaceAll(pickreg, '').trim() }
+        if (pickreg.test(msg)) { return msg.replace(pickreg, '').trim() }
         return false
       case 3:// 匹配关键字或前缀#并去除
-        if (pickreg.test(msg) || /^#.*$/g.test(msg)) { return msg.replaceAll('#', '').replaceAll(pickreg, '').trim() }
+        if (pickreg.test(msg) || /^#.*$/g.test(msg)) { return msg.replace(/^#*/g, '').replace(pickreg, '').trim() }
         return false
       case 4:// 匹配关键字和前缀#并去除
-        if (pickreg.test(msg) && /^#.*$/g.test(msg)) { return msg.replaceAll('#', '').replaceAll(pickreg, '').trim() }
+        if (pickreg.test(msg) && /^#.*$/g.test(msg)) { return msg.replace(/^#*/g, '').replace(pickreg, '').trim() }
     }
     return false
   }
