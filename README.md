@@ -43,9 +43,16 @@ git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 
 其他图鉴仍在完善中...
  
+### 4、兼容性更改
+本插件支持动态优先级。
+
+如要更改插件优先级，请找到文件`Atlas\resource\config.yaml`下的相应属性：
+priority为优先级，默认为10
+success为匹配指令拦截，默认为TRUE
+
 如果你对上述规则不满意，可以查阅第四点：
 
-### 4、拓展：修改图鉴匹配规则（可以不修改）
+### 5、拓展：修改图鉴匹配规则（可以不修改）
 如果你对当前图鉴匹配效果不满意，可以修改图鉴匹配规则以让插件更频繁或更少触发
 
 规则文件在`resource/rule/对应文件夹目录名.yaml`里查看，如不存在对应文件夹目录名（例如圣遗物artifact的对应yaml不存在，则以默认config.yaml为准）
