@@ -1,7 +1,8 @@
 ﻿import plugin from '../../lib/plugins/plugin.js'
 import fs from 'node:fs'
 import { exec } from 'child_process'
-// 插件制作 西北一枝花(1679659) 首发群240979646，不准搬，一旦在其他群看到本插件立刻停止所有插件制作
+import { pluginRoot } from "./model/path.js";
+
 export class admin extends plugin {
   constructor () {
     super({
@@ -15,7 +16,7 @@ export class admin extends plugin {
       }]
     })
     this._path = process.cwd().replace(/\\/g, '/')
-    this.version = '3.3.2'
+    this.version = '3.3.3'
     this.task = {
       cron: '0 0 3 * * ?',
       name: '自动更新最新图鉴图片-凌晨3-4点之间某一刻自动执行',
@@ -23,9 +24,7 @@ export class admin extends plugin {
     }
   }
 
-  get pluginName () { return !fs.existsSync(`${this._path}/plugins/Atlas`) ? 'atlas' : 'Atlas' }
-
-  get pluginPath () { return `${this._path}/plugins/${this.pluginName}/` }
+  get pluginPath () { return `${pluginRoot}/` }
 
   get pluginResourcePath () { return `${this.pluginPath}Genshin-Atlas/` }
 

@@ -4,9 +4,15 @@ import { segment } from 'oicq'
 import YAML from 'yaml'
 import gsCfg from '../genshin/model/gsCfg.js'
 import puppeteer from '../../lib/puppeteer/puppeteer.js'
+import { pluginRoot,pluginResources } from "./model/path.js";
 
 let context = {} // 索引表
 let num = {} // 计数器
+
+// 检查配置文件
+if (!fs.existsSync(`${pluginResources}/config.yaml`)) { fs.copyFileSync(`${pluginResources}/config_default.yaml`, `${pluginResources}/config.yaml`) }
+let atlasConfig = YAML.parse(fs.readFileSync(`${pluginResources}/config.yaml`, 'utf8'))
+
 export class atlas extends plugin {
   constructor () {
     let rule = {
@@ -17,36 +23,33 @@ export class atlas extends plugin {
       name: '图鉴',
       dsc: '原神各类图鉴与角色材料，支持热更新',
       event: 'message',
-      priority: 10,
+      priority: atlasConfig.priority,
       rule: [rule]
     })
-    this._path = process.cwd().replace(/\\/g, '/')
     this.islog = false
     this.ignore = ['.git', 'role', 'food', 'weekboss']
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
-
-  get pluginName () { return fs.existsSync(`${this._path}/plugins/Atlas`) ? 'Atlas' : 'atlas' }
-
+  
   async atlas (e) {
     let msg
     try { msg = e.msg.trim() } catch (e) { return false }
     if ((typeof msg!='string')||msg.constructor!==String) { return false }
     if (context[this.e.user_id]) { if (await this.select(e)) { delete num[this.e.user_id] } }
-    if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`)) {
+    if (fs.existsSync(`${pluginRoot}/Genshin-Atlas`)) {
       let ignore = this.ignore
-      const syncFiles = fs.readdirSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas`).filter(function (item, index, arr) { return !ignore.includes(item) })
+      const syncFiles = fs.readdirSync(`${pluginRoot}/Genshin-Atlas`).filter(function (item, index, arr) { return !ignore.includes(item) })
       for (let sync of syncFiles) {
         let rule = await this.getRule(sync)
         let Tmpmsg = await this.PickRule(msg, rule)
         if (!Tmpmsg) { continue }
         if (!await this.index(sync, Tmpmsg, rule)) {
-          if (fs.statSync(`${this._path}/plugins/${this.pluginName}/Genshin-Atlas/${sync}`).isDirectory()) {
-            let path = `${this._path}/plugins/${this.pluginName}/Genshin-Atlas/${sync}/${await this.getName(Tmpmsg, sync, rule.mode)}.png`
+          if (fs.statSync(`${pluginRoot}/Genshin-Atlas/${sync}`).isDirectory()) {
+            let path = `${pluginRoot}/Genshin-Atlas/${sync}/${await this.getName(Tmpmsg, sync, rule.mode)}.png`
             if (fs.existsSync(path)) {
               this.reply(segment.image(path))
               this.islog = true
-              return this.islog
+              return atlasConfig.success
             }
           }
         }
@@ -56,7 +59,7 @@ export class atlas extends plugin {
   }
 
   async index (sync, key, rule) {
-    let respath = `${this._path}/plugins/${this.pluginName}/resource/text/${sync}.yaml`
+    let respath = `${pluginResources}/text/${sync}.yaml`
     if (fs.existsSync(respath)) {
       let re = YAML.parse(fs.readFileSync(respath, 'utf8'))
       for (let element in re) {
@@ -115,8 +118,8 @@ export class atlas extends plugin {
     }
     if (!result || !result.message_id) {
       let base64 = await puppeteer.screenshot('AtlasIndex', {
-        tplFile: `${this._path}/plugins/${this.pluginName}/resource/massage/text.html`,
-        pluResPath: `${this._path}/plugins/${this.pluginName}/resource/`,
+        tplFile: `${pluginResources}/massage/text.html`,
+        pluResPath: `${pluginResources}/`,
         imgType: 'png',
         massage: msgs,
         name: this.e.nickname
@@ -140,8 +143,8 @@ export class atlas extends plugin {
   }
 
   async getRule (sync) {
-    let path = `${this._path}/plugins/${this.pluginName}/resource/rule/`
-    let pathDef = `${this._path}/plugins/${this.pluginName}/resource/rule_default/`
+    let path = `${pluginResources}/rule/`
+    let pathDef = `${pluginResources}/rule_default/`
     const files = fs.readdirSync(pathDef).filter(file => file.endsWith('.yaml'))
     for (let file of files) { if (!fs.existsSync(`${path}${file}`)) { fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`) } }
     let syncPath = `${path}${sync}.yaml`
@@ -171,8 +174,8 @@ export class atlas extends plugin {
   }
 
   async getName (originName, sync, pickmode) {
-    if (fs.existsSync(`${this._path}/plugins/${this.pluginName}/resource/othername/${sync}.yaml`)) {
-      let YamlObject = YAML.parse(fs.readFileSync(`${this._path}/plugins/${this.pluginName}/resource/othername/${sync}.yaml`, 'utf8'))
+    if (fs.existsSync(`${pluginResources}/othername/${sync}.yaml`)) {
+      let YamlObject = YAML.parse(fs.readFileSync(`${pluginResources}/othername/${sync}.yaml`, 'utf8'))
       for (let element in YamlObject) { if (pickmode) { if (pickmode === 1) { for (let Elementword of YamlObject[element]) { if (Elementword.includes(originName)) { return element } } } else { for (let Elementword of YamlObject[element]) { if (originName.includes(Elementword)) { return element } } } } else { if (YamlObject[element].includes(originName)) { return element } } }
     }
     if (sync.includes('role')) {
