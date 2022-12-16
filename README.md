@@ -1,7 +1,6 @@
 # Atlas
 
-## 这是什么
-Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴插件包，可通过Yunzai-Bot查询[`米游社@西北壹枝花`](https://bbs.mihoyo.com/ys/accountCenter/postList?id=289918413)制作的原神(Genshin Impact)游戏图鉴。
+Atlas是一个适用于V3版本及以上Yunzai-Bot的原神图鉴插件包，可通过Yunzai-Bot查询[`米游社@西北壹枝花`](https://bbs.mihoyo.com/ys/accountCenter/postList?id=289918413)制作的原神(Genshin Impact)游戏图鉴。
 
 插件代码严格遵循ES6规范。
 
@@ -42,7 +41,7 @@ git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 3. `七圣召唤`口令唤出七圣召唤卡牌索引，逐级查询想要找的七圣召唤卡牌
 
 其他图鉴仍在完善中...
- 
+
 ### 4、兼容性更改
 本插件支持动态优先级。
 
@@ -82,22 +81,32 @@ success为匹配指令拦截，默认为TRUE
 2. `前缀#`只在（condition=1、3或4）的时候才会生效，否则将视为你文件名的一部分。
 
 ## 致谢
-| Nickname| Contribution |
-|---------|------|
+| ProjectName | Contribution |
+|---------|-----:|
 | [xiaoyao-cvs-plugin](https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin) | 参考武器、圣遗物别名 |
 | [Yunzai-Bot小飞插件](https://gitee.com/xfdown/xiaofei-plugin) | 参考消息发送风控处理代码 |
 
+## 反馈
+
+如果你需要提出issue或者PR，请前往github的相关页面。
+
+[提出issue](https://github.com/Nwflower/Atlas/issues)
+
+[发起PR](https://github.com/Nwflower/Atlas/pulls)
+
+当然，你也可以使用QQ群组功能反馈。**点击加入[Atlas交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)**。
+
 ## 其他
+
 最后给个star或者[爱发电](https://afdian.net/a/Nwflower)，你的支持不会获得额外内容，但会提高本项目的更新积极性
 
 严禁用于任何商业用途和非法行为
 
-点击加入[Atlas交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)
 ### 发电榜
-| 名单| 发电量 |
-|---------|------|
-| 杨花洛尽 | 23.3 |
-| 归来？汐去 | 20   |
-| 寮青   | 15   |
-| 溯流光   | 15   |
-| 薛皮皮| 5 |
+| NickName   | RMB Contribution |
+| :--------- | ---------------: |
+| 杨花洛尽   |             23.3 |
+| 归来？汐去 |               20 |
+| 寮青       |               15 |
+| 溯流光     |               15 |
+| 薛皮皮     |                5 |
