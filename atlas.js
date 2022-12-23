@@ -77,6 +77,10 @@ export class atlas extends plugin {
               return atlasConfig.success
             }
           }
+        } else {
+          // 索引遍历成功 返回FALSE防止指令覆盖
+          this.islog = true
+          return false
         }
       }
     } else { logger.error('Atlas图鉴拓展包没有正确安装或者不是最新版本。请发送指令 #图鉴升级 以获取或升级Atlas图鉴拓展包') }
