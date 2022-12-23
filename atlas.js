@@ -27,7 +27,7 @@ export class atlas extends plugin {
       rule: [rule]
     })
     this.islog = false
-    this.ignore = ['.git', 'role', 'food', 'weekboss']
+    this.ignore = ['.git', 'role', 'food', 'WeekBOSS']
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
   
