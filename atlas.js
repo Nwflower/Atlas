@@ -184,7 +184,7 @@ export class atlas extends plugin {
   async getRule (sync) {
     // 获取某目录的匹配规则
     let syncPath = `${pluginResources}/rule/${sync}.yaml`
-    if (!fs.existsSync(syncPath)) { syncPath = `${path}config.yaml` }
+    if (!fs.existsSync(syncPath)) { syncPath = `${pluginResources}/rule/config.yaml` }
     return YAML.parse(fs.readFileSync(syncPath, 'utf8'))
   }
 
