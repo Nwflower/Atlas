@@ -1,0 +1,292 @@
+{
+  "DefaultHP": [
+    {
+      "Factors": "4人",
+      "HPRatioValue": 2.5
+    },
+    {
+      "Factors": "2人",
+      "HPRatioValue": 1.25
+    },
+    {
+      "Factors": "3人",
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "4人",
+      "HPRatioValue": 1.75
+    }
+  ],
+  "SpiralAbyssHP": [
+    {
+      "Factors": "11-1",
+      "Level": 88,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "11-2",
+      "Level": 90,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "11-3",
+      "Level": 92,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "12-1",
+      "Level": 95,
+      "HPRatioValue": 2.5
+    },
+    {
+      "Factors": "12-2",
+      "Level": 98,
+      "HPRatioValue": 2.5
+    },
+    {
+      "Factors": "12-3",
+      "Level": 100,
+      "HPRatioValue": 2.5
+    },
+    {
+      "Factors": "1-1",
+      "Level": 25,
+      "HPRatioValue": 1
+    },
+    {
+      "Factors": "1-2",
+      "Level": 25,
+      "HPRatioValue": 1
+    },
+    {
+      "Factors": "1-3",
+      "Level": 25,
+      "HPRatioValue": 1
+    },
+    {
+      "Factors": "2-1",
+      "Level": 40,
+      "HPRatioValue": 1
+    },
+    {
+      "Factors": "2-2",
+      "Level": 40,
+      "HPRatioValue": 1
+    },
+    {
+      "Factors": "2-3",
+      "Level": 40,
+      "HPRatioValue": 1
+    },
+    {
+      "Factors": "3-1",
+      "Level": 45,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "3-2",
+      "Level": 45,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "3-3",
+      "Level": 45,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "4-1",
+      "Level": 50,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "4-2",
+      "Level": 50,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "4-3",
+      "Level": 50,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "5-1",
+      "Level": 55,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "5-2",
+      "Level": 55,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "5-3",
+      "Level": 55,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "6-1",
+      "Level": 60,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "6-2",
+      "Level": 60,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "6-3",
+      "Level": 60,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "7-1",
+      "Level": 65,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "7-2",
+      "Level": 65,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "7-3",
+      "Level": 65,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": "8-1",
+      "Level": 70,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "8-2",
+      "Level": 70,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "8-3",
+      "Level": 70,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "9-1",
+      "Level": 72,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "9-2",
+      "Level": 74,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "9-3",
+      "Level": 76,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "10-1",
+      "Level": 80,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "10-2",
+      "Level": 82,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": "10-3",
+      "Level": 85,
+      "HPRatioValue": 2
+    }
+  ],
+  "DefaultATK": [
+    {
+      "Factors": "4人",
+      "ATKRatioValue": 1.4
+    },
+    {
+      "Factors": "2人",
+      "ATKRatioValue": 1.1
+    },
+    {
+      "Factors": "3人",
+      "ATKRatioValue": 1.25
+    },
+    {
+      "Factors": "4人",
+      "ATKRatioValue": 1.4
+    },
+    {
+      "Factors": "火元素增幅",
+      "ATKRatioValue": 1.4
+    },
+    {
+      "Factors": "黑泥",
+      "ATKRatioValue": 1.2
+    },
+    {
+      "Factors": "凋零使徒",
+      "ATKRatioValue": 1.1
+    },
+    {
+      "Factors": "强化1层",
+      "ATKRatioValue": 1.15
+    },
+    {
+      "Factors": "强化2层",
+      "ATKRatioValue": 1.3
+    },
+    {
+      "Factors": "强化3层",
+      "ATKRatioValue": 1.45
+    },
+    {
+      "Factors": "强化4层",
+      "ATKRatioValue": 1.6
+    },
+    {
+      "Factors": "强化5层",
+      "ATKRatioValue": 1.75
+    },
+    {
+      "Factors": "伸雷灵蕈",
+      "ATKRatioValue": 1.4
+    },
+    {
+      "Factors": "岩使盾",
+      "ATKRatioValue": 1.2
+    },
+    {
+      "Factors": "嗜魔",
+      "ATKRatioValue": 1.3
+    },
+    {
+      "Factors": "迅捷",
+      "ATKRatioValue": 1.3
+    },
+    {
+      "Factors": "吼叫1层",
+      "ATKRatioValue": 1.25
+    },
+    {
+      "Factors": "吼叫2层",
+      "ATKRatioValue": 1.5
+    },
+    {
+      "Factors": "狂暴",
+      "ATKRatioValue": 1.3
+    },
+    {
+      "Factors": "特别凶暴G",
+      "ATKRatioValue": 2
+    },
+    {
+      "Factors": "特别凶暴H",
+      "ATKRatioValue": 2.2
+    },
+    {
+      "Factors": "特别凶暴M",
+      "ATKRatioValue": 3.5
+    }
+  ]
+}
