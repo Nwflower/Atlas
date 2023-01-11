@@ -90,6 +90,7 @@ success为匹配指令拦截，默认为TRUE
 
 | ProjectName | Contribution |
 |---------|-----:|
+| [Csxylic](https://www.miyoushe.com/ys/accountCenter/postList?id=258229537) | 提供原魔数据、原魔属性 |
 | [xiaoyao-cvs-plugin](https://gitee.com/Ctrlcvs/xiaoyao-cvs-plugin) | 参考武器、圣遗物别名 |
 | [Yunzai-Bot小飞插件](https://gitee.com/xfdown/xiaofei-plugin) | 参考消息发送风控处理代码 |
 
