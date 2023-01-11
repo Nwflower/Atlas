@@ -16,7 +16,7 @@ export class admin extends plugin {
       }]
     })
     this._path = process.cwd().replace(/\\/g, '/')
-    this.version = '3.3.3'
+    this.version = '3.4.0'
     this.task = {
       cron: '0 0 3 * * ?',
       name: '自动更新最新图鉴图片-凌晨3-4点之间某一刻自动执行',

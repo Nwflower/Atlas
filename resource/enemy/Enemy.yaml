@@ -1,1455 +1,1832 @@
-- Enemy: 无相之火
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 无相之水
-  HPScale: HilichurlHP
-  HPValue: 9
-  ATKScale: BoarATK
-  ATKValue: 9
-- Enemy: 无相之雷
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 至纯的无相之雷
-  HPScale: HilichurlHP
-  HPValue: 11
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 无相之风
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 至纯的无相之风
-  HPScale: HilichurlHP
-  HPValue: 11
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 无相之岩
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 至纯的无相之岩
-  HPScale: HilichurlHP
-  HPValue: 11
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 无相之冰
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 急冻树
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 爆炎树
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 掣电树
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 古岩龙蜥
-  HPScale: HilichurlHP
-  HPValue: 30
-  ATKScale: BoarATK
-  ATKValue: 8
-- Enemy: 翠翎恐蕈
-  HPScale: FungusHP
-  HPValue: 14
-  ATKScale: BosaciusATK
-  ATKValue: 7
-- Enemy: 深海龙蜥之群
-  HPScale: FungusHP
-  HPValue: 24
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 恒常机关阵列
-  HPScale: FungusHP
-  HPValue: 16
-  ATKScale: BosaciusATK
-  ATKValue: 7.2
-- Enemy: 遗迹巨蛇
-  HPScale: FungusHP
-  HPValue: 16
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 纯水精灵(本体)
-  HPScale: HilichurlHP
-  HPValue: 14
-  ATKScale: BoarATK
-  ATKValue: 9
-- Enemy: 雷音权现
-  HPScale: FungusHP
-  HPValue: 14
-  ATKScale: BosaciusATK
-  ATKValue: 7.2
-- Enemy: 黄金王兽
-  HPScale: FungusHP
-  HPValue: 12
-  ATKScale: BosaciusATK
-  ATKValue: 8
-- Enemy: 魔偶剑鬼
-  HPScale: HilichurlHP
-  HPValue: 20
-  ATKScale: BosaciusATK
-  ATKValue: 8
-- Enemy: 跋掣(其一)
-  HPScale: FungusHP
-  HPValue: 18
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 魔偶剑鬼·孤风
-  HPScale: HilichurlHP
-  HPValue: 16
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 魔偶剑鬼·霜驰
-  HPScale: HilichurlHP
-  HPValue: 16
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 魔偶剑鬼·凶面
-  HPScale: HilichurlHP
-  HPValue: 16
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 魔花
-  HPScale: FungusHP
-  HPValue: 11
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 复苏的急冻树
-  HPScale: HilichurlHP
-  HPValue: 11
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 特瓦林
-  HPScale: HilichurlHP
-  HPValue: 9
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 安德留斯
-  HPScale: HilichurlHP
-  HPValue: 18
-  ATKScale: BoarATK
-  ATKValue: 7.2
-- Enemy: 公子(第一阶段)
-  HPScale: HilichurlHP
-  HPValue: 6
-  ATKScale: BoarATK
-  ATKValue: 10
-- Enemy: 公子(第二阶段)
-  HPScale: HilichurlHP
-  HPValue: 6
-  ATKScale: BoarATK
-  ATKValue: 10
-- Enemy: 公子(第三阶段)
-  HPScale: HilichurlHP
-  HPValue: 10
-  ATKScale: BoarATK
-  ATKValue: 14
-- Enemy: 若陀龙王(第一阶段)
-  HPScale: HilichurlHP
-  HPValue: 36
-  ATKScale: BosaciusATK
-  ATKValue: 9
-- Enemy: 若陀龙王(第二阶段)
-  HPScale: HilichurlHP
-  HPValue: 36
-  ATKScale: BosaciusATK
-  ATKValue: 9
-- Enemy: 若陀龙王(第三阶段)
-  HPScale: HilichurlHP
-  HPValue: 36
-  ATKScale: BosaciusATK
-  ATKValue: 9
-- Enemy: 女士(第一阶段)
-  HPScale: FungusHP
-  HPValue: 10
-  ATKScale: BoarATK
-  ATKValue: 4.8
-- Enemy: 女士(第二阶段)
-  HPScale: FungusHP
-  HPValue: 20
-  ATKScale: BoarATK
-  ATKValue: 4.8
-- Enemy: 祸津御建鸣神命
-  HPScale: FungusHP
-  HPValue: 40
-  ATKScale: BosaciusATK
-  ATKValue: 12
-- Enemy: 纯水精灵
-  HPScale: HilichurlHP
-  HPValue: 10
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 大雪猪王
-  HPScale: HilichurlHP
-  HPValue: 11
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 魔神任务雷电将军
-  HPScale: FungusHP
-  HPValue: 40
-  ATKScale: BoarATK
-  ATKValue: 9
-- Enemy: 半永恒统辖矩阵
-  HPScale: FungusHP
-  HPValue: 16
-  ATKScale: BosaciusATK
-  ATKValue: 6.6
-- Enemy: 兆载永劫龙兽
-  HPScale: FungusHP
-  HPValue: 17
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 无相之草
-  HPScale: HilichurlHP
-  HPValue: 9
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 正机之神(第一阶段)
-  HPScale: FungusHP
-  HPValue: 20
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 正机之神(第二阶段)
-  HPScale: FungusHP
-  HPValue: 18
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 活动无相之水
-  HPScale: FungusHP
-  HPValue: 9
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 活动无相之火
-  HPScale: FungusHP
-  HPValue: 9
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 活动无相之冰
-  HPScale: FungusHP
-  HPValue: 9
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 活动无相之草
-  HPScale: FungusHP
-  HPValue: 9
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 风蚀沙虫
-  HPScale: FungusHP
-  HPValue: 14
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 遗迹巡弋者
-  HPScale: FungusHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 4.2
-- Enemy: 遗迹歼击者
-  HPScale: FungusHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 4.2
-- Enemy: 遗迹侦查者
-  HPScale: FungusHP
-  HPValue: 4.2
-  ATKScale: BoarATK
-  ATKValue: 3.9
-- Enemy: 遗迹防卫者
-  HPScale: FungusHP
-  HPValue: 4.2
-  ATKScale: BoarATK
-  ATKValue: 4.5
-- Enemy: 元能构装体·勘探机
-  HPScale: FungusHP
-  HPValue: 3.4
-  ATKScale: BosaciusATK
-  ATKValue: 3.6
-- Enemy: 元能构装体·力场发生器
-  HPScale: FungusHP
-  HPValue: 3.4
-  ATKScale: BosaciusATK
-  ATKValue: 3.6
-- Enemy: 元能构装体·重塑仪
-  HPScale: FungusHP
-  HPValue: 3.4
-  ATKScale: BosaciusATK
-  ATKValue: 3.6
-- Enemy: 遗迹守卫
-  HPScale: HilichurlHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 4.8
-- Enemy: 遗迹猎者
-  HPScale: HilichurlHP
-  HPValue: 6
-  ATKScale: BoarATK
-  ATKValue: 14
-- Enemy: 遗迹重机
-  HPScale: HilichurlHP
-  HPValue: 9
-  ATKScale: BoarATK
-  ATKValue: 7
-- Enemy: 遗迹龙兽·空巡
-  HPScale: FungusHP
-  HPValue: 5
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 遗迹龙兽·地巡
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 火史莱姆
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.6
-- Enemy: 冰史莱姆
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.6
-- Enemy: 水史莱姆
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.6
-- Enemy: 草史莱姆
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.6
-- Enemy: 岩史莱姆
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.6
-- Enemy: 风史莱姆
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 雷史莱姆
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.6
-- Enemy: 大型火史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.2
-- Enemy: 大型冰史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.2
-- Enemy: 大型水史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 2.8
-- Enemy: 大型草史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 2.8
-- Enemy: 大型风史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 2.8
-- Enemy: 大型岩史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.2
-- Enemy: 大型雷史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.2
-- Enemy: 变异雷史莱姆
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.2
-- Enemy: 火飘浮灵
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.75
-- Enemy: 冰飘浮灵
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.75
-- Enemy: 水飘浮灵
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.75
-- Enemy: 草飘浮灵
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.4
-- Enemy: 雷飘浮灵
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 2.8
-- Enemy: 风飘浮灵
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.75
-- Enemy: 岩飘浮灵
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.75
-- Enemy: 狂风之核
-  HPScale: FungusHP
-  HPValue: 5
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 打手丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 冲锋丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 爆弹丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 3.6
-- Enemy: 冰弹丘丘人
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.9
-- Enemy: 雷弹丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 木盾丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 冰盾丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 岩盾丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 射手丘丘人
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.9
-- Enemy: 火箭丘丘人
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 1.35
-- Enemy: 冰箭丘丘人
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.9
-- Enemy: 雷箭丘丘人
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 1.35
-- Enemy: 奇怪的丘丘人
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 木盾丘丘暴徒
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2.4
-- Enemy: 岩盾丘丘暴徒
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2.4
-- Enemy: 冰盾丘丘暴徒
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2.4
-- Enemy: 火斧丘丘暴徒
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 4.8
-- Enemy: 雷斧丘丘暴徒
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 4.8
-- Enemy: 丘丘雷兜王
-  HPScale: HilichurlHP
-  HPValue: 9
-  ATKScale: BoarATK
-  ATKValue: 12
-- Enemy: 丘丘霜铠王
-  HPScale: HilichurlHP
-  HPValue: 9
-  ATKScale: BoarATK
-  ATKValue: 12
-- Enemy: 丘丘岩盔王
-  HPScale: HilichurlHP
-  HPValue: 9
-  ATKScale: BoarATK
-  ATKValue: 9
-- Enemy: 风丘丘萨满
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 雷丘丘萨满
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 岩丘丘萨满
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 水丘丘萨满
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 冰丘丘萨满
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 草丘丘萨满
-  HPScale: HilichurlHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 盗宝团·溜溜1
-  HPScale: HilichurlHP
-  HPValue: 2.4
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 盗宝团·大姐头1
-  HPScale: HilichurlHP
-  HPValue: 2.4
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 盗宝团·瓦伦斯坦
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2.4
-- Enemy: 盗宝团·卡门1
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 盗宝团·怪鸟
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 盗宝团·火之药剂师
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·雷之药剂师
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·水之药剂师
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·冰之药剂师
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·掘墓者
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·海上男儿
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·拳术师
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·粉碎者
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 盗宝团·神射手
-  HPScale: HilichurlHP
-  HPValue: 1.2
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 盗宝团·斥候
-  HPScale: HilichurlHP
-  HPValue: 1.2
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 盗宝团·杂工
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 镀金旅团·刀舞者
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.6
-- Enemy: 镀金旅团·阵前斧手
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.6
-- Enemy: 镀金旅团·破阵者
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 1.6
-- Enemy: 镀金旅团·机弩兵
-  HPScale: FungusHP
-  HPValue: 1.2
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 镀金旅团·鸦喙戟手
-  HPScale: FungusHP
-  HPValue: 1.2
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 镀金旅团·沙中净水
-  HPScale: FungusHP
-  HPValue: 3.6
-  ATKScale: BosaciusATK
-  ATKValue: 3.2
-- Enemy: 镀金旅团·炽阳凝冰
-  HPScale: FungusHP
-  HPValue: 3.6
-  ATKScale: BosaciusATK
-  ATKValue: 3.2
-- Enemy: 镀金旅团·白日鸣雷
-  HPScale: FungusHP
-  HPValue: 4
-  ATKScale: BosaciusATK
-  ATKValue: 2.4
-- Enemy: 镀金旅团·灵风猎手
-  HPScale: FungusHP
-  HPValue: 4.4
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 镀金旅团·魔岩役使
-  HPScale: FungusHP
-  HPValue: 5
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 千岩军士兵
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 千岩军教头
-  HPScale: HilichurlHP
-  HPValue: 2.4
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 野伏众·火付番
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BosaciusATK
-  ATKValue: 1.6
-- Enemy: 野伏众·机巧番
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BosaciusATK
-  ATKValue: 1.6
-- Enemy: 野伏众·阵刀番
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BosaciusATK
-  ATKValue: 1.6
-- Enemy: 海乱鬼·雷腾
-  HPScale: FungusHP
-  HPValue: 4.8
-  ATKScale: BosaciusATK
-  ATKValue: 7.5
-- Enemy: 海乱鬼·炎威
-  HPScale: FungusHP
-  HPValue: 4.8
-  ATKScale: BosaciusATK
-  ATKValue: 7.5
-- Enemy: 幕府足轻
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 幕府足轻头
-  HPScale: HilichurlHP
-  HPValue: 2.4
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 珊瑚宫众
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.6
-- Enemy: 寄骑武士
-  HPScale: FungusHP
-  HPValue: 3.6
-  ATKScale: BoarATK
-  ATKValue: 2.4
-- Enemy: 愚人众先遣队·火铳游击兵
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 4.5
-- Enemy: 愚人众先遣队·岩使游击兵
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 3
-- Enemy: 愚人众先遣队·水铳重卫士
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 愚人众先遣队·冰铳重卫士
-  HPScale: HilichurlHP
-  HPValue: 4
-  ATKScale: BoarATK
-  ATKValue: 3
-- Enemy: 愚人众先遣队·雷锤前锋军
-  HPScale: HilichurlHP
-  HPValue: 4
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 愚人众先遣队·风拳前锋军
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 愚人众·火之债务处理人
-  HPScale: HilichurlHP
-  HPValue: 5
-  ATKScale: BoarATK
-  ATKValue: 8
-- Enemy: 愚人众·雷萤术士
-  HPScale: HilichurlHP
-  HPValue: 5
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 愚人众·冰萤术士
-  HPScale: HilichurlHP
-  HPValue: 5
-  ATKScale: BoarATK
-  ATKValue: 4
-- Enemy: 愚人众·藏镜仕女
-  HPScale: FungusHP
-  HPValue: 6
-  ATKScale: BoarATK
-  ATKValue: 2.4
-- Enemy: 岩龙蜥
-  HPScale: HilichurlHP
-  HPValue: 8
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 幼岩龙蜥
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 炽焰骗骗花
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 3
-- Enemy: 冰霜骗骗花
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 电气骗骗花
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 深海龙蜥·原种
-  HPScale: FungusHP
-  HPValue: 8
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 深海龙蜥幼体·原种
-  HPScale: FungusHP
-  HPValue: 4
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 深海龙蜥·吞雷
-  HPScale: FungusHP
-  HPValue: 12
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 深海龙蜥幼体·吞雷
-  HPScale: FungusHP
-  HPValue: 4
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 深海龙蜥·啮冰
-  HPScale: FungusHP
-  HPValue: 12
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 深海龙蜥幼体·啮冰
-  HPScale: FungusHP
-  HPValue: 4
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 水萤
-  HPScale: HilichurlHP
-  HPValue: 0.5
-  ATKScale: BoarATK
-  ATKValue: 0.8
-- Enemy: 冰萤
-  HPScale: HilichurlHP
-  HPValue: 0.5
-  ATKScale: BoarATK
-  ATKValue: 0.8
-- Enemy: 雷萤
-  HPScale: HilichurlHP
-  HPValue: 0.5
-  ATKScale: BoarATK
-  ATKValue: 0.8
-- Enemy: 浮游水蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 浮游草蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 浮游风蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 旋转雷蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 旋转冰蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 旋转火蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 伸缩岩蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 伸缩风蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 伸缩火蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 伸缩雷蕈兽
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BosaciusATK
-  ATKValue: 1.8
-- Enemy: 有翼冰本真蕈
-  HPScale: FungusHP
-  HPValue: 2.8
-  ATKScale: BosaciusATK
-  ATKValue: 2.4
-- Enemy: 有翼草本真蕈
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BosaciusATK
-  ATKValue: 3
-- Enemy: 陆行水本真蕈
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BosaciusATK
-  ATKValue: 3
-- Enemy: 陆行岩本真蕈
-  HPScale: FungusHP
-  HPValue: 2.8
-  ATKScale: BosaciusATK
-  ATKValue: 2.4
-- Enemy: 火深渊法师
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.5
-- Enemy: 水深渊法师
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 3
-- Enemy: 雷深渊法师
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 3.75
-- Enemy: 冰深渊法师
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 3
-- Enemy: 深渊使徒·激流
-  HPScale: HilichurlHP
-  HPValue: 8
-  ATKScale: BoarATK
-  ATKValue: 4.5
-- Enemy: 深渊咏者·紫电
-  HPScale: HilichurlHP
-  HPValue: 8
-  ATKScale: BoarATK
-  ATKValue: 4.5
-- Enemy: 深渊咏者·渊火
-  HPScale: HilichurlHP
-  HPValue: 8
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 嗜雷·兽境猎犬
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 3.2
-- Enemy: 嗜雷·兽境幼兽
-  HPScale: FungusHP
-  HPValue: 2.4
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 嗜岩·兽境猎犬
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 3.2
-- Enemy: 嗜岩·兽境幼兽
-  HPScale: FungusHP
-  HPValue: 2.4
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 黯色空壳·旗令
-  HPScale: FungusHP
-  HPValue: 5
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 黯色空壳·破阵
-  HPScale: FungusHP
-  HPValue: 6
-  ATKScale: BosaciusATK
-  ATKValue: 3
-- Enemy: 黯色空壳·近卫
-  HPScale: FungusHP
-  HPValue: 4
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 黑蛇骑士·斩风之剑
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 幻形豕兽·水
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 幻形游禽·水
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 幻形蛙·水
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 幻形鹤·水
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 幻形飞鸢·水
-  HPScale: HilichurlHP
-  HPValue: 0.8
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 幻形雀·水
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 幻形花鼠·水
-  HPScale: HilichurlHP
-  HPValue: 1.4
-  ATKScale: BosaciusATK
-  ATKValue: 3
-- Enemy: 幻形蟹·水
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 浮舍残像
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 1
-- Enemy: 落武者·咒雷
-  HPScale: FungusHP
-  HPValue: 4.8
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 落武者·祟炎
-  HPScale: FungusHP
-  HPValue: 4.8
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 厄灵·岩之魔蜥
-  HPScale: FungusHP
-  HPValue: 1.5
-  ATKScale: BosaciusATK
-  ATKValue: 3.2
-- Enemy: 厄灵·风之魔鸢
-  HPScale: FungusHP
-  HPValue: 1.32
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 帽子刀子狗子
-  HPScale: FungusHP
-  HPValue: 60
-  ATKScale: BoarATK
-  ATKValue: 6
-- Enemy: 影狼丸
-  HPScale: FungusHP
-  HPValue: 15
-  ATKScale: BoarATK
-  ATKValue: 5
-- Enemy: 一心传·名刀
-  HPScale: FungusHP
-  HPValue: 6.4
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 振刀1太郎丸
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BoarATK
-  ATKValue: 2
-- Enemy: 无留陀的化身
-  HPScale: HilichurlHP
-  HPValue: 3
-  ATKScale: BoarATK
-  ATKValue: 8
-- Enemy: 瘴晦瘤
-  HPScale: HilichurlHP
-  HPValue: 15
-  ATKScale: BoarATK
-  ATKValue: 0.4
-- Enemy: 防卫机关
-  HPScale: HilichurlHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 0.9
-- Enemy: 蜘蛛
-  HPScale: HilichurlHP
-  HPValue: 0.333
-  ATKScale: BoarATK
-  ATKValue: 0.6
-- Enemy: 野猪
-  HPScale: HilichurlHP
-  HPValue: 0.00014
-  ATKScale: BoarATK
-  ATKValue: 1
-- Enemy: 雪猪
-  HPScale: HilichurlHP
-  HPValue: 0.00014
-  ATKScale: BoarATK
-  ATKValue: 1
-- Enemy: 蕈猪
-  HPScale: HilichurlHP
-  HPValue: 0.00014
-  ATKScale: BoarATK
-  ATKValue: 1
-- Enemy: 长鬓虎
-  HPScale: FungusHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 棘冠鳄
-  HPScale: FungusHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 0.8
-- Enemy: 秃鹫
-  HPScale: FungusHP
-  HPValue: 0.6
-  ATKScale: BoarATK
-  ATKValue: 1
-- Enemy: 毒蝎
-  HPScale: FungusHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 1.2
-- Enemy: 驮兽野生小
-  HPScale: FungusHP
-  HPValue: 0.2
-  ATKScale: BoarATK
-  ATKValue: 1
-- Enemy: 驮兽野生中
-  HPScale: FungusHP
-  HPValue: 0.6
-  ATKScale: BoarATK
-  ATKValue: 1.4
-- Enemy: 驮兽野生大
-  HPScale: FungusHP
-  HPValue: 1
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 驮兽驯服大
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 驮兽驯服中
-  HPScale: FungusHP
-  HPValue: 1.2
-  ATKScale: BoarATK
-  ATKValue: 1.4
-- Enemy: 驮兽驯服小
-  HPScale: FungusHP
-  HPValue: 0.8
-  ATKScale: BoarATK
-  ATKValue: 1
-- Enemy: 水滴I
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 2.8
-- Enemy: 水滴II
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 2.8
-- Enemy: 水滴III
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 2.8
-- Enemy: 水滴IV
-  HPScale: HilichurlHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 2.8
-- Enemy: 遗迹守卫靶子
-  HPScale: HilichurlHP
-  HPValue: 1800
-  ATKScale: BoarATK
-  ATKValue: 1.8
-- Enemy: 敌方浮游水蕈兽
-  HPScale: FungusHP
-  HPValue: 1.2
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方浮游草蕈兽
-  HPScale: FungusHP
-  HPValue: 1.2
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方浮游风蕈兽
-  HPScale: FungusHP
-  HPValue: 1.2
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方旋转雷蕈兽
-  HPScale: FungusHP
-  HPValue: 1.5
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方旋转冰蕈兽
-  HPScale: FungusHP
-  HPValue: 1.5
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方旋转火蕈兽
-  HPScale: FungusHP
-  HPValue: 2.24
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方伸缩岩蕈兽
-  HPScale: FungusHP
-  HPValue: 3.2
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方伸缩火蕈兽
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方伸缩风蕈兽
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 敌方伸缩雷蕈兽
-  HPScale: FungusHP
-  HPValue: 1.6
-  ATKScale: BoarATK
-  ATKValue: 3.456
-- Enemy: 哲伯莱赫-白日鸣雷友方
-  HPScale: BoarATK
-  HPValue: 360
-  ATKScale: FungusHP
-  ATKValue: 0.1
-- Enemy: 婕德-沙中净水友方
-  HPScale: BoarATK
-  HPValue: 360
-  ATKScale: FungusHP
-  ATKValue: 0.1
-- Enemy: 拉娜
-  HPScale: BoarATK
-  HPValue: 180
-  ATKScale: HilichurlHP
-  ATKValue: 1
-- Enemy: 友方长鬓虎
-  HPScale: BoarATK
-  HPValue: 180
-  ATKScale: HilichurlHP
-  ATKValue: 1
-- Enemy: 哈巴奇-刀舞者友方
-  HPScale: FungusHP
-  HPValue: 3
-  ATKScale: HilichurlHP
-  ATKValue: 1.62
-- Enemy: 友方浮游水蕈兽
-  HPScale: FungusHP
-  HPValue: 1.5
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方浮游草蕈兽
-  HPScale: FungusHP
-  HPValue: 1.5
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方浮游风蕈兽
-  HPScale: FungusHP
-  HPValue: 1.5
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方旋转雷蕈兽
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方旋转冰蕈兽
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方旋转火蕈兽
-  HPScale: FungusHP
-  HPValue: 4
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方伸缩岩蕈兽
-  HPScale: FungusHP
-  HPValue: 4
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方伸缩火蕈兽
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方伸缩风蕈兽
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 友方伸缩雷蕈兽
-  HPScale: FungusHP
-  HPValue: 2
-  ATKScale: BoarATK
-  ATKValue: 4.32
-- Enemy: 镀金旅团·炽沙叙事人
-  HPScale: FungusHP
-  HPValue: 4.4
-  ATKScale: BosaciusATK
-  ATKValue: 5
-- Enemy: 镀金旅团·叶轮舞者
-  HPScale: FungusHP
-  HPValue: 5
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 厄灵·炎之魔蝎
-  HPScale: FungusHP
-  HPValue: 1.32
-  ATKScale: BosaciusATK
-  ATKValue: 4
-- Enemy: 厄灵·草之灵蛇
-  HPScale: FungusHP
-  HPValue: 1.5
-  ATKScale: BosaciusATK
-  ATKValue: 3.2
-- Enemy: 赤炎·圣骸赤鹫
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 苍雷·圣骸毒蝎
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 驭风·圣骸飞蛇
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 6
-- Enemy: 飞蛇
-  HPScale: HilichurlHP
-  HPValue: 0.6
-  ATKScale: BoarATK
-  ATKValue: 0.8
-- Enemy: 盗宝团·溜溜2
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 3
-- Enemy: 盗宝团·大姐头2
-  HPScale: FungusHP
-  HPValue: 7
-  ATKScale: BosaciusATK
-  ATKValue: 3
-- Enemy: 盗宝团·卡门2
-  HPScale: FungusHP
-  HPValue: 8
-  ATKScale: BosaciusATK
-  ATKValue: 2.4
-- Enemy: 振刀1野伏众
-  HPScale: FungusHP
-  HPValue: 5.6
-  ATKScale: BosaciusATK
-  ATKValue: 0.8
-- Enemy: 振刀1寄骑武士
-  HPScale: FungusHP
-  HPValue: 6.4
-  ATKScale: BosaciusATK
-  ATKValue: 1.2
-- Enemy: 振刀1雷海乱鬼
-  HPScale: FungusHP
-  HPValue: 7.6
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 振刀2珊瑚宫众
-  HPScale: FungusHP
-  HPValue: 7.9248
-  ATKScale: BosaciusATK
-  ATKValue: 1.6
-- Enemy: 振刀2寄骑武士
-  HPScale: FungusHP
-  HPValue: 9.0562
-  ATKScale: BosaciusATK
-  ATKValue: 1.2
-- Enemy: 振刀2火海乱鬼
-  HPScale: FungusHP
-  HPValue: 10.1036
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 振刀2太郎丸
-  HPScale: FungusHP
-  HPValue: 8.6602
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 振刀2魔岩役使
-  HPScale: FungusHP
-  HPValue: 10.1884
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 振刀2魔偶剑鬼
-  HPScale: FungusHP
-  HPValue: 11.7168
-  ATKScale: BosaciusATK
-  ATKValue: 2
-- Enemy: 塔德菈-灵风猎手友方
-  HPScale: BoarATK
-  HPValue: 360
-  ATKScale: FungusHP
-  ATKValue: 0.1
-- Enemy: 阿萨里格-魔岩役使友方
-  HPScale: BoarATK
-  HPValue: 360
-  ATKScale: FungusHP
-  ATKValue: 0.1
-- Enemy: 元能构装靶子
-  HPScale: HilichurlHP
-  HPValue: 1800
-  ATKScale: BoarATK
-  ATKValue: 1.8
+Enemy:
+  - Enemy: 无相之火
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 无相之水
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: BoarATK
+    ATKValue: 9
+  - Enemy: 无相之雷
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 至纯的无相之雷
+    HPScale: HilichurlHP
+    HPValue: 11
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 无相之风
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 至纯的无相之风
+    HPScale: HilichurlHP
+    HPValue: 11
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 无相之岩
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 至纯的无相之岩
+    HPScale: HilichurlHP
+    HPValue: 11
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 无相之冰
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 急冻树
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 爆炎树
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 掣电树
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 古岩龙蜥
+    HPScale: HilichurlHP
+    HPValue: 30
+    ATKScale: BoarATK
+    ATKValue: 8
+  - Enemy: 翠翎恐蕈
+    HPScale: FungusHP
+    HPValue: 14
+    ATKScale: BosaciusATK
+    ATKValue: 7
+  - Enemy: 深海龙蜥之群
+    HPScale: FungusHP
+    HPValue: 24
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 恒常机关阵列
+    HPScale: FungusHP
+    HPValue: 16
+    ATKScale: BosaciusATK
+    ATKValue: 7.2
+  - Enemy: 遗迹巨蛇
+    HPScale: FungusHP
+    HPValue: 16
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 纯水精灵(本体)
+    HPScale: HilichurlHP
+    HPValue: 14
+    ATKScale: BoarATK
+    ATKValue: 9
+  - Enemy: 雷音权现
+    HPScale: FungusHP
+    HPValue: 14
+    ATKScale: BosaciusATK
+    ATKValue: 7.2
+  - Enemy: 黄金王兽
+    HPScale: FungusHP
+    HPValue: 12
+    ATKScale: BosaciusATK
+    ATKValue: 8
+  - Enemy: 魔偶剑鬼
+    HPScale: HilichurlHP
+    HPValue: 20
+    ATKScale: BosaciusATK
+    ATKValue: 8
+  - Enemy: 跋掣(其一)
+    HPScale: FungusHP
+    HPValue: 18
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 魔偶剑鬼·孤风
+    HPScale: HilichurlHP
+    HPValue: 16
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 魔偶剑鬼·霜驰
+    HPScale: HilichurlHP
+    HPValue: 16
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 魔偶剑鬼·凶面
+    HPScale: HilichurlHP
+    HPValue: 16
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 魔花
+    HPScale: FungusHP
+    HPValue: 11
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 复苏的急冻树
+    HPScale: HilichurlHP
+    HPValue: 11
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 特瓦林
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 安德留斯
+    HPScale: HilichurlHP
+    HPValue: 18
+    ATKScale: BoarATK
+    ATKValue: 7.2
+  - Enemy: 公子(第一阶段)
+    HPScale: HilichurlHP
+    HPValue: 6
+    ATKScale: BoarATK
+    ATKValue: 10
+  - Enemy: 公子(第二阶段)
+    HPScale: HilichurlHP
+    HPValue: 6
+    ATKScale: BoarATK
+    ATKValue: 10
+  - Enemy: 公子(第三阶段)
+    HPScale: HilichurlHP
+    HPValue: 10
+    ATKScale: BoarATK
+    ATKValue: 14
+  - Enemy: 若陀龙王(第一阶段)
+    HPScale: HilichurlHP
+    HPValue: 36
+    ATKScale: BosaciusATK
+    ATKValue: 9
+  - Enemy: 若陀龙王(第二阶段)
+    HPScale: HilichurlHP
+    HPValue: 36
+    ATKScale: BosaciusATK
+    ATKValue: 9
+  - Enemy: 若陀龙王(第三阶段)
+    HPScale: HilichurlHP
+    HPValue: 36
+    ATKScale: BosaciusATK
+    ATKValue: 9
+  - Enemy: 女士(第一阶段)
+    HPScale: FungusHP
+    HPValue: 10
+    ATKScale: BoarATK
+    ATKValue: 4.8
+  - Enemy: 女士(第二阶段)
+    HPScale: FungusHP
+    HPValue: 20
+    ATKScale: BoarATK
+    ATKValue: 4.8
+  - Enemy: 祸津御建鸣神命
+    HPScale: FungusHP
+    HPValue: 40
+    ATKScale: BosaciusATK
+    ATKValue: 12
+  - Enemy: 纯水精灵
+    HPScale: HilichurlHP
+    HPValue: 10
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 大雪猪王
+    HPScale: HilichurlHP
+    HPValue: 11
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 魔神任务雷电将军
+    HPScale: FungusHP
+    HPValue: 40
+    ATKScale: BoarATK
+    ATKValue: 9
+  - Enemy: 半永恒统辖矩阵
+    HPScale: FungusHP
+    HPValue: 16
+    ATKScale: BosaciusATK
+    ATKValue: 6.6
+  - Enemy: 兆载永劫龙兽
+    HPScale: FungusHP
+    HPValue: 17
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 无相之草
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 七叶寂照秘密主(第一阶段)
+    HPScale: FungusHP
+    HPValue: 20
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 七叶寂照秘密主(第二阶段)
+    HPScale: FungusHP
+    HPValue: 18
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 活动无相之水
+    HPScale: FungusHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 活动无相之火
+    HPScale: FungusHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 活动无相之冰
+    HPScale: FungusHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 活动无相之草
+    HPScale: FungusHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 风蚀沙虫
+    HPScale: FungusHP
+    HPValue: 14
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 遗迹巡弋者
+    HPScale: FungusHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 4.2
+  - Enemy: 遗迹歼击者
+    HPScale: FungusHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 4.2
+  - Enemy: 遗迹侦查者
+    HPScale: FungusHP
+    HPValue: 4.2
+    ATKScale: BoarATK
+    ATKValue: 3.9
+  - Enemy: 遗迹防卫者
+    HPScale: FungusHP
+    HPValue: 4.2
+    ATKScale: BoarATK
+    ATKValue: 4.5
+  - Enemy: 元能构装体·勘探机
+    HPScale: FungusHP
+    HPValue: 3.4
+    ATKScale: BosaciusATK
+    ATKValue: 3.6
+  - Enemy: 元能构装体·力场发生器
+    HPScale: FungusHP
+    HPValue: 3.4
+    ATKScale: BosaciusATK
+    ATKValue: 3.6
+  - Enemy: 元能构装体·重塑仪
+    HPScale: FungusHP
+    HPValue: 3.4
+    ATKScale: BosaciusATK
+    ATKValue: 3.6
+  - Enemy: 遗迹守卫
+    HPScale: HilichurlHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 4.8
+  - Enemy: 遗迹猎者
+    HPScale: HilichurlHP
+    HPValue: 6
+    ATKScale: BoarATK
+    ATKValue: 14
+  - Enemy: 遗迹重机
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: BoarATK
+    ATKValue: 7
+  - Enemy: 遗迹龙兽·空巡
+    HPScale: FungusHP
+    HPValue: 5
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 遗迹龙兽·地巡
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 火史莱姆
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 冰史莱姆
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 水史莱姆
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 草史莱姆
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 岩史莱姆
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 风史莱姆
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 雷史莱姆
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 大型火史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.2
+  - Enemy: 大型冰史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.2
+  - Enemy: 大型水史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 2.8
+  - Enemy: 大型草史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 2.8
+  - Enemy: 大型风史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 2.8
+  - Enemy: 大型岩史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.2
+  - Enemy: 大型雷史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.2
+  - Enemy: 变异雷史莱姆
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.2
+  - Enemy: 火飘浮灵
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.75
+  - Enemy: 冰飘浮灵
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.75
+  - Enemy: 水飘浮灵
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.75
+  - Enemy: 草飘浮灵
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.4
+  - Enemy: 雷飘浮灵
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 2.8
+  - Enemy: 风飘浮灵
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.75
+  - Enemy: 岩飘浮灵
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.75
+  - Enemy: 狂风之核
+    HPScale: FungusHP
+    HPValue: 5
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 打手丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 冲锋丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 爆弹丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 3.6
+  - Enemy: 冰弹丘丘人
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.9
+  - Enemy: 雷弹丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 木盾丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 冰盾丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 岩盾丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 射手丘丘人
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.9
+  - Enemy: 火箭丘丘人
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 1.35
+  - Enemy: 冰箭丘丘人
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.9
+  - Enemy: 雷箭丘丘人
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 1.35
+  - Enemy: 奇怪的丘丘人
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 木盾丘丘暴徒
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2.4
+  - Enemy: 岩盾丘丘暴徒
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2.4
+  - Enemy: 冰盾丘丘暴徒
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2.4
+  - Enemy: 火斧丘丘暴徒
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 4.8
+  - Enemy: 雷斧丘丘暴徒
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 4.8
+  - Enemy: 丘丘雷兜王
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: BoarATK
+    ATKValue: 12
+  - Enemy: 丘丘霜铠王
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: BoarATK
+    ATKValue: 12
+  - Enemy: 丘丘岩盔王
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: BoarATK
+    ATKValue: 9
+  - Enemy: 风丘丘萨满
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 雷丘丘萨满
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 岩丘丘萨满
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 水丘丘萨满
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 冰丘丘萨满
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 草丘丘萨满
+    HPScale: HilichurlHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 盗宝团·溜溜1
+    HPScale: HilichurlHP
+    HPValue: 2.4
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 盗宝团·大姐头1
+    HPScale: HilichurlHP
+    HPValue: 2.4
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 盗宝团·瓦伦斯坦
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2.4
+  - Enemy: 盗宝团·卡门1
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 盗宝团·怪鸟
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 盗宝团·火之药剂师
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·雷之药剂师
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·水之药剂师
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·冰之药剂师
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·掘墓者
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·海上男儿
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·拳术家
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·粉碎者
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 盗宝团·神射手
+    HPScale: HilichurlHP
+    HPValue: 1.2
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 盗宝团·斥候
+    HPScale: HilichurlHP
+    HPValue: 1.2
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 盗宝团·杂工
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 镀金旅团·刀舞者
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 镀金旅团·阵前斧手
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 镀金旅团·破阵者
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 镀金旅团·机弩兵
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 镀金旅团·鸦喙戟手
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 镀金旅团·沙中净水
+    HPScale: FungusHP
+    HPValue: 3.6
+    ATKScale: BosaciusATK
+    ATKValue: 3.2
+  - Enemy: 镀金旅团·炽阳凝冰
+    HPScale: FungusHP
+    HPValue: 3.6
+    ATKScale: BosaciusATK
+    ATKValue: 3.2
+  - Enemy: 镀金旅团·白日鸣雷
+    HPScale: FungusHP
+    HPValue: 4
+    ATKScale: BosaciusATK
+    ATKValue: 2.4
+  - Enemy: 镀金旅团·灵风猎手
+    HPScale: FungusHP
+    HPValue: 4.4
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 镀金旅团·魔岩役使
+    HPScale: FungusHP
+    HPValue: 5
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 千岩军士兵
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 千岩军教头
+    HPScale: HilichurlHP
+    HPValue: 2.4
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 野伏众·火付番
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 野伏众·机巧番
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 野伏众·阵刀番
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 海乱鬼·雷腾
+    HPScale: FungusHP
+    HPValue: 4.8
+    ATKScale: BosaciusATK
+    ATKValue: 7.5
+  - Enemy: 海乱鬼·炎威
+    HPScale: FungusHP
+    HPValue: 4.8
+    ATKScale: BosaciusATK
+    ATKValue: 7.5
+  - Enemy: 幕府足轻
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 幕府足轻头
+    HPScale: HilichurlHP
+    HPValue: 2.4
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 珊瑚宫众
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.6
+  - Enemy: 寄骑武士
+    HPScale: FungusHP
+    HPValue: 3.6
+    ATKScale: BoarATK
+    ATKValue: 2.4
+  - Enemy: 愚人众先遣队·火铳游击兵
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 4.5
+  - Enemy: 愚人众先遣队·岩使游击兵
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 愚人众先遣队·水铳重卫士
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 愚人众先遣队·冰铳重卫士
+    HPScale: HilichurlHP
+    HPValue: 4
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 愚人众先遣队·雷锤前锋军
+    HPScale: HilichurlHP
+    HPValue: 4
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 愚人众先遣队·风拳前锋军
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 愚人众·火之债务处理人
+    HPScale: HilichurlHP
+    HPValue: 5
+    ATKScale: BoarATK
+    ATKValue: 8
+  - Enemy: 愚人众·雷萤术士
+    HPScale: HilichurlHP
+    HPValue: 5
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 愚人众·冰萤术士
+    HPScale: HilichurlHP
+    HPValue: 5
+    ATKScale: BoarATK
+    ATKValue: 4
+  - Enemy: 愚人众·藏镜仕女
+    HPScale: FungusHP
+    HPValue: 6
+    ATKScale: BoarATK
+    ATKValue: 2.4
+  - Enemy: 岩龙蜥
+    HPScale: HilichurlHP
+    HPValue: 8
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 幼岩龙蜥
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 炽焰骗骗花
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 冰霜骗骗花
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 电气骗骗花
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 深海龙蜥·原种
+    HPScale: FungusHP
+    HPValue: 8
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 深海龙蜥幼体·原种
+    HPScale: FungusHP
+    HPValue: 4
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 深海龙蜥·吞雷
+    HPScale: FungusHP
+    HPValue: 12
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 深海龙蜥幼体·吞雷
+    HPScale: FungusHP
+    HPValue: 4
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 深海龙蜥·啮冰
+    HPScale: FungusHP
+    HPValue: 12
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 深海龙蜥幼体·啮冰
+    HPScale: FungusHP
+    HPValue: 4
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 水萤
+    HPScale: HilichurlHP
+    HPValue: 0.5
+    ATKScale: BoarATK
+    ATKValue: 0.8
+  - Enemy: 冰萤
+    HPScale: HilichurlHP
+    HPValue: 0.5
+    ATKScale: BoarATK
+    ATKValue: 0.8
+  - Enemy: 雷萤
+    HPScale: HilichurlHP
+    HPValue: 0.5
+    ATKScale: BoarATK
+    ATKValue: 0.8
+  - Enemy: 浮游水蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 浮游草蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 浮游风蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 旋转雷蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 旋转冰蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 旋转火蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 伸缩岩蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 伸缩风蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 伸缩火蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 伸缩雷蕈兽
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 1.8
+  - Enemy: 有翼冰本真蕈
+    HPScale: FungusHP
+    HPValue: 2.8
+    ATKScale: BosaciusATK
+    ATKValue: 2.4
+  - Enemy: 有翼草本真蕈
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BosaciusATK
+    ATKValue: 3
+  - Enemy: 陆行水本真蕈
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BosaciusATK
+    ATKValue: 3
+  - Enemy: 陆行岩本真蕈
+    HPScale: FungusHP
+    HPValue: 2.8
+    ATKScale: BosaciusATK
+    ATKValue: 2.4
+  - Enemy: 火深渊法师
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.5
+  - Enemy: 水深渊法师
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 雷深渊法师
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 3.75
+  - Enemy: 冰深渊法师
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 深渊使徒·激流
+    HPScale: HilichurlHP
+    HPValue: 8
+    ATKScale: BoarATK
+    ATKValue: 4.5
+  - Enemy: 深渊咏者·紫电
+    HPScale: HilichurlHP
+    HPValue: 8
+    ATKScale: BoarATK
+    ATKValue: 4.5
+  - Enemy: 深渊咏者·渊火
+    HPScale: HilichurlHP
+    HPValue: 8
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 嗜雷·兽境猎犬
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 3.2
+  - Enemy: 嗜雷·兽境幼兽
+    HPScale: FungusHP
+    HPValue: 2.4
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 嗜岩·兽境猎犬
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 3.2
+  - Enemy: 嗜岩·兽境幼兽
+    HPScale: FungusHP
+    HPValue: 2.4
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 黯色空壳·旗令
+    HPScale: FungusHP
+    HPValue: 5
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 黯色空壳·破阵
+    HPScale: FungusHP
+    HPValue: 6
+    ATKScale: BosaciusATK
+    ATKValue: 3
+  - Enemy: 黯色空壳·近卫
+    HPScale: FungusHP
+    HPValue: 4
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 黑蛇骑士·斩风之剑
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 幻形豕兽·水
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 幻形游禽·水
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 幻形蛙·水
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 幻形鹤·水
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 幻形飞鸢·水
+    HPScale: HilichurlHP
+    HPValue: 0.8
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 幻形雀·水
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 幻形花鼠·水
+    HPScale: HilichurlHP
+    HPValue: 1.4
+    ATKScale: BosaciusATK
+    ATKValue: 3
+  - Enemy: 幻形蟹·水
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 浮舍残像
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 1
+  - Enemy: 落武者·咒雷
+    HPScale: FungusHP
+    HPValue: 4.8
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 落武者·祟炎
+    HPScale: FungusHP
+    HPValue: 4.8
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 厄灵·岩之魔蜥
+    HPScale: FungusHP
+    HPValue: 1.5
+    ATKScale: BosaciusATK
+    ATKValue: 3.2
+  - Enemy: 厄灵·风之魔鸢
+    HPScale: FungusHP
+    HPValue: 1.32
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 帽子刀子狗子
+    HPScale: FungusHP
+    HPValue: 60
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 影狼丸
+    HPScale: FungusHP
+    HPValue: 15
+    ATKScale: BoarATK
+    ATKValue: 5
+  - Enemy: 一心传·名刀
+    HPScale: FungusHP
+    HPValue: 6.4
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 振刀1太郎丸
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 无留陀的化身
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 8
+  - Enemy: 瘴晦瘤
+    HPScale: HilichurlHP
+    HPValue: 15
+    ATKScale: BoarATK
+    ATKValue: 0.4
+  - Enemy: 防卫机关
+    HPScale: HilichurlHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 0.9
+  - Enemy: 蜘蛛
+    HPScale: HilichurlHP
+    HPValue: 0.333
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 野猪
+    HPScale: None
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 雪猪
+    HPScale: None
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 蕈猪
+    HPScale: None
+    HPValue: 3
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 长鬓虎
+    HPScale: FungusHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 棘冠鳄
+    HPScale: FungusHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 0.8
+  - Enemy: 秃鹫
+    HPScale: FungusHP
+    HPValue: 0.6
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 毒蝎
+    HPScale: FungusHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 1.2
+  - Enemy: 驮兽野生小
+    HPScale: FungusHP
+    HPValue: 0.2
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 驮兽野生中
+    HPScale: FungusHP
+    HPValue: 0.6
+    ATKScale: BoarATK
+    ATKValue: 1.4
+  - Enemy: 驮兽野生大
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 驮兽驯服大
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 驮兽驯服中
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BoarATK
+    ATKValue: 1.4
+  - Enemy: 驮兽驯服小
+    HPScale: FungusHP
+    HPValue: 0.8
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 水滴I
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 2.8
+  - Enemy: 水滴II
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 2.8
+  - Enemy: 水滴III
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 2.8
+  - Enemy: 水滴IV
+    HPScale: HilichurlHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 2.8
+  - Enemy: 遗迹守卫靶子
+    HPScale: HilichurlHP
+    HPValue: 1800
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 敌方浮游水蕈兽
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方浮游草蕈兽
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方浮游风蕈兽
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方旋转雷蕈兽
+    HPScale: FungusHP
+    HPValue: 1.5
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方旋转冰蕈兽
+    HPScale: FungusHP
+    HPValue: 1.5
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方旋转火蕈兽
+    HPScale: FungusHP
+    HPValue: 2.24
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方伸缩岩蕈兽
+    HPScale: FungusHP
+    HPValue: 3.2
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方伸缩火蕈兽
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方伸缩风蕈兽
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 敌方伸缩雷蕈兽
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BoarATK
+    ATKValue: 3.456
+  - Enemy: 哲伯莱勒-白日鸣雷友方
+    HPScale: BoarATK
+    HPValue: 360
+    ATKScale: HilichurlHP
+    ATKValue: 0.1
+  - Enemy: 婕德-沙中净水友方
+    HPScale: BoarATK
+    HPValue: 360
+    ATKScale: HilichurlHP
+    ATKValue: 0.1
+  - Enemy: 拉娜
+    HPScale: BoarATK
+    HPValue: 180
+    ATKScale: HilichurlHP
+    ATKValue: 1
+  - Enemy: 友方长鬓虎
+    HPScale: BoarATK
+    HPValue: 180
+    ATKScale: HilichurlHP
+    ATKValue: 1
+  - Enemy: 哈巴奇-刀舞者友方
+    HPScale: FungusHP
+    HPValue: 3
+    ATKScale: HilichurlHP
+    ATKValue: 1.62
+  - Enemy: 友方浮游水蕈兽
+    HPScale: FungusHP
+    HPValue: 1.5
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方浮游草蕈兽
+    HPScale: FungusHP
+    HPValue: 1.5
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方浮游风蕈兽
+    HPScale: FungusHP
+    HPValue: 1.5
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方旋转雷蕈兽
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方旋转冰蕈兽
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方旋转火蕈兽
+    HPScale: FungusHP
+    HPValue: 4
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方伸缩岩蕈兽
+    HPScale: FungusHP
+    HPValue: 4
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方伸缩火蕈兽
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方伸缩风蕈兽
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 友方伸缩雷蕈兽
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BoarATK
+    ATKValue: 4.32
+  - Enemy: 镀金旅团·炽沙叙事人
+    HPScale: FungusHP
+    HPValue: 4.4
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 镀金旅团·叶轮舞者
+    HPScale: FungusHP
+    HPValue: 5
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 厄灵·炎之魔蝎
+    HPScale: FungusHP
+    HPValue: 1.32
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 厄灵·草之灵蛇
+    HPScale: FungusHP
+    HPValue: 1.5
+    ATKScale: BosaciusATK
+    ATKValue: 3.2
+  - Enemy: 赤炎·圣骸赤鹫
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 苍雷·圣骸毒蝎
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 驭风·圣骸飞蛇
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 飞蛇
+    HPScale: HilichurlHP
+    HPValue: 0.6
+    ATKScale: BoarATK
+    ATKValue: 0.8
+  - Enemy: 盗宝团·溜溜2
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 3
+  - Enemy: 盗宝团·大姐头2
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 3
+  - Enemy: 盗宝团·卡门2
+    HPScale: FungusHP
+    HPValue: 8
+    ATKScale: BosaciusATK
+    ATKValue: 2.4
+  - Enemy: 振刀1野伏众
+    HPScale: FungusHP
+    HPValue: 5.6
+    ATKScale: BosaciusATK
+    ATKValue: 0.8
+  - Enemy: 振刀1寄骑武士
+    HPScale: FungusHP
+    HPValue: 6.4
+    ATKScale: BosaciusATK
+    ATKValue: 1.2
+  - Enemy: 振刀1雷海乱鬼
+    HPScale: FungusHP
+    HPValue: 7.6
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 振刀2珊瑚宫众
+    HPScale: FungusHP
+    HPValue: 7.9248
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 振刀2寄骑武士
+    HPScale: FungusHP
+    HPValue: 9.0562
+    ATKScale: BosaciusATK
+    ATKValue: 1.2
+  - Enemy: 振刀2火海乱鬼
+    HPScale: FungusHP
+    HPValue: 10.1036
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 振刀2太郎丸
+    HPScale: FungusHP
+    HPValue: 8.6602
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 振刀2魔岩役使
+    HPScale: FungusHP
+    HPValue: 10.1884
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 振刀2魔偶剑鬼
+    HPScale: FungusHP
+    HPValue: 11.7168
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 塔德菈-灵风猎手友方
+    HPScale: BoarATK
+    HPValue: 360
+    ATKScale: HilichurlHP
+    ATKValue: 0.1
+  - Enemy: 阿萨里格-魔岩役使友方
+    HPScale: BoarATK
+    HPValue: 360
+    ATKScale: HilichurlHP
+    ATKValue: 0.1
+  - Enemy: 元能构装靶子
+    HPScale: HilichurlHP
+    HPValue: 1800
+    ATKScale: BoarATK
+    ATKValue: 1.8
+  - Enemy: 活动幻形豕兽·水
+    HPScale: HilichurlHP
+    HPValue: 3.4
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 活动幻形花鼠·水
+    HPScale: HilichurlHP
+    HPValue: 3.4
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 活动幻形蟹·水
+    HPScale: HilichurlHP
+    HPValue: 0.6
+    ATKScale: BoarATK
+    ATKValue: 2
+  - Enemy: 遗迹重机特异体
+    HPScale: HilichurlHP
+    HPValue: 14
+    ATKScale: BoarATK
+    ATKValue: 7
+  - Enemy: 秋野防灾-野猪
+    HPScale: HilichurlHP
+    HPValue: 0.128
+    ATKScale: BoarATK
+    ATKValue: 0.6
+  - Enemy: 秋野防灾-野猪-小
+    HPScale: HilichurlHP
+    HPValue: 0.037
+    ATKScale: BoarATK
+    ATKValue: 0.2
+  - Enemy: 秋野防灾-雪猪
+    HPScale: HilichurlHP
+    HPValue: 0.983
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 秋野防灾-大雪猪王
+    HPScale: HilichurlHP
+    HPValue: 9.832
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 镀金旅团·无武器
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 镀金旅团NPC士兵
+    HPScale: FungusHP
+    HPValue: 1.2
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 镀金旅团NPC头子
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 1.6
+  - Enemy: 魔花-剧情
+    HPScale: FungusHP
+    HPValue: 9
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Enemy: 公子(第一阶段)-剧情
+    HPScale: HilichurlHP
+    HPValue: 6
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 公子(第二阶段)-剧情
+    HPScale: HilichurlHP
+    HPValue: 6
+    ATKScale: BoarATK
+    ATKValue: 6
+  - Enemy: 公子(第三阶段)-剧情
+    HPScale: HilichurlHP
+    HPValue: 10
+    ATKScale: BoarATK
+    ATKValue: 8
+  - Enemy: 女士(第一阶段)-剧情
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 4.8
+  - Enemy: 女士(第二阶段)-剧情
+    HPScale: FungusHP
+    HPValue: 14
+    ATKScale: BosaciusATK
+    ATKValue: 4.8
+  - Enemy: 祸津御建鸣神命-剧情初战
+    HPScale: FungusHP
+    HPValue: 3.6
+    ATKScale: BosaciusATK
+    ATKValue: 4.8
+  - Enemy: 祸津御建鸣神命-剧情正战
+    HPScale: FungusHP
+    HPValue: 18
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 七叶寂照秘密主(第一阶段)-剧情
+    HPScale: FungusHP
+    HPValue: 10
+    ATKScale: BosaciusATK
+    ATKValue: 2
+  - Enemy: 七叶寂照秘密主(第一阶段)-剧情间章
+    HPScale: FungusHP
+    HPValue: 16
+    ATKScale: BosaciusATK
+    ATKValue: 2.5
+  - Enemy: 七叶寂照秘密主(第二阶段)-剧情90s
+    HPScale: FungusHP
+    HPValue: 18
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 七叶寂照秘密主(第二阶段)-剧情
+    HPScale: FungusHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 2.4
+  - Enemy: 特瓦林-剧情
+    HPScale: FungusHP
+    HPValue: 10
+    ATKScale: BosaciusATK
+    ATKValue: 3.4
+  - Enemy: 安德留斯-剧情
+    HPScale: HilichurlHP
+    HPValue: 18
+    ATKScale: BoarATK
+    ATKValue: 7.2
+  - Enemy: 若陀龙王-剧情
+    HPScale: HilichurlHP
+    HPValue: 36
+    ATKScale: BosaciusATK
+    ATKValue: 9
+Gadget:
+  - Gadget: 菲莉吉丝
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 地脉镇石-深境螺旋
+    HPScale: BoarATK
+    HPValue: 90
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 地脉镇石-每日委托
+    HPScale: BoarATK
+    HPValue: 36
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 雷鸟栖木
+    HPScale: HilichurlHP
+    HPValue: 5
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 古阵机关1
+    HPScale: HilichurlHP
+    HPValue: 3
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 古阵机关2
+    HPScale: HilichurlHP
+    HPValue: 6
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 古阵机关3
+    HPScale: HilichurlHP
+    HPValue: 9
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人水盆
+    HPScale: HilichurlHP
+    HPValue: 1.47232
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人木桩
+    HPScale: None
+    HPValue: 800
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人箭靶
+    HPScale: None
+    HPValue: 800
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人帐篷-高
+    HPScale: HilichurlHP
+    HPValue: 0.5
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人帐篷-低
+    HPScale: HilichurlHP
+    HPValue: 0.5
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人路障
+    HPScale: HilichurlHP
+    HPValue: 1.47232
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人带刺木板
+    HPScale: None
+    HPValue: 800
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人带刺长木板
+    HPScale: HilichurlHP
+    HPValue: 2.64
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人哨塔
+    HPScale: HilichurlHP
+    HPValue: 0.9
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 丘丘人围墙
+    HPScale: None
+    HPValue: 800
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 货物堆
+    HPScale: None
+    HPValue: 800
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 货物破车
+    HPScale: None
+    HPValue: 800
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 海上丘丘人平台
+    HPScale: None
+    HPValue: 700
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 海上丘丘人栅栏
+    HPScale: None
+    HPValue: 400
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 稻草人-红
+    HPScale: None
+    HPValue: 20
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 稻草人-蓝
+    HPScale: None
+    HPValue: 20
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 云堇邀约稻草人-红
+    HPScale: None
+    HPValue: 10000
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 云堇邀约稻草人-蓝
+    HPScale: None
+    HPValue: 10000
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 普尔希娜光钉-采样
+    HPScale: BoarATK
+    HPValue: 22.5
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 普尔希娜光钉-实践
+    HPScale: BoarATK
+    HPValue: 90
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 浪船
+    HPScale: BoarATK
+    HPValue: 22.5
+    ATKScale: HilichurlHP
+    ATKValue: 0.2
+  - Gadget: 危险运输现象
+    HPScale: BoarATK
+    HPValue: 63
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 安全运输现象
+    HPScale: BoarATK
+    HPValue: 54
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 地脉镇石-其他
+    HPScale: BoarATK
+    HPValue: 45
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 归终机
+    HPScale: BoarATK
+    HPValue: 54
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 轻策之藏
+    HPScale: BoarATK
+    HPValue: 45
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 谜境悬兵-守护机关
+    HPScale: BoarATK
+    HPValue: 13.5
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 谜境悬兵-水式札
+    HPScale: BoarATK
+    HPValue: 10.8
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 谜境悬兵-冰式札
+    HPScale: BoarATK
+    HPValue: 13.5
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 遗迹之烛-可摧毁
+    HPScale: BoarATK
+    HPValue: 13.5
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 遗迹之烛-可摧毁-活动
+    HPScale: BoarATK
+    HPValue: 18
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 遗迹之烛-可摧毁-深境螺旋
+    HPScale: BoarATK
+    HPValue: 45
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 地脉镇石-甘雨任务
+    HPScale: BoarATK
+    HPValue: 63
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 地脉镇石-蕈兽活动
+    HPScale: BoarATK
+    HPValue: 36
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 反雷电将训练器
+    HPScale: None
+    HPValue: 0
+    ATKScale: BoarATK
+    ATKValue: 3
+  - Gadget: 海灯节热气球
+    HPScale: HilichurlHP
+    HPValue: 95
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 须弥随机事件-货运热气球
+    HPScale: HilichurlHP
+    HPValue: 29.446
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 货运热气球-任务
+    HPScale: HilichurlHP
+    HPValue: 44.169
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 风琥珀
+    HPScale: None
+    HPValue: 8000
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 水琥珀
+    HPScale: None
+    HPValue: 8000
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 岩琥珀
+    HPScale: None
+    HPValue: 8000
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 风龙琥珀
+    HPScale: None
+    HPValue: 8000
+    ATKScale: None
+    ATKValue: 0

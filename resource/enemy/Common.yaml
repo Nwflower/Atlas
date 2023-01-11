@@ -8,6 +8,7 @@
   EnvironCo: 17.165605
   AvatarCo: 17.165605
   CrystalCo: 91.1791
+  None: 1
   HBase: 5.367859
   FBase: 5.404888
   B1Base: 2.02052
@@ -22,6 +23,7 @@
   EnvironCo: 18.535048
   AvatarCo: 18.535048
   CrystalCo: 98.707667
+  None: 1
   HBase: 6.818905
   FBase: 6.867565
   B1Base: 2.32577
@@ -36,6 +38,7 @@
   EnvironCo: 19.904854
   AvatarCo: 19.904854
   CrystalCo: 106.23622
+  None: 1
   HBase: 8.421231
   FBase: 8.483289
   B1Base: 2.65371
@@ -50,6 +53,7 @@
   EnvironCo: 21.274903
   AvatarCo: 21.274903
   CrystalCo: 113.764771
+  None: 1
   HBase: 10.17484
   FBase: 10.252208
   B1Base: 3.00456
@@ -64,6 +68,7 @@
   EnvironCo: 22.6454
   AvatarCo: 22.6454
   CrystalCo: 121.293322
+  None: 1
   HBase: 12.07987
   FBase: 12.174544
   B1Base: 3.37863
@@ -78,6 +83,7 @@
   EnvironCo: 24.649613
   AvatarCo: 24.649613
   CrystalCo: 128.821878
+  None: 1
   HBase: 14.13796
   FBase: 14.251988
   B1Base: 3.77619
@@ -92,6 +98,7 @@
   EnvironCo: 26.640643
   AvatarCo: 26.640643
   CrystalCo: 136.350422
+  None: 1
   HBase: 16.34828
   FBase: 16.483804
   B1Base: 4.19745
@@ -106,6 +113,7 @@
   EnvironCo: 28.868587
   AvatarCo: 28.868587
   CrystalCo: 143.878978
+  None: 1
   HBase: 17.50736
   FBase: 17.65636
   B1Base: 4.58077
@@ -120,6 +128,7 @@
   EnvironCo: 31.367679
   AvatarCo: 31.367679
   CrystalCo: 151.407522
+  None: 1
   HBase: 19.26782
   FBase: 19.436101
   B1Base: 4.98102
@@ -134,6 +143,7 @@
   EnvironCo: 34.143343
   AvatarCo: 34.143343
   CrystalCo: 158.936078
+  None: 1
   HBase: 21.09865
   FBase: 21.287471
   B1Base: 5.39831
@@ -148,6 +158,7 @@
   EnvironCo: 37.201
   AvatarCo: 37.201
   CrystalCo: 169.991484
+  None: 1
   HBase: 24.06383
   FBase: 24.350191
   B1Base: 5.95895
@@ -162,6 +173,7 @@
   EnvironCo: 40.66
   AvatarCo: 40.66
   CrystalCo: 181.076253
+  None: 1
   HBase: 27.14657
   FBase: 27.538501
   B1Base: 6.54609
@@ -176,6 +188,7 @@
   EnvironCo: 44.446668
   AvatarCo: 44.446668
   CrystalCo: 192.190362
+  None: 1
   HBase: 30.34872
   FBase: 30.854608
   B1Base: 7.16003
@@ -190,6 +203,7 @@
   EnvironCo: 48.563519
   AvatarCo: 48.563519
   CrystalCo: 204.048207
+  None: 1
   HBase: 33.90172
   FBase: 34.542476
   B1Base: 7.829
@@ -204,6 +218,7 @@
   EnvironCo: 53.74848
   AvatarCo: 53.74848
   CrystalCo: 215.938996
+  None: 1
   HBase: 37.58709
   FBase: 38.372718
   B1Base: 8.5272
@@ -218,6 +233,7 @@
   EnvironCo: 59.081897
   AvatarCo: 59.081897
   CrystalCo: 227.86275
+  None: 1
   HBase: 41.4068
   FBase: 42.347909
   B1Base: 9.255
@@ -232,6 +248,7 @@
   EnvironCo: 64.420047
   AvatarCo: 64.420047
   CrystalCo: 247.685944
+  None: 1
   HBase: 46.00103
   FBase: 47.130227
   B1Base: 10.24456
@@ -246,6 +263,7 @@
   EnvironCo: 69.724455
   AvatarCo: 69.724455
   CrystalCo: 267.542105
+  None: 1
   HBase: 50.05359
   FBase: 51.37316
   B1Base: 11.26446
@@ -260,6 +278,7 @@
   EnvironCo: 75.123137
   AvatarCo: 75.123137
   CrystalCo: 287.431209
+  None: 1
   HBase: 54.18154
   FBase: 57.933083
   B1Base: 12.31476
@@ -274,6 +293,7 @@
   EnvironCo: 80.584775
   AvatarCo: 80.584775
   CrystalCo: 303.826417
+  None: 1
   HBase: 65.1649
   FBase: 62.656434
   B1Base: 13.31608
@@ -288,6 +308,7 @@
   EnvironCo: 86.112028
   AvatarCo: 86.112028
   CrystalCo: 320.225217
+  None: 1
   HBase: 68.61109
   FBase: 67.499706
   B1Base: 14.26676
@@ -302,6 +323,7 @@
   EnvironCo: 91.703742
   AvatarCo: 91.703742
   CrystalCo: 336.627633
+  None: 1
   HBase: 72.10564
   FBase: 72.46275
   B1Base: 15.24058
@@ -316,6 +338,7 @@
   EnvironCo: 97.244628
   AvatarCo: 97.244628
   CrystalCo: 352.319267
+  None: 1
   HBase: 75.35814
   FBase: 77.453622
   B1Base: 16.20382
@@ -330,6 +353,7 @@
   EnvironCo: 102.812644
   AvatarCo: 102.812644
   CrystalCo: 368.010913
+  None: 1
   HBase: 79.78938
   FBase: 82.533054
   B1Base: 17.18874
@@ -344,6 +368,7 @@
   EnvironCo: 108.409563
   AvatarCo: 108.409563
   CrystalCo: 383.702548
+  None: 1
   HBase: 84.30028
   FBase: 87.702665
   B1Base: 18.19528
@@ -358,6 +383,7 @@
   EnvironCo: 113.201694
   AvatarCo: 113.201694
   CrystalCo: 394.432358
+  None: 1
   HBase: 88.9361
   FBase: 92.404373
   B1Base: 18.885
@@ -372,6 +398,7 @@
   EnvironCo: 118.102906
   AvatarCo: 118.102906
   CrystalCo: 405.18147
+  None: 1
   HBase: 93.66512
   FBase: 97.388693
   B1Base: 19.58528
@@ -386,6 +413,7 @@
   EnvironCo: 122.979318
   AvatarCo: 122.979318
   CrystalCo: 415.949907
+  None: 1
   HBase: 98.48837
   FBase: 102.556758
   B1Base: 20.29613
@@ -400,6 +428,7 @@
   EnvironCo: 129.72733
   AvatarCo: 129.72733
   CrystalCo: 426.737645
+  None: 1
   HBase: 103.4069
   FBase: 109.563825
   B1Base: 21.0176
@@ -414,6 +443,7 @@
   EnvironCo: 136.29291
   AvatarCo: 136.29291
   CrystalCo: 437.544709
+  None: 1
   HBase: 108.4217
   FBase: 116.679181
   B1Base: 21.74973
@@ -428,6 +458,7 @@
   EnvironCo: 142.67085
   AvatarCo: 142.67085
   CrystalCo: 450.600004
+  None: 1
   HBase: 114.4719
   FBase: 123.905551
   B1Base: 22.61761
@@ -442,6 +473,7 @@
   EnvironCo: 149.029029
   AvatarCo: 149.029029
   CrystalCo: 463.700301
+  None: 1
   HBase: 120.6543
   FBase: 131.393036
   B1Base: 23.50049
@@ -456,6 +488,7 @@
   EnvironCo: 155.416987
   AvatarCo: 155.416987
   CrystalCo: 476.845577
+  None: 1
   HBase: 125.744
   FBase: 139.203033
   B1Base: 24.3984
@@ -470,6 +503,7 @@
   EnvironCo: 161.825495
   AvatarCo: 161.825495
   CrystalCo: 491.127512
+  None: 1
   HBase: 148.7045
   FBase: 147.342314
   B1Base: 25.37062
@@ -484,6 +518,7 @@
   EnvironCo: 169.106313
   AvatarCo: 169.106313
   CrystalCo: 502.554564
+  None: 1
   HBase: 153.7546
   FBase: 156.631994
   B1Base: 26.19798
@@ -498,6 +533,7 @@
   EnvironCo: 176.518077
   AvatarCo: 176.518077
   CrystalCo: 514.012104
+  None: 1
   HBase: 158.886
   FBase: 166.419906
   B1Base: 27.03764
@@ -512,6 +548,7 @@
   EnvironCo: 184.072741
   AvatarCo: 184.072741
   CrystalCo: 531.409589
+  None: 1
   HBase: 165.88
   FBase: 176.602768
   B1Base: 28.30728
@@ -526,6 +563,7 @@
   EnvironCo: 191.709518
   AvatarCo: 191.709518
   CrystalCo: 549.979601
+  None: 1
   HBase: 173.5809
   FBase: 187.12581
   B1Base: 29.66658
@@ -540,6 +578,7 @@
   EnvironCo: 199.556908
   AvatarCo: 199.556908
   CrystalCo: 568.58488
+  None: 1
   HBase: 181.4102
   FBase: 198.114252
   B1Base: 31.05228
@@ -554,6 +593,7 @@
   EnvironCo: 207.382042
   AvatarCo: 207.382042
   CrystalCo: 584.99652
+  None: 1
   HBase: 198.3841
   FBase: 209.499926
   B1Base: 32.51703
@@ -568,6 +608,7 @@
   EnvironCo: 215.3989
   AvatarCo: 215.3989
   CrystalCo: 605.670375
+  None: 1
   HBase: 207.9781
   FBase: 221.358289
   B1Base: 34.0855
@@ -582,6 +623,7 @@
   EnvironCo: 224.165667
   AvatarCo: 224.165667
   CrystalCo: 626.386206
+  None: 1
   HBase: 217.7367
   FBase: 234.313678
   B1Base: 35.68458
@@ -596,6 +638,7 @@
   EnvironCo: 233.50216
   AvatarCo: 233.50216
   CrystalCo: 646.052333
+  None: 1
   HBase: 227.0249
   FBase: 248.218566
   B1Base: 37.24761
@@ -610,6 +653,7 @@
   EnvironCo: 243.350573
   AvatarCo: 243.350573
   CrystalCo: 665.755638
+  None: 1
   HBase: 236.4653
   FBase: 263.037912
   B1Base: 38.8393
@@ -624,6 +668,7 @@
   EnvironCo: 256.063067
   AvatarCo: 256.063067
   CrystalCo: 685.496096
+  None: 1
   HBase: 264.514
   FBase: 281.447806
   B1Base: 40.45966
@@ -638,6 +683,7 @@
   EnvironCo: 268.543493
   AvatarCo: 268.543493
   CrystalCo: 700.839402
+  None: 1
   HBase: 273.7571
   FBase: 300.164605
   B1Base: 41.71497
@@ -652,6 +698,7 @@
   EnvironCo: 281.526075
   AvatarCo: 281.526075
   CrystalCo: 723.333147
+  None: 1
   HBase: 289.6475
   FBase: 319.937058
   B1Base: 43.60169
@@ -666,6 +713,7 @@
   EnvironCo: 295.013648
   AvatarCo: 295.013648
   CrystalCo: 745.865265
+  None: 1
   HBase: 305.8628
   FBase: 340.796525
   B1Base: 45.52411
@@ -680,6 +728,7 @@
   EnvironCo: 309.067188
   AvatarCo: 309.067188
   CrystalCo: 768.435731
+  None: 1
   HBase: 322.4075
   FBase: 362.845112
   B1Base: 47.48235
@@ -694,6 +743,7 @@
   EnvironCo: 323.601597
   AvatarCo: 323.601597
   CrystalCo: 786.791945
+  None: 1
   HBase: 367.8213
   FBase: 386.007951
   B1Base: 50.14548
@@ -708,6 +758,7 @@
   EnvironCo: 336.757542
   AvatarCo: 336.757542
   CrystalCo: 809.538812
+  None: 1
   HBase: 384.5919
   FBase: 405.819862
   B1Base: 51.97996
@@ -722,6 +773,7 @@
   EnvironCo: 350.530312
   AvatarCo: 350.530312
   CrystalCo: 832.329057
+  None: 1
   HBase: 401.5548
   FBase: 426.750883
   B1Base: 53.83439
@@ -736,6 +788,7 @@
   EnvironCo: 364.482705
   AvatarCo: 364.482705
   CrystalCo: 855.162654
+  None: 1
   HBase: 418.7124
   FBase: 448.336057
   B1Base: 55.7086
@@ -750,6 +803,7 @@
   EnvironCo: 378.619181
   AvatarCo: 378.619181
   CrystalCo: 878.039628
+  None: 1
   HBase: 436.0667
   FBase: 470.60851
   B1Base: 57.60231
@@ -764,6 +818,7 @@
   EnvironCo: 398.600417
   AvatarCo: 398.600417
   CrystalCo: 899.484802
+  None: 1
   HBase: 452.5111
   FBase: 500.874926
   B1Base: 59.40968
@@ -778,6 +833,7 @@
   EnvironCo: 416.398254
   AvatarCo: 416.398254
   CrystalCo: 919.362018
+  None: 1
   HBase: 466.241
   FBase: 529.129932
   B1Base: 60.96815
@@ -792,6 +848,7 @@
   EnvironCo: 434.386996
   AvatarCo: 434.386996
   CrystalCo: 946.039586
+  None: 1
   HBase: 483.8348
   FBase: 558.18566
   B1Base: 63.18038
@@ -806,6 +863,7 @@
   EnvironCo: 452.566797
   AvatarCo: 452.951051
   CrystalCo: 974.764223
+  None: 1
   HBase: 503.1843
   FBase: 588.083628
   B1Base: 65.56533
@@ -820,6 +878,7 @@
   EnvironCo: 471.426268
   AvatarCo: 472.606217
   CrystalCo: 1003.578617
+  None: 1
   HBase: 522.7799
   FBase: 619.623012
   B1Base: 67.97952
@@ -834,6 +893,7 @@
   EnvironCo: 490.481663
   AvatarCo: 492.88489
   CrystalCo: 1030.077002
+  None: 1
   HBase: 616.9946
   FBase: 652.160115
   B1Base: 70.615
@@ -848,6 +908,7 @@
   EnvironCo: 509.50428
   AvatarCo: 513.568543
   CrystalCo: 1056.634974
+  None: 1
   HBase: 637.3271
   FBase: 685.428224
   B1Base: 72.87743
@@ -862,6 +923,7 @@
   EnvironCo: 532.771793
   AvatarCo: 539.103198
   CrystalCo: 1085.246306
+  None: 1
   HBase: 659.6903
   FBase: 725.285998
   B1Base: 75.3163
@@ -876,6 +938,7 @@
   EnvironCo: 556.393323
   AvatarCo: 565.510563
   CrystalCo: 1113.924427
+  None: 1
   HBase: 682.2833
   FBase: 766.455168
   B1Base: 77.77995
@@ -890,6 +953,7 @@
   EnvironCo: 580.103031
   AvatarCo: 592.538753
   CrystalCo: 1149.25872
+  None: 1
   HBase: 711.7287
   FBase: 808.564929
   B1Base: 80.84824
@@ -904,6 +968,7 @@
   EnvironCo: 607.894973
   AvatarCo: 624.443427
   CrystalCo: 1178.064819
+  None: 1
   HBase: 734.9008
   FBase: 857.394435
   B1Base: 83.39035
@@ -918,6 +983,7 @@
   EnvironCo: 630.20133
   AvatarCo: 651.470148
   CrystalCo: 1200.223743
+  None: 1
   HBase: 753.9569
   FBase: 899.702297
   B1Base: 85.24774
@@ -932,6 +998,7 @@
   EnvironCo: 652.866818
   AvatarCo: 679.49683
   CrystalCo: 1227.660294
+  None: 1
   HBase: 829.3079
   FBase: 943.454358
   B1Base: 89.40919
@@ -946,6 +1013,7 @@
   EnvironCo: 675.186325
   AvatarCo: 707.79406
   CrystalCo: 1257.242987
+  None: 1
   HBase: 855.3966
   FBase: 987.485571
   B1Base: 92.12469
@@ -960,6 +1028,7 @@
   EnvironCo: 697.782682
   AvatarCo: 736.671422
   CrystalCo: 1284.917392
+  None: 1
   HBase: 879.7074
   FBase: 1032.847836
   B1Base: '94.70249'
@@ -974,6 +1043,7 @@
   EnvironCo: 720.170325
   AvatarCo: 765.640231
   CrystalCo: 1314.75288
+  None: 1
   HBase: 960.8343
   FBase: 1078.628975
   B1Base: 97.48067
@@ -988,6 +1058,7 @@
   EnvironCo: 742.454652
   AvatarCo: 794.773403
   CrystalCo: 1342.665216
+  None: 1
   HBase: 987.2563
   FBase: 1125.08591
   B1Base: 100.11726
@@ -1002,6 +1073,7 @@
   EnvironCo: 765.205477
   AvatarCo: 824.677397
   CrystalCo: 1372.752485
+  None: 1
   HBase: 1016.308
   FBase: 1176.675427
   B1Base: 102.95798
@@ -1016,6 +1088,7 @@
   EnvironCo: 784.374617
   AvatarCo: 851.157781
   CrystalCo: 1396.320986
+  None: 1
   HBase: 1037.415
   FBase: 1225.49735
   B1Base: 105.19038
@@ -1030,6 +1103,7 @@
   EnvironCo: 803.401172
   AvatarCo: 877.74209
   CrystalCo: 1427.312436
+  None: 1
   HBase: 1067.75
   FBase: 1276.60159
   B1Base: 108.15596
@@ -1044,6 +1118,7 @@
   EnvironCo: 830.920776
   AvatarCo: 914.229123
   CrystalCo: 1458.374528
+  None: 1
   HBase: 1098.412
   FBase: 1349.673881
   B1Base: 111.14884
@@ -1058,6 +1133,7 @@
   EnvironCo: 854.403332
   AvatarCo: 946.746752
   CrystalCo: 1482.335772
+  None: 1
   HBase: 1123.775
   FBase: 1419.612117
   B1Base: 113.33174
@@ -1072,6 +1148,7 @@
   EnvironCo: 877.759777
   AvatarCo: 979.411386
   CrystalCo: 1511.910837
+  None: 1
   HBase: 1153.119
   FBase: 1492.443537
   B1Base: 116.23478
@@ -1086,6 +1163,7 @@
   EnvironCo: 900.117232
   AvatarCo: 1011.223022
   CrystalCo: 1541.549377
+  None: 1
   HBase: 1182.76
   FBase: 1566.433893
   B1Base: 119.16229
@@ -1100,6 +1178,7 @@
   EnvironCo: 923.766661
   AvatarCo: 1044.791746
   CrystalCo: 1569.153701
+  None: 1
   HBase: 1210.233
   FBase: 1645.94096
   B1Base: 121.92657
@@ -1114,6 +1193,7 @@
   EnvironCo: 946.370258
   AvatarCo: 1077.443668
   CrystalCo: 1596.814298
+  None: 1
   HBase: 1366.735
   FBase: 1740.033716
   B1Base: 125.41919
@@ -1128,6 +1208,7 @@
   EnvironCo: 968.634183
   AvatarCo: 1109.99754
   CrystalCo: 1622.419626
+  None: 1
   HBase: 1394.867
   FBase: 1832.442432
   B1Base: 128.0491
@@ -1142,6 +1223,7 @@
   EnvironCo: 991.029365
   AvatarCo: 1142.976615
   CrystalCo: 1648.074031
+  None: 1
   HBase: 1423.247
   FBase: 1926.506478
   B1Base: 130.69697
@@ -1156,6 +1238,7 @@
   EnvironCo: 1013.527108
   AvatarCo: 1176.369483
   CrystalCo: 1666.376146
+  None: 1
   HBase: 1440.909
   FBase: 2018.166593
   B1Base: 132.59346
@@ -1170,6 +1253,7 @@
   EnvironCo: 1036.132954
   AvatarCo: 1210.184393
   CrystalCo: 1684.678276
+  None: 1
   HBase: 1485.468
   FBase: 2109.698322
   B1Base: 134.49482
@@ -1184,6 +1268,7 @@
   EnvironCo: 1066.623598
   AvatarCo: 1253.835659
   CrystalCo: 1702.980391
+  None: 1
   HBase: 1503.56
   FBase: 2223.0678
   B1Base: 136.40101
@@ -1198,6 +1283,7 @@
   EnvironCo: 1089.964198
   AvatarCo: 1288.952801
   CrystalCo: 1726.104684
+  None: 1
   HBase: 1532.91
   FBase: 2317.169022
   B1Base: 138.65791
@@ -1212,6 +1298,7 @@
   EnvironCo: 1114.964489
   AvatarCo: 1325.484092
   CrystalCo: 1754.671567
+  None: 1
   HBase: 1563.946
   FBase: 2412.804255
   B1Base: 141.59421
@@ -1226,6 +1313,7 @@
   EnvironCo: 1141.662656
   AvatarCo: 1363.456928
   CrystalCo: 1785.86656
+  None: 1
   HBase: 1598.809
   FBase: 2510.077812
   B1Base: 144.79605
@@ -1240,6 +1328,7 @@
   EnvironCo: 1171.941798
   AvatarCo: 1405.097377
   CrystalCo: 1817.137404
+  None: 1
   HBase: 1634.08
   FBase: 2613.843345
   B1Base: 148.02296
@@ -1254,6 +1343,7 @@
   EnvironCo: 1202.813736
   AvatarCo: 1446.853458
   CrystalCo: 1851.060358
+  None: 1
   HBase: 1792.851
   FBase: 2731.175574
   B1Base: 151.52366
@@ -1268,6 +1358,7 @@
   EnvironCo: 1233.939915
   AvatarCo: 1488.215547
   CrystalCo: 1885.067163
+  None: 1
   HBase: 1835.423
   FBase: 2831.961352
   B1Base: 155.44891
@@ -1282,6 +1373,7 @@
   EnvironCo: 1264.69967
   AvatarCo: 1528.444567
   CrystalCo: 1921.749303
+  None: 1
   HBase: 1882.428
   FBase: 2934.134496
   B1Base: 159.68016
@@ -1296,6 +1388,7 @@
   EnvironCo: 1305.689483
   AvatarCo: 1580.367911
   CrystalCo: 1958.523291
+  None: 1
   HBase: 1930.047
   FBase: 3063.695303
   B1Base: 163.96824
@@ -1310,6 +1403,7 @@
   EnvironCo: 1346.084383
   AvatarCo: 1630.847528
   CrystalCo: 2006.194108
+  None: 1
   HBase: 1996.661
   FBase: 3191.604976
   B1Base: 169.54304
@@ -1324,6 +1418,7 @@
   EnvironCo: 1411.738173
   AvatarCo: 1711.197785
   CrystalCo: 2041.569007
+  None: 1
   HBase: 2042.759
   FBase: 3344.277164
   B1Base: 173.8133
@@ -1338,6 +1433,7 @@
   EnvironCo: 1468.874501
   AvatarCo: 1780.453941
   CrystalCo: 2054.472064
+  None: 1
   HBase: 2055.588
   FBase: 3495.400913
   B1Base: 175.20334
@@ -1352,6 +1448,7 @@
   EnvironCo: 1524.041318
   AvatarCo: 1847.322809
   CrystalCo: 2065.97498
+  None: 1
   HBase: 2069.809
   FBase: 3644.670642
   B1Base: 176.75739
@@ -1366,6 +1463,7 @@
   EnvironCo: 1576.966305
   AvatarCo: 1911.474309
   CrystalCo: 2174.7226
+  None: 1
   HBase: 2256.937
   FBase: 3791.268551
   B1Base: 189.76929
@@ -1380,6 +1478,7 @@
   EnvironCo: 1627.613082
   AvatarCo: 1972.864342
   CrystalCo: 2186.7682
+  None: 1
   HBase: 2272.524
   FBase: 3934.99308
   B1Base: 191.44692
@@ -1394,6 +1493,7 @@
   EnvironCo: 1674.809242
   AvatarCo: 2030.071808
   CrystalCo: 2198.81396
+  None: 1
   HBase: 2706.502
   FBase: 4082.745804
   B1Base: 196.03574
@@ -1408,6 +1508,7 @@
   EnvironCo: 1719.824463
   AvatarCo: 2084.635712
   CrystalCo: 2205.506002
+  None: 1
   HBase: 2770.433083
   FBase: 4213.191254
   B1Base: 196.423744
@@ -1422,6 +1523,7 @@
   EnvironCo: 1764.716533
   AvatarCo: 2139.050343
   CrystalCo: 2212.198045
+  None: 1
   HBase: 2835.451413
   FBase: 4347.95826
   B1Base: 196.812013
@@ -1436,6 +1538,7 @@
   EnvironCo: 1809.401079
   AvatarCo: 2193.213429
   CrystalCo: 2218.890087
+  None: 1
   HBase: 2901.570598
   FBase: 4485.799985
   B1Base: 197.200593
@@ -1450,6 +1553,7 @@
   EnvironCo: 1843.19297
   AvatarCo: 2234.173297
   CrystalCo: 2225.58213
+  None: 1
   HBase: 2968.804108
   FBase: 4590.933598
   B1Base: 197.589393
@@ -1464,6 +1568,7 @@
   EnvironCo: 1884.980024
   AvatarCo: 2284.824271
   CrystalCo: 2232.274172
+  None: 1
   HBase: 3199.580462
   FBase: 4720.887809
   B1Base: 197.978503
@@ -1478,6 +1583,7 @@
   EnvironCo: 1900.652682
   AvatarCo: 2303.821432
   CrystalCo: 2238.966214
+  None: 1
   HBase: 3272.799249
   FBase: 4825.014134
   B1Base: 198.367879
@@ -1492,6 +1598,7 @@
   EnvironCo: 1916.375807
   AvatarCo: 2322.879766
   CrystalCo: 2245.658257
+  None: 1
   HBase: 3347.234099
   FBase: 4906.452297
   B1Base: 198.757519
@@ -1506,6 +1613,7 @@
   EnvironCo: 1932.149524
   AvatarCo: 2341.999423
   CrystalCo: 2252.350299
+  None: 1
   HBase: 3422.899146
   FBase: 4988.697953
   B1Base: 199.147426
@@ -1520,6 +1628,7 @@
   EnvironCo: 1947.973947
   AvatarCo: 2361.180542
   CrystalCo: 2259.042342
+  None: 1
   HBase: 3499.808304
   FBase: 5071.757656
   B1Base: 199.537642
@@ -1534,6 +1643,7 @@
   EnvironCo: 1963.849194
   AvatarCo: 2380.423265
   CrystalCo: 2265.734384
+  None: 1
   HBase: 3938.627503
   FBase: 5167.530109
   B1Base: 199.928123
@@ -1548,6 +1658,7 @@
   EnvironCo: 1979.775385
   AvatarCo: 2399.727739
   CrystalCo: 2272.426426
+  None: 1
   HBase: 4026.07472
   FBase: 5252.99654
   B1Base: 200.318825
@@ -1562,6 +1673,7 @@
   EnvironCo: 1995.752646
   AvatarCo: 2419.094117
   CrystalCo: 2279.118469
+  None: 1
   HBase: 4114.938015
   FBase: 5339.302709
   B1Base: 200.709837
@@ -1576,6 +1688,7 @@
   EnvironCo: 2011.781094
   AvatarCo: 2438.522538
   CrystalCo: 2285.810511
+  None: 1
   HBase: 4205.232921
   FBase: 5426.455094
   B1Base: 201.101115
@@ -1590,6 +1703,7 @@
   EnvironCo: 2027.860851
   AvatarCo: 2458.013153
   CrystalCo: 2292.502554
+  None: 1
   HBase: 4296.974971
   FBase: 5514.460468
   B1Base: 201.492702
@@ -1604,6 +1718,7 @@
   EnvironCo: 2055.471827
   AvatarCo: 2491.481003
   CrystalCo: 2299.194596
+  None: 1
   HBase: 4496.222541
   FBase: 5603.325383
   B1Base: 201.88451
@@ -1618,6 +1733,7 @@
   EnvironCo: 2074.894563
   AvatarCo: 2515.023713
   CrystalCo: 2305.886638
+  None: 1
   HBase: 4593.192285
   FBase: 5671.801973
   B1Base: 202.276628
@@ -1632,6 +1748,7 @@
   EnvironCo: 2094.380896
   AvatarCo: 2538.643511
   CrystalCo: 2312.578681
+  None: 1
   HBase: 4691.691622
   FBase: 5743.353651
   B1Base: 202.668967
@@ -1646,6 +1763,7 @@
   EnvironCo: 2113.930973
   AvatarCo: 2562.340573
   CrystalCo: 2319.270723
+  None: 1
   HBase: 4791.736528
   FBase: 5818.047777
   B1Base: 203.061615
@@ -1660,6 +1778,7 @@
   EnvironCo: 2133.544944
   AvatarCo: 2586.115083
   CrystalCo: 2325.962766
+  None: 1
   HBase: 4893.342756
   FBase: 5895.955094
   B1Base: 203.454529
@@ -1674,6 +1793,7 @@
   EnvironCo: 2153.22296
   AvatarCo: 2609.967224
   CrystalCo: 2332.654808
+  None: 1
   HBase: 5299.346069
   FBase: 5977.149661
   B1Base: 203.847753
@@ -1688,6 +1808,7 @@
   EnvironCo: 2172.965177
   AvatarCo: 2633.897184
   CrystalCo: 2339.34685
+  None: 1
   HBase: 5399.216652
   FBase: 6049.208701
   B1Base: 204.241198
@@ -1702,6 +1823,7 @@
   EnvironCo: 2192.771741
   AvatarCo: 2657.90514
   CrystalCo: 2346.038893
+  None: 1
   HBase: 5500.462529
   FBase: 6124.506846
   B1Base: 204.634952
@@ -1716,6 +1838,7 @@
   EnvironCo: 2212.642803
   AvatarCo: 2681.991276
   CrystalCo: 2352.730935
+  None: 1
   HBase: 5603.097541
   FBase: 6203.11889
   B1Base: 205.028928
@@ -1730,6 +1853,7 @@
   EnvironCo: 2232.578518
   AvatarCo: 2706.15578
   CrystalCo: 2359.422978
+  None: 1
   HBase: 5707.135453
   FBase: 6285.123086
   B1Base: 205.423213
@@ -1744,6 +1868,7 @@
   EnvironCo: 2252.579033
   AvatarCo: 2730.398828
   CrystalCo: 2366.11502
+  None: 1
   HBase: 5812.590106
   FBase: 6370.601001
   B1Base: 205.817764
@@ -1758,6 +1883,7 @@
   EnvironCo: 2261.164708
   AvatarCo: 2740.805707
   CrystalCo: 2372.807062
+  None: 1
   HBase: 5919.475118
   FBase: 6459.637883
   B1Base: 206.21258
@@ -1772,6 +1898,7 @@
   EnvironCo: 2269.771434
   AvatarCo: 2751.238101
   CrystalCo: 2379.499105
+  None: 1
   HBase: 6027.804402
   FBase: 6549.582818
   B1Base: 206.607705
@@ -1786,6 +1913,7 @@
   EnvironCo: 2278.399255
   AvatarCo: 2761.696067
   CrystalCo: 2386.191147
+  None: 1
   HBase: 6137.591652
   FBase: 6640.442432
   B1Base: 207.003052
@@ -1800,6 +1928,7 @@
   EnvironCo: 2287.048214
   AvatarCo: 2772.179653
   CrystalCo: 2392.88319
+  None: 1
   HBase: 6248.850633
   FBase: 6732.223277
   B1Base: 207.398708
@@ -1814,6 +1943,7 @@
   EnvironCo: 2295.718356
   AvatarCo: 2782.688916
   CrystalCo: 2399.575232
+  None: 1
   HBase: 6361.595112
   FBase: 6824.931979
   B1Base: 207.79463
@@ -1828,6 +1958,7 @@
   EnvironCo: 2304.409727
   AvatarCo: 2793.223912
   CrystalCo: 2406.267274
+  None: 1
   HBase: 6475.838928
   FBase: 6918.575162
   B1Base: 208.190817
@@ -1842,6 +1973,7 @@
   EnvironCo: 2313.122368
   AvatarCo: 2803.784689
   CrystalCo: 2412.959317
+  None: 1
   HBase: 6591.595774
   FBase: 7013.159526
   B1Base: 208.58727
@@ -1856,6 +1988,7 @@
   EnvironCo: 2321.856331
   AvatarCo: 2814.37131
   CrystalCo: 2419.651359
+  None: 1
   HBase: 6708.879417
   FBase: 7108.691622
   B1Base: 208.983988
@@ -1870,6 +2003,7 @@
   EnvironCo: 2330.611655
   AvatarCo: 2824.983824
   CrystalCo: 2426.343402
+  None: 1
   HBase: 6827.703696
   FBase: 7205.178077
   B1Base: 209.381016
@@ -1884,6 +2018,7 @@
   EnvironCo: 2339.388382
   AvatarCo: 2835.622281
   CrystalCo: 2433.035444
+  None: 1
   HBase: 6948.082303
   FBase: 7302.625589
   B1Base: 209.778309
@@ -1898,6 +2033,7 @@
   EnvironCo: 2348.186559
   AvatarCo: 2846.286738
   CrystalCo: 2439.727486
+  None: 1
   HBase: 7070.029078
   FBase: 7401.040636
   B1Base: 210.175823
@@ -1912,6 +2048,7 @@
   EnvironCo: 2357.006235
   AvatarCo: 2856.977254
   CrystalCo: 2446.419529
+  None: 1
   HBase: 7193.557715
   FBase: 7500.429918
   B1Base: 210.573646
@@ -1926,6 +2063,7 @@
   EnvironCo: 2365.847447
   AvatarCo: 2867.693875
   CrystalCo: 2453.111571
+  None: 1
   HBase: 7318.681979
   FBase: 7600.800133
   B1Base: 210.97178
@@ -1940,6 +2078,7 @@
   EnvironCo: 2374.710241
   AvatarCo: 2878.436656
   CrystalCo: 2459.803614
+  None: 1
   HBase: 7445.415783
   FBase: 7702.157759
   B1Base: 211.370134
@@ -1954,6 +2093,7 @@
   EnvironCo: 2383.594668
   AvatarCo: 2889.205658
   CrystalCo: 2466.495656
+  None: 1
   HBase: 7573.772747
   FBase: 7804.509496
   B1Base: 211.768754
@@ -1968,6 +2108,7 @@
   EnvironCo: 2392.500763
   AvatarCo: 2900.000925
   CrystalCo: 2473.187698
+  None: 1
   HBase: 7703.766637
   FBase: 7907.86197
   B1Base: 212.167684
@@ -1982,6 +2123,7 @@
   EnvironCo: 2401.428579
   AvatarCo: 2910.82252
   CrystalCo: 2479.879741
+  None: 1
   HBase: 7835.411366
   FBase: 8012.221731
   B1Base: 212.566879
@@ -1996,6 +2138,7 @@
   EnvironCo: 2410.378155
   AvatarCo: 2921.670491
   CrystalCo: 2486.571783
+  None: 1
   HBase: 7968.720554
   FBase: 8117.595554
   B1Base: 212.966339
@@ -2010,6 +2153,7 @@
   EnvironCo: 2419.349533
   AvatarCo: 2932.544888
   CrystalCo: 2493.263826
+  None: 1
   HBase: 8103.708039
   FBase: 8223.989915
   B1Base: 213.366065
@@ -2024,6 +2168,7 @@
   EnvironCo: 2428.342759
   AvatarCo: 2943.445769
   CrystalCo: 2499.955868
+  None: 1
   HBase: 8240.387515
   FBase: 8331.41144
   B1Base: 213.766056
@@ -2038,6 +2183,7 @@
   EnvironCo: 2437.357883
   AvatarCo: 2954.373192
   CrystalCo: 2506.64791
+  None: 1
   HBase: 8378.772895
   FBase: 8439.866902
   B1Base: 214.166357
@@ -2052,6 +2198,7 @@
   EnvironCo: 2446.394947
   AvatarCo: 2965.327209
   CrystalCo: 2513.339953
+  None: 1
   HBase: 8518.877797
   FBase: 8549.362706
   B1Base: 214.566879
@@ -2066,6 +2213,7 @@
   EnvironCo: 2455.453992
   AvatarCo: 2976.30787
   CrystalCo: 2520.031995
+  None: 1
   HBase: 8660.716137
   FBase: 8659.905698
   B1Base: 214.967711
@@ -2080,6 +2228,7 @@
   EnvironCo: 2464.535064
   AvatarCo: 2987.315229
   CrystalCo: 2526.724038
+  None: 1
   HBase: 8804.301531
   FBase: 8771.502282
   B1Base: 215.368808
@@ -2094,6 +2243,7 @@
   EnvironCo: 2473.638208
   AvatarCo: 2998.349343
   CrystalCo: 2533.41608
+  None: 1
   HBase: 8949.647821
   FBase: 8884.159231
   B1Base: 215.77017
@@ -2108,6 +2258,7 @@
   EnvironCo: 2482.763466
   AvatarCo: 3009.410262
   CrystalCo: 2540.108122
+  None: 1
   HBase: 9096.768846
   FBase: 8997.883171
   B1Base: 216.171798
@@ -2122,6 +2273,7 @@
   EnvironCo: 2491.910884
   AvatarCo: 3020.498041
   CrystalCo: 2546.800165
+  None: 1
   HBase: 9245.678224
   FBase: 9112.68058
   B1Base: 216.573735
@@ -2136,6 +2288,7 @@
   EnvironCo: 2501.080507
   AvatarCo: 3031.612736
   CrystalCo: 2553.492207
+  None: 1
   HBase: 9396.38987
   FBase: 9228.55823
   B1Base: 216.975893
@@ -2150,6 +2303,7 @@
   EnvironCo: 2510.272377
   AvatarCo: 3042.754397
   CrystalCo: 2560.18425
+  None: 1
   HBase: 9548.917476
   FBase: 9345.522674
   B1Base: 217.378362
@@ -2164,6 +2318,7 @@
   EnvironCo: 2519.486545
   AvatarCo: 3053.923085
   CrystalCo: 2566.876292
+  None: 1
   HBase: 9703.274809
   FBase: 9463.58061
   B1Base: 217.781095
@@ -2178,6 +2333,7 @@
   EnvironCo: 2528.723051
   AvatarCo: 3065.118849
   CrystalCo: 2573.568334
+  None: 1
   HBase: 9859.475633
   FBase: 9582.738516
   B1Base: 218.184094
@@ -2192,6 +2348,7 @@
   EnvironCo: 2537.981936
   AvatarCo: 3076.341741
   CrystalCo: 2580.260377
+  None: 1
   HBase: 10017.533716
   FBase: 9703.003092
   B1Base: 218.587358
@@ -2206,6 +2363,7 @@
   EnvironCo: 2547.263248
   AvatarCo: 3087.591815
   CrystalCo: 2586.952419
+  None: 1
   HBase: 10177.462898
   FBase: 9824.380963
   B1Base: 218.990932
@@ -2220,6 +2378,7 @@
   EnvironCo: 2556.567031
   AvatarCo: 3098.869128
   CrystalCo: 2593.644462
+  None: 1
   HBase: 10339.27687
   FBase: 9946.878828
   B1Base: 219.394728
@@ -2234,6 +2393,7 @@
   EnvironCo: 2565.893331
   AvatarCo: 3110.173734
   CrystalCo: 2600.336504
+  None: 1
   HBase: 10502.989473
   FBase: 10070.503165
   B1Base: 219.798832
@@ -2248,6 +2408,7 @@
   EnvironCo: 2575.24219
   AvatarCo: 3121.505684
   CrystalCo: 2607.028546
+  None: 1
   HBase: 10585.561985
   FBase: 10195.260674
   B1Base: 220.203202
@@ -2262,6 +2423,7 @@
   EnvironCo: 2584.613653
   AvatarCo: 3132.865034
   CrystalCo: 2613.720589
+  None: 1
   HBase: 10668.614399
   FBase: 10321.15798
   B1Base: 220.607838
@@ -2276,6 +2438,7 @@
   EnvironCo: 2594.007767
   AvatarCo: 3144.251839
   CrystalCo: 2620.412631
+  None: 1
   HBase: 10752.148263
   FBase: 10448.201634
   B1Base: 221.012739
@@ -2290,6 +2453,7 @@
   EnvironCo: 2603.424572
   AvatarCo: 3155.666148
   CrystalCo: 2627.104674
+  None: 1
   HBase: 10836.165415
   FBase: 10576.39841
   B1Base: 221.417949
@@ -2304,6 +2468,7 @@
   EnvironCo: 2612.864115
   AvatarCo: 3167.108018
   CrystalCo: 2633.796716
+  None: 1
   HBase: 10920.66755
   FBase: 10705.754711
   B1Base: 221.823381
@@ -2318,6 +2483,7 @@
   EnvironCo: 2622.326437
   AvatarCo: 3178.577499
   CrystalCo: 2640.488758
+  None: 1
   HBase: 11005.65636
   FBase: 10836.277385
   B1Base: 222.229122
@@ -2332,6 +2498,7 @@
   EnvironCo: 2631.811588
   AvatarCo: 3190.074652
   CrystalCo: 2647.180801
+  None: 1
   HBase: 11091.133613
   FBase: 10967.972909
   B1Base: 222.635129
@@ -2346,6 +2513,7 @@
   EnvironCo: 2641.319605
   AvatarCo: 3201.599521
   CrystalCo: 2653.872843
+  None: 1
   HBase: 11177.100928
   FBase: 11100.847909
   B1Base: 223.041401
@@ -2360,6 +2528,7 @@
   EnvironCo: 2650.850538
   AvatarCo: 3213.152168
   CrystalCo: 2660.564886
+  None: 1
   HBase: 11263.560218
   FBase: 11234.909084
   B1Base: 223.447939
@@ -2374,6 +2543,7 @@
   EnvironCo: 2660.404429
   AvatarCo: 3224.732642
   CrystalCo: 2667.256928
+  None: 1
   HBase: 11350.512956
   FBase: 11370.163059
   B1Base: 223.854742
@@ -2388,6 +2558,7 @@
   EnvironCo: 2669.981324
   AvatarCo: 3236.340999
   CrystalCo: 2673.94897
+  None: 1
   HBase: 11437.961057
   FBase: 11506.616387
   B1Base: 224.261854
@@ -2402,6 +2573,7 @@
   EnvironCo: 2679.581268
   AvatarCo: 3247.977294
   CrystalCo: 2680.641013
+  None: 1
   HBase: 11525.906213
   FBase: 11644.275692
   B1Base: 224.669232
@@ -2416,6 +2588,7 @@
   EnvironCo: 2689.204303
   AvatarCo: 3259.641579
   CrystalCo: 2687.333055
+  None: 1
   HBase: 11614.350044
   FBase: 11783.1476
   B1Base: 225.076831
@@ -2430,6 +2603,7 @@
   EnvironCo: 2698.850478
   AvatarCo: 3271.333913
   CrystalCo: 2694.025098
+  None: 1
   HBase: 11703.29439
   FBase: 11923.23881
   B1Base: 225.48474
@@ -2444,6 +2618,7 @@
   EnvironCo: 2708.519832
   AvatarCo: 3283.054342
   CrystalCo: 2700.71714
+  None: 1
   HBase: 11792.740945
   FBase: 12064.555801
   B1Base: 225.892958
@@ -2458,6 +2633,7 @@
   EnvironCo: 2718.212414
   AvatarCo: 3294.802926
   CrystalCo: 2707.409182
+  None: 1
   HBase: 11882.691328
   FBase: 12207.105345
   B1Base: 226.301398
@@ -2472,6 +2648,7 @@
   EnvironCo: 2727.928266
   AvatarCo: 3306.579716
   CrystalCo: 2714.101225
+  None: 1
   HBase: 11973.147379
   FBase: 12350.893993
   B1Base: 226.710103
@@ -2486,6 +2663,7 @@
   EnvironCo: 2737.667429
   AvatarCo: 3318.384762
   CrystalCo: 2720.793267
+  None: 1
   HBase: 12064.110792
   FBase: 12495.928372
   B1Base: 227.119117
@@ -2500,6 +2678,7 @@
   EnvironCo: 2747.429957
   AvatarCo: 3330.21813
   CrystalCo: 2727.48531
+  None: 1
   HBase: 12155.58326
   FBase: 12642.215106
   B1Base: 227.528397
@@ -2514,6 +2693,7 @@
   EnvironCo: 2757.215888
   AvatarCo: 3342.079865
   CrystalCo: 2734.177352
+  None: 1
   HBase: 12247.566475
   FBase: 12789.760748
   B1Base: 227.937942
@@ -2528,6 +2708,7 @@
   EnvironCo: 2767.025263
   AvatarCo: 3353.970016
   CrystalCo: 2740.869394
+  None: 1
   HBase: 12340.062279
   FBase: 12938.57207
   B1Base: 228.347753
@@ -2542,6 +2723,7 @@
   EnvironCo: 2776.858133
   AvatarCo: 3365.888646
   CrystalCo: 2747.561437
+  None: 1
   HBase: 12433.072217
   FBase: 13088.655624
   B1Base: 228.757829
@@ -2556,6 +2738,7 @@
   EnvironCo: 2786.714538
   AvatarCo: 3377.835804
   CrystalCo: 2754.253479
+  None: 1
   HBase: 12526.598204
   FBase: 13240.017962
   B1Base: 229.168215
@@ -2570,6 +2753,7 @@
   EnvironCo: 2796.594525
   AvatarCo: 3389.811546
   CrystalCo: 2760.945522
+  None: 1
   HBase: 12620.641784
   FBase: 13392.665783
   B1Base: 229.578822
@@ -2584,6 +2768,7 @@
   EnvironCo: 2806.498135
   AvatarCo: 3401.815921
   CrystalCo: 2767.637564
+  None: 1
   HBase: 12715.2048
   FBase: 13546.605639
   B1Base: 229.989738
@@ -2598,6 +2783,7 @@
   EnvironCo: 2816.425418
   AvatarCo: 3413.848991
   CrystalCo: 2774.329606
+  None: 1
   HBase: 12810.288943
   FBase: 13701.844302
   B1Base: 230.40092
@@ -2612,6 +2798,7 @@
   EnvironCo: 2826.376411
   AvatarCo: 3425.910801
   CrystalCo: 2781.021649
+  None: 1
   HBase: 12905.895907
   FBase: 13858.388177
   B1Base: 230.812367
@@ -2626,6 +2813,7 @@
   EnvironCo: 2836.351165
   AvatarCo: 3438.001412
   CrystalCo: 2787.713691
+  None: 1
   HBase: 13002.027459
   FBase: 14016.244111
   B1Base: 231.22408
@@ -2640,6 +2828,7 @@
   EnvironCo: 2846.34972
   AvatarCo: 3450.120873
   CrystalCo: 2794.405734
+  None: 1
   HBase: 13098.685292
   FBase: 14175.418581
   B1Base: 231.636102
@@ -2654,6 +2843,7 @@
   EnvironCo: 2856.372124
   AvatarCo: 3462.269241
   CrystalCo: 2801.097776
+  None: 1
   HBase: 13195.871098
   FBase: 14335.918213
   B1Base: 232.048346
@@ -2668,6 +2858,7 @@
   EnvironCo: 2866.418416
   AvatarCo: 3474.446565
   CrystalCo: 2807.789818
+  None: 1
   HBase: 13293.586646
   FBase: 14497.749706
   B1Base: 232.460899
@@ -2682,6 +2873,7 @@
   EnvironCo: 2876.488648
   AvatarCo: 3486.652906
   CrystalCo: 2814.481861
+  None: 1
   HBase: 13391.833628
   FBase: 14660.919611
   B1Base: 232.873717
@@ -2696,6 +2888,7 @@
   EnvironCo: 2886.58286
   AvatarCo: 3498.888316
   CrystalCo: 2821.173903
+  None: 1
   HBase: 13490.613737
   FBase: 14825.434555
   B1Base: 233.286801
@@ -2710,6 +2903,7 @@
   EnvironCo: 2896.701095
   AvatarCo: 3511.152843
   CrystalCo: 2827.865946
+  None: 1
   HBase: 13589.92874
   FBase: 14991.301163
   B1Base: 233.700195
@@ -2724,6 +2918,7 @@
   EnvironCo: 2906.843403
   AvatarCo: 3523.446549
   CrystalCo: 2834.557988
+  None: 1
   HBase: 13689.780403
   FBase: 15158.526134
   B1Base: 234.113809
@@ -2738,6 +2933,7 @@
   EnvironCo: 2916.88902
   AvatarCo: 3535.623055
   CrystalCo: 2841.25003
+  None: 1
   HBase: 13790.170347
   FBase: 15327.116019
   B1Base: 234.527689
@@ -2752,6 +2948,7 @@
   EnvironCo: 2927.079372
   AvatarCo: 3547.974996
   CrystalCo: 2847.942073
+  None: 1
   HBase: 13891.100339
   FBase: 15497.077444
   B1Base: 234.941879
@@ -2766,6 +2963,7 @@
   EnvironCo: 2937.293961
   AvatarCo: 3560.356316
   CrystalCo: 2854.634115
+  None: 1
   HBase: 13992.572144
   FBase: 15668.417035
   B1Base: 235.356334
@@ -2780,6 +2978,7 @@
   EnvironCo: 2947.532738
   AvatarCo: 3572.766955
   CrystalCo: 2861.326158
+  None: 1
   HBase: 14094.587382
   FBase: 15841.141416
   B1Base: 235.771054
@@ -2794,6 +2993,7 @@
   EnvironCo: 2957.795853
   AvatarCo: 3585.207095
   CrystalCo: 2868.0182
+  None: 1
   HBase: 14197.147895
   FBase: 16016.257214
   B1Base: 236.18604

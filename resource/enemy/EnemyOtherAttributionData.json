@@ -1,20 +1,34 @@
 {
   "DefaultHP": [
     {
-      "Factors": "4人",
-      "HPRatioValue": 2.5
-    },
-    {
       "Factors": "2人",
-      "HPRatioValue": 1.25
+      "HPRatioValue": [{
+		  "enemy":["祸津御建鸣神命","公子(第一阶段)","公子(第二阶段)","公子(第三阶段)","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)"],
+		  "value":1.25
+	  },{
+		  "enemy":[],
+		  "value":1.5
+	  }]
     },
     {
       "Factors": "3人",
-      "HPRatioValue": 1.5
+      "HPRatioValue": [{
+		  "enemy":["祸津御建鸣神命","公子(第一阶段)","公子(第二阶段)","公子(第三阶段)","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)"],
+		  "value":1.5
+	  },{
+		  "enemy":[],
+		  "value":2
+	  }]
     },
     {
       "Factors": "4人",
-      "HPRatioValue": 1.75
+      "HPRatioValue": [{
+		  "enemy":["祸津御建鸣神命","公子(第一阶段)","公子(第二阶段)","公子(第三阶段)","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)"],
+		  "value":1.75
+	  },{
+		  "enemy":[],
+		  "value":2.5
+	  }]
     }
   ],
   "SpiralAbyssHP": [
@@ -201,10 +215,6 @@
   ],
   "DefaultATK": [
     {
-      "Factors": "4人",
-      "ATKRatioValue": 1.4
-    },
-    {
       "Factors": "2人",
       "ATKRatioValue": 1.1
     },
@@ -230,23 +240,53 @@
     },
     {
       "Factors": "强化1层",
-      "ATKRatioValue": 1.15
+      "ATKRatioValue": [{
+		  "enemy":["黯色空壳·近卫"],
+		  "value":1.15
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "强化2层",
-      "ATKRatioValue": 1.3
+      "ATKRatioValue": [{
+		  "enemy":["黯色空壳·近卫"],
+		  "value":1.3
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "强化3层",
-      "ATKRatioValue": 1.45
+      "ATKRatioValue": [{
+		  "enemy":["黯色空壳·近卫"],
+		  "value":1.45
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "强化4层",
-      "ATKRatioValue": 1.6
+      "ATKRatioValue": [{
+		  "enemy":["黯色空壳·近卫"],
+		  "value":1.6
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "强化5层",
-      "ATKRatioValue": 1.75
+      "ATKRatioValue": [{
+		  "enemy":["黯色空壳·近卫"],
+		  "value":1.75
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "伸雷灵蕈",
@@ -258,7 +298,13 @@
     },
     {
       "Factors": "嗜魔",
-      "ATKRatioValue": 1.3
+      "ATKRatioValue": [{
+		  "enemy":["黄金王兽"],
+		  "value":1.3
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "迅捷",
@@ -266,27 +312,49 @@
     },
     {
       "Factors": "吼叫1层",
-      "ATKRatioValue": 1.25
+      "ATKRatioValue": [{
+		  "enemy":["嗜岩·兽境幼兽","嗜雷·兽境幼兽"],
+		  "value":1.25
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "吼叫2层",
-      "ATKRatioValue": 1.5
+      "ATKRatioValue": [{
+		  "enemy":["嗜岩·兽境幼兽","嗜雷·兽境幼兽"],
+		  "value":1.5
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
       "Factors": "狂暴",
-      "ATKRatioValue": 1.3
+      "ATKRatioValue": [{
+		  "enemy":["大雪猪王"],
+		  "value":1.3
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     },
     {
-      "Factors": "特别凶暴G",
-      "ATKRatioValue": 2
-    },
-    {
-      "Factors": "特别凶暴H",
-      "ATKRatioValue": 2.2
-    },
-    {
-      "Factors": "特别凶暴M",
-      "ATKRatioValue": 3.5
+      "Factors": "特别凶暴",
+      "ATKRatioValue": [{
+		  "enemy":["火斧丘丘暴徒","雷斧丘丘暴徒","冰盾丘丘暴徒","木盾丘丘暴徒","岩盾丘丘暴徒"],
+		  "value":2.2
+	  },{
+		  "enemy":["遗迹守卫"],
+		  "value":2
+	  },{
+		  "enemy":["遗迹猎者"],
+		  "value":3.5
+	  },{
+		  "enemy":[],
+		  "value":1
+	  }]
     }
   ]
 }
