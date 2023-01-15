@@ -1,18 +1,22 @@
-﻿import plugin from "../../lib/plugins/plugin.js";
+﻿import plugin from "../../../lib/plugins/plugin.js";
 import fs from "node:fs";
-import { pluginResources } from "./model/path.js";
+import { pluginResources } from "../model/path.js";
 import YAML from "yaml";
-import gsCfg from "../genshin/model/gsCfg.js";
+
+const CommonData =  YAML.parse(fs.readFileSync(`${pluginResources}/enemy/Common.yaml`, "utf-8"));
+const OtherName = YAML.parse(fs.readFileSync(`${pluginResources}/othername/Enemy.yaml`, "utf-8"));
+const EnemyData = await YAML.parse(fs.readFileSync(`${pluginResources}/enemy/Enemy.yaml`, "utf-8"));
+const AttrData = JSON.parse(fs.readFileSync(`${pluginResources}/enemy/EnemyOtherAttributionData.json`, "utf-8"));
 
 export class EnemyValue extends plugin {
   constructor() {
     super({
-      name: "原魔属性计算",
+      name: "Atlas原魔属性计算",
       dsc: "查询原魔生命值和攻击力",
       event: "message",
       priority: 600,
       rule: [{
-        reg: "^#(原魔)?.*(生命值|攻击力).*",
+        reg: "^(#|原魔)?.*(生命值|攻击力).*",
         fnc: "query"
       }]
     });
@@ -72,6 +76,7 @@ export class EnemyValue extends plugin {
     // 填充修饰因子名字
     if (fea) { feature = fea.Factors }
     this.reply(`${feature}的${level}级${enemy.Enemy}${(type === 'HP')? '生命值':'攻击力'}为${Number(CurvesType).toFixed(1)}*${Number(value).toFixed(2)}*${((isNaN(beilv))? 1:beilv).toFixed(2)}=${(Number(CurvesType) * Number(value) * ((isNaN(beilv))? 1:beilv)).toFixed(1)}`)
+    return true
   }
 
   async getRatioValue(fea, type, enemy){
@@ -89,11 +94,10 @@ export class EnemyValue extends plugin {
 
   async getCurvesType(level, type) {
     level = Number(level)
-    let Datas = await YAML.parse(fs.readFileSync(`${pluginResources}/enemy/Common.yaml`, "utf-8"));
 
-    for (let Data in Datas) {
-      if (Number(Datas[Data].Level) === level) {
-        return Datas[Data][type]
+    for (let Data in CommonData) {
+      if (Number(CommonData[Data].Level) === level) {
+        return CommonData[Data][type]
       }
     }
     return false
@@ -102,8 +106,6 @@ export class EnemyValue extends plugin {
   // 匹配原魔
   async regEnemy(text) {
     // 先匹配别名
-    let OtherName = await YAML.parse(fs.readFileSync(`${pluginResources}/othername/Enemy.yaml`, "utf-8"));
-
     let EnableName = []
     // 逐个筛选可疑名字
     for (let element in OtherName) {
@@ -127,8 +129,6 @@ export class EnemyValue extends plugin {
       })
     }
 
-    let EnemyData = await YAML.parse(fs.readFileSync(`${pluginResources}/enemy/Enemy.yaml`, "utf-8"));
-
     for (let Datas in EnemyData) {
       for (let Data of EnemyData[Datas]){
         if (Data[Datas] === EnableName[0]) {
@@ -147,7 +147,6 @@ export class EnemyValue extends plugin {
 
   // 匹配修饰因子
   async regEnemyOtherData(text, type) {
-    let AttrData = await this.getJson("EnemyOtherAttributionData");
     for (let key of Object.keys(AttrData)) {
       if (key.includes(type)) {
         //ATK HP强制过滤
@@ -160,10 +159,6 @@ export class EnemyValue extends plugin {
     }
     // 没有匹配到
     return false;
-  }
-
-  async getJson(file) {
-    return JSON.parse(fs.readFileSync(`${pluginResources}/enemy/${file}.json`, "utf-8"));
   }
 
   async getType(text) {

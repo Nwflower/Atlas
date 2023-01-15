@@ -1,10 +1,10 @@
-﻿import plugin from '../../lib/plugins/plugin.js'
+﻿import plugin from '../../../lib/plugins/plugin.js'
 import fs from 'node:fs'
 import { segment } from 'oicq'
 import YAML from 'yaml'
-import gsCfg from '../genshin/model/gsCfg.js'
-import puppeteer from '../../lib/puppeteer/puppeteer.js'
-import { pluginRoot,pluginResources } from "./model/path.js";
+import gsCfg from '../../genshin/model/gsCfg.js'
+import puppeteer from '../../../lib/puppeteer/puppeteer.js'
+import { pluginRoot,pluginResources } from "../model/path.js";
 
 let context = {} // 索引表
 let num = {} // 计数器
@@ -20,7 +20,7 @@ export class atlas extends plugin {
       fnc: 'atlas'
     }
     super({
-      name: '图鉴',
+      name: 'Atlas图鉴',
       dsc: '原神各类图鉴与角色材料，支持热更新',
       event: 'message',
       priority: atlasConfig.priority,

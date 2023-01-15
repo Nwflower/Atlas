@@ -1,7 +1,7 @@
-﻿import plugin from '../../lib/plugins/plugin.js'
+﻿import plugin from '../../../lib/plugins/plugin.js'
 import fs from 'node:fs'
 import { exec } from 'child_process'
-import { pluginRoot } from "./model/path.js";
+import { pluginRoot } from "../model/path.js";
 
 export class admin extends plugin {
   constructor () {
@@ -12,15 +12,14 @@ export class admin extends plugin {
       priority: 99,
       rule: [{
         reg: '^#*图鉴(强制)?升级$',
-        fnc: 'updata'
+        fnc: 'update'
       }]
     })
     this._path = process.cwd().replace(/\\/g, '/')
-    this.version = '3.4.0'
     this.task = {
       cron: '0 0 3 * * ?',
       name: '自动更新最新图鉴图片-凌晨3-4点之间某一刻自动执行',
-      fnc: () => this.updataTask()
+      fnc: () => this.updateTask()
     }
   }
 
@@ -28,12 +27,7 @@ export class admin extends plugin {
 
   get pluginResourcePath () { return `${this.pluginPath}Genshin-Atlas/` }
 
-  async init () {
-    logger.info('---------QAQ---------')
-    logger.info(`Atlas图鉴${this.version}很高兴为您服务~`)
-  }
-
-  async updataTask () {
+  async updateTask () {
     let pluginResourcePath = this.pluginResourcePath
     setTimeout(async function () {
       if (fs.existsSync(pluginResourcePath)) {
@@ -45,8 +39,8 @@ export class admin extends plugin {
     }, Math.floor(Math.random() * 3600000 + 1))
   }
 
-  async updata (e) {
-    if (!e.isMaster) { return true }
+  async update (e) {
+    if (!e.isMaster) { return false }
     let command
     if (fs.existsSync(this.pluginResourcePath)) {
       command = 'git pull'
@@ -54,7 +48,6 @@ export class admin extends plugin {
         command = 'git  checkout . && git  pull'
         e.reply('开始执行强制更新操作，请稍等')
       } else { e.reply('开始执行更新操作，请稍等') }
-      exec(command, { cwd: this.pluginPath }, function (error, stdout, stderr) { if (error) { e.reply('图鉴代码片段更新失败，部分图片可能无法使用。\nError code: ' + error.code + '\n' + error.stack + '\n 请稍后重试。') } else { e.reply('图鉴代码片段升级完毕') } })
       exec(command, { cwd: this.pluginResourcePath }, function (error, stdout, stderr) {
         if (/Already up to date/.test(stdout) || stdout.includes('最新')) { e.reply('目前所有图片都已经是最新了~') }
         let numRet = /(\d*) files changed,/.exec(stdout)
