@@ -4,7 +4,7 @@ import { pluginResources } from "../model/path.js";
 import YAML from "yaml";
 
 const CommonData =  YAML.parse(fs.readFileSync(`${pluginResources}/enemy/Common.yaml`, "utf-8"));
-const OtherName = YAML.parse(fs.readFileSync(`${pluginResources}/othername/enemy.yaml`, "utf-8"));
+const OtherName = YAML.parse(fs.readFileSync(`${pluginResources}/othername/enemy for value.yaml`, "utf-8"));
 const EnemyData = await YAML.parse(fs.readFileSync(`${pluginResources}/enemy/Enemy.yaml`, "utf-8"));
 const AttrData = JSON.parse(fs.readFileSync(`${pluginResources}/enemy/EnemyOtherAttributionData.json`, "utf-8"));
 
