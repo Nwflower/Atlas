@@ -1,5 +1,6 @@
-# Atlas
+<img decoding="async" align=right src="resource/img/logo_atlas.png" width="25%">
 
+# Atlas
 Atlas是一个适用于V3版本及以上Yunzai-Bot的原神图鉴插件包，可通过Yunzai-Bot查询[`米游社@西北壹枝花`](https://bbs.mihoyo.com/ys/accountCenter/postList?id=289918413)制作的原神(Genshin Impact)游戏图鉴。
 
 插件代码严格遵循ES6规范。
