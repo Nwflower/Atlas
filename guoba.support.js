@@ -1,4 +1,5 @@
 import { pluginResources } from "./model/path.js";
+import path from 'path'
 
 
 // 支持锅巴
