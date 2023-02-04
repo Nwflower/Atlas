@@ -27,7 +27,8 @@ export class atlas extends plugin {
       rule: [rule]
     })
     this.islog = false
-    this.ignore = ['.git', 'food', 'WeekBOSS']
+    // 忽略的目录
+    this.ignore = ['.git']
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
 
