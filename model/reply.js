@@ -20,8 +20,11 @@ export default class Reply {
         MsgArray = []
       }
       if (typeof messageArrayElement !== 'string'){
-        // 如果已经存储了部分内容
-        if (MsgArrayElement){ MsgArray.push(MsgArrayElement) }
+        if (MsgArrayElement){
+          // 消息移入栈
+          MsgArray.push(MsgArrayElement)
+          MsgArrayElement = ''
+        }
         MsgArray.push(messageArrayElement)
       } else {
         if (MsgArrayElement && MsgArrayElement.length < 100){
