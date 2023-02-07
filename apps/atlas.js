@@ -5,6 +5,7 @@ import YAML from 'yaml'
 import gsCfg from '../../genshin/model/gsCfg.js'
 import puppeteer from '../../../lib/puppeteer/puppeteer.js'
 import { pluginRoot,pluginResources } from "../model/path.js";
+import Reply from "../model/reply.js";
 
 let context = {} // 索引表
 let num = {} // 计数器
@@ -91,80 +92,54 @@ export class atlas extends plugin {
   async index (sync, key, rule) {
     // 获取索引文件目录
     let respath = `${pluginResources}/text/${sync}.yaml`
-    if (fs.existsSync(respath)) {
-      let re = YAML.parse(fs.readFileSync(respath, 'utf8'))
-      for (let element in re) {
-        // 如果口令匹配到
-        if (key === element) {
-          // 对象转口令
-          let divi = ''
-          switch (rule.condition) {
-            case 1:
-            case 3:
-              divi = '#'
-              break
-            case 2:
-              divi = `${rule.pick[0]}`
-              break
-            case 4:
-              divi = `#${rule.pick[0]}`
-              break
-          }
-          // 发送消息
-          let sendmsg = []
-          let MsgArray = []
-          for (let i in re[element]) {
-            re[element][i] = divi + re[element][i]
-            sendmsg.push({
-              name: re[element][i],
-              Num: Number(i)+1
-            })
-            MsgArray.push({
-              message: `${Number(i)+1}、${re[element][i]}`,
-              nickname: Bot.nickname,
-              user_id: Bot.uin
-            })
-          }
-          this.reply(sendmsg, true, {MsgArray})
-          context[this.e.user_id] = re[element]
-          return true
+    if (!fs.existsSync(respath)) { return false}
+    let re = YAML.parse(fs.readFileSync(respath, 'utf8'))
+    for (let element in re) {
+      // 如果口令匹配到
+      if (key === element) {
+        // 对象转口令
+        let divi = ''
+        switch (rule.condition) {
+          case 1:
+          case 3:
+            divi = '#'
+            break
+          case 2:
+            divi = `${rule.pick[0]}`
+            break
+          case 4:
+            divi = `#${rule.pick[0]}`
+            break
         }
+        // 发送消息
+        let sendmsg = []
+        let MsgArray = ['请直接发送数字序号或对应指令：']
+        for (let i in re[element]) {
+          re[element][i] = divi + re[element][i]
+          sendmsg.push({
+            name: re[element][i],
+            Num: Number(i)+1
+          })
+          MsgArray.push(`${Number(i)+1}、${re[element][i]}`)
+        }
+        let reply = new Reply(this.e)
+        let result = await reply.replyMessageArray(MsgArray)
+        // 转发失败时加工成图片
+        if (!result || !result.message_id) {
+          let base64 = await puppeteer.screenshot('AtlasIndex', {
+            tplFile: `${pluginResources}/massage/text.html`,
+            pluResPath: `${pluginResources}/`,
+            imgType: 'png',
+            massage: sendmsg,
+            name: this.e.nickname
+          })
+          result = await this.reply(base64)
+        }
+        if (!result || !result.message_id) { logger.error('Atlas处理图鉴索引列表时处理失败，请检查账号是否被风控') }
+        context[this.e.user_id] = re[element]
+        return true
       }
     }
-    return false
-  }
-
-  // 消息防风控
-  async reply (msgs, quote, data) {
-    if (!msgs) return false
-    let result
-    if (!Array.isArray(msgs)) {
-      // 图片交给父方法
-      msgs = [msgs]
-      result = await super.reply(msgs, quote)
-    } else {
-      // 先以转发消息形式处理
-      let forwardMsg = await Bot.makeForwardMsg(data.MsgArray);
-      forwardMsg.data = forwardMsg.data
-        .replace('<?xml version="1.0" encoding="utf-8"?>','<?xml version="1.0" encoding="utf-8" ?>')
-        .replace(/\n/g, '')
-        .replace(/<title color="#777777" size="26">(.+?)<\/title>/g, '___')
-        .replace(/___+/, '<title color="#777777" size="26">请点击查看内容</title>');
-      result = await super.reply(forwardMsg, quote)
-    }
-    // 转发失败时加工成图片
-    if (!result || !result.message_id) {
-      let base64 = await puppeteer.screenshot('AtlasIndex', {
-        tplFile: `${pluginResources}/massage/text.html`,
-        pluResPath: `${pluginResources}/`,
-        imgType: 'png',
-        massage: msgs,
-        name: this.e.nickname
-      })
-      result = await super.reply(base64)
-      if (!result || !result.message_id) { logger.error('Atlas处理图鉴列表时处理失败，请检查账号是否被风控') }
-    }
-    return result
   }
 
   async select (e) {
