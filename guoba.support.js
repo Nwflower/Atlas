@@ -8,7 +8,7 @@ export function supportGuoba () {
     pluginInfo: {
       name: 'atlas',
       title: '图鉴(Atlas)',
-      author: '@西北一枝花',
+      author: '@听语惊花',
       authorLink: 'https://github.com/Nwflower',
       link: 'https://github.com/Nwflower/atlas',
       isV3: true,
