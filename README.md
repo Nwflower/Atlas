@@ -55,7 +55,7 @@ git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 priority为优先级，默认为10
 success为匹配指令拦截，默认为TRUE
 
-如果你对上述规则不满意，可以查阅第四点：
+如果你对上述规则不满意，可以查阅第五点：
 
 ### 5、拓展：修改图鉴匹配规则（可以不修改）
 如果你对当前图鉴匹配效果不满意，可以修改图鉴匹配规则以让插件更频繁或更少触发
