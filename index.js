@@ -2,7 +2,7 @@ import { pluginName } from "./model/path.js";
 import fs from "fs";
 import common from "../../lib/common/common.js";
 
-let currentVersion = '3.4.2'
+let currentVersion = '3.5.0'
 
 logger.info('---------QAQ---------')
 logger.info(`Atlas图鉴${currentVersion}很高兴为您服务~`)

@@ -3,6 +3,7 @@ import fs from 'node:fs'
 import { exec } from 'child_process'
 import { pluginRoot } from "../model/path.js";
 import { pull, pullForce, pullHard, pullClean } from  "../model/update.js";
+import { library, link, list } from "../model/moreLib.js";
 
 export class admin extends plugin {
   constructor () {
@@ -12,7 +13,7 @@ export class admin extends plugin {
       event: 'message',
       priority: 99,
       rule: [{
-        reg: '^#*图鉴(强行)?(强制)?升级$',
+        reg: '^#*(原神|崩铁)?图鉴(强行)?(强制)?升级$',
         fnc: 'update'
       },{
         reg: '^#*图鉴插件(强行)?(强制)?升级$',
@@ -29,34 +30,45 @@ export class admin extends plugin {
 
   get pluginPath () { return `${pluginRoot}/` }
 
-  get pluginResourcePath () { return `${this.pluginPath}Genshin-Atlas/` }
+  getPluginResourcePath (libName) {
+    return `${this.pluginPath}${library[libName]}/`
+  }
 
   async updateTask () {
-    let pluginResourcePath = this.pluginResourcePath
-    setTimeout(async function () {
-      if (fs.existsSync(pluginResourcePath)) {
-        exec(pull, { cwd: pluginResourcePath }, function (error, stdout, stderr) {
-          let numRet = /(\d*) files changed,/.exec(stdout)
-          if (numRet && numRet[1]) { logger.info(`Atlas图鉴资源自动更新成功，此次更新了${numRet[1]}个图片~`) } else if (error) { logger.info('图片资源更新失败！\nError code: ' + error.code + '\n' + error.stack + '\n 将于明日重试') }
-        })
-      }
-    }, Math.floor(Math.random() * 3600000 + 1))
+    for (let listElement of list) {
+      let pluginResourcePath = this.getPluginResourcePath(listElement)
+      setTimeout(async function () {
+        if (fs.existsSync(pluginResourcePath)) {
+          exec(pull, { cwd: pluginResourcePath }, function (error, stdout, stderr) {
+            let numRet = /(\d*) files changed,/.exec(stdout)
+            if (numRet && numRet[1]) { logger.info(`Atlas${listElement}图鉴资源自动更新成功，此次更新了${numRet[1]}个图片~`) } else if (error) { logger.info('图片资源更新失败！\nError code: ' + error.code + '\n' + error.stack + '\n 将于明日重试') }
+          })
+        }
+      }, Math.floor(Math.random() * 3600000 + 1))
+    }
   }
 
   async update (e) {
     if (!e.isMaster) { return false }
-    if (fs.existsSync(this.pluginResourcePath)) {
+    let libName = list[0]
+
+    // 获取要更新的仓库
+    for (let listElement of list) {
+      if (this.e.msg && this.e.msg.includes(listElement)){ libName = listElement }
+    }
+
+    if (fs.existsSync(this.getPluginResourcePath(libName))) {
       let command = await this.getUpdateType()
-      exec(command, { cwd: this.pluginResourcePath }, function (error, stdout, stderr) {
+      exec(command, { cwd: this.getPluginResourcePath(libName) }, function (error, stdout, stderr) {
         if (/Already up to date/.test(stdout) || stdout.includes('最新')) { e.reply('目前所有图片都已经是最新了~') }
         let numRet = /(\d*) files changed,/.exec(stdout)
-        if (numRet && numRet[1]) { e.reply(`报告主人，更新成功，此次更新了${numRet[1]}个图片~`) }
+        if (numRet && numRet[1]) { e.reply(`报告主人，更新成功，此次更新了${libName}图鉴的${numRet[1]}个图片~`) }
         if (error) { e.reply('图片资源更新失败！\nError code: ' + error.code + '\n' + error.stack + '\n 请稍后重试。') } else { e.reply('Atlas图鉴图片资源升级完毕') }
       })
     } else {
-      let command = `git clone --depth=1 https://gitee.com/Nwflower/genshin-atlas "${this.pluginResourcePath}"`
-      e.reply('开始尝试安装Atlas图鉴升级包，可能会需要一段时间，请耐心等待~')
-      exec(command, function (error, stdout, stderr) { if (error) { e.reply('Atlas图鉴拓展包安装失败！\nError code: ' + error.code + '\n' + error.stack + '\n 请稍后重试。') } else { e.reply('Atlas图鉴拓展包安装成功！您后续也可以通过 #图鉴升级 命令来更新图像') } })
+      let command = `git clone --depth=1 ${link[libName]} "${this.getPluginResourcePath(libName)}"`
+      e.reply(`开始尝试安装Atlas${libName}图鉴升级包，可能会需要一段时间，请耐心等待~`)
+      exec(command, function (error, stdout, stderr) { if (error) { e.reply(`Atlas${libName}图鉴拓展包安装失败！\nError code: ` + error.code + '\n' + error.stack + '\n 请稍后重试。') } else { e.reply(`Atlas${libName}图鉴拓展包安装成功！您后续也可以通过 #${libName}图鉴升级 命令来更新图像`) } })
     }
     return true
   }

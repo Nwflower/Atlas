@@ -6,6 +6,7 @@ import gsCfg from '../../genshin/model/gsCfg.js'
 import puppeteer from '../../../lib/puppeteer/puppeteer.js'
 import { pluginRoot,pluginResources } from "../model/path.js";
 import Reply from "../model/reply.js";
+import { library, list } from "../model/moreLib.js";
 
 let context = {} // 索引表
 let num = {} // 计数器
@@ -28,17 +29,28 @@ export class atlas extends plugin {
       rule: [rule]
     })
     this.islog = false
-    // 忽略的目录
-    this.ignore = ['.git']
     Object.defineProperty(rule, 'log', { get: () => this.islog })
   }
 
+  getLibraryResourcePath (libName) {
+    return `${pluginResources}/Forlibrary/${library[libName]}/`
+  }
+
   init () {
-    // 检查匹配规则文件
-    let path = `${pluginResources}/rule/`
-    let pathDef = `${pluginResources}/rule_default/`
-    const files = fs.readdirSync(pathDef).filter(file => file.endsWith('.yaml'))
-    for (let file of files) { if (!fs.existsSync(`${path}${file}`)) { fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`) } }
+    // 载入图鉴库
+    let hasLibrary = false
+    for (let listElement of list) {
+      let libResPath = this.getLibraryResourcePath(listElement)
+      if (fs.existsSync(libResPath) && fs.existsSync(`${pluginRoot}/${library[listElement]}`)){
+        if (fs.existsSync(`${pluginRoot}/${library[listElement]}/`)){ hasLibrary = true}
+        let path = `${libResPath}rule/`
+        let pathDef = `${libResPath}rule_default/`
+        const files = fs.readdirSync(pathDef).filter(file => file.endsWith('.yaml'))
+        for (let file of files) { if (!fs.existsSync(`${path}${file}`)) { fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`) } }
+        logger.info(`Atlas载入库：${listElement}成功！`)
+      }
+    }
+    if (!hasLibrary){ logger.error('Atlas图鉴拓展包没有正确安装或者不是最新版本。请发送指令 #图鉴升级 以获取或升级Atlas图鉴拓展包') }
   }
 
   async atlas (e) {
@@ -51,26 +63,28 @@ export class atlas extends plugin {
     if (context[this.e.user_id]) { if (await this.select(e)) { delete num[this.e.user_id] } }
 
     // 校验资源目录
-    if (fs.existsSync(`${pluginRoot}/Genshin-Atlas/path.json`)) {
-      // 获取所有图鉴模块
-      let ignore = this.ignore
-      const imagePath = JSON.parse(fs.readFileSync(`${pluginRoot}/Genshin-Atlas/path.json`,'utf-8'))
-      const syncFiles = Object.keys(imagePath).filter(function (item, index, arr) { return !ignore.includes(item) })
+
+    for (let listElement of list) {
+      let libpath = `${pluginRoot}/${library[listElement]}`
+      if (!fs.existsSync(`${libpath}/path.json`)) {continue}
+      // 获取图鉴的所有模块
+      const imagePath = JSON.parse(fs.readFileSync(`${libpath}/path.json`,'utf-8'))
+      const syncFiles = Object.keys(imagePath)
 
       for (let sync of syncFiles) {
         // 口令转名称
-        let rule = await this.getRule(sync)
+        let rule = await this.getRule(sync, listElement)
         let Tmpmsg = await this.PickRule(msg, rule)
         if (!Tmpmsg) { continue }
 
         // 先遍历索引
-        if (!await this.index(sync, Tmpmsg, rule)) {
+        if (!await this.index(sync, Tmpmsg, rule, libpath)) {
           // 别名转正名
-          let rightname = await this.getName(Tmpmsg, sync, rule.mode)
+          let rightname = await this.getName(Tmpmsg, sync, rule.mode, listElement)
 
           // 检查资源是否存在
           if (rightname in imagePath[sync]) {
-            let path = `${pluginRoot}/Genshin-Atlas${imagePath[sync][rightname]}`
+            let path = `${libpath}${imagePath[sync][rightname]}`
             if (fs.existsSync(path)) {
               // 回复图片
               this.reply(segment.image(path))
@@ -85,13 +99,14 @@ export class atlas extends plugin {
           return false
         }
       }
-    } else { logger.error('Atlas图鉴拓展包没有正确安装或者不是最新版本。请发送指令 #图鉴升级 以获取或升级Atlas图鉴拓展包') }
+    }
     return this.islog
+
   }
 
-  async index (sync, key, rule) {
+  async index (sync, key, rule, libpath) {
     // 获取索引文件目录
-    let respath = `${pluginResources}/text/${sync}.yaml`
+    let respath = `${libpath}/index/${sync}.yaml`
     if (!fs.existsSync(respath)) { return false}
     let re = YAML.parse(fs.readFileSync(respath, 'utf8'))
     for (let element in re) {
@@ -102,13 +117,13 @@ export class atlas extends plugin {
         switch (rule.condition) {
           case 1:
           case 3:
-            divi = '#'
+            divi = rule.prefix || '#'
             break
           case 2:
             divi = `${rule.pick[0]}`
             break
           case 4:
-            divi = `#${rule.pick[0]}`
+            divi = `${rule.prefix || '#'}${rule.pick[0]}`
             break
         }
         // 发送消息
@@ -161,49 +176,54 @@ export class atlas extends plugin {
     return this.atlas(e)
   }
 
-  async getRule (sync) {
+  async getRule (sync, libname) {
     // 获取某目录的匹配规则
-    let syncPath = `${pluginResources}/rule/${sync}.yaml`
-    if (!fs.existsSync(syncPath)) { syncPath = `${pluginResources}/rule/config.yaml` }
+    let syncPath = `${this.getLibraryResourcePath(libname)}rule/${sync}.yaml`
+    if (!fs.existsSync(syncPath)) { syncPath = `${this.getLibraryResourcePath(libname)}/rule/config.yaml` }
     return YAML.parse(fs.readFileSync(syncPath, 'utf8'))
   }
 
   async PickRule (msg, Rule) {
     // 执行匹配规则
     let pickreg = /图鉴/g
+    let prefix = '#'
 
     // 触发词处理
     if ('pick' in Rule) { pickreg = new RegExp(`(${Rule.pick.join('|')})`, 'g') }
+
+    // 前缀处理
+    if ('prefix' in Rule) { prefix = Rule.prefix }
+    let testPrefixReg = new RegExp(`^${prefix}.*$`, 'g')
     switch (Rule.condition) {
-      case 0:// 去除可能的前缀#
-        return msg.replace(/^#*/g, '').trim()
-      case 1:// 匹配前缀#并去除
-        if (/^#.*$/g.test(msg)) { return msg.replace(/^#*/g, '').trim() }
+      case 0:// 去除可能的前缀词
+        return msg.replace(new RegExp(`^${prefix}*`, 'g'), '').trim()
+      case 1:// 匹配前缀词并去除
+        if (testPrefixReg.test(msg)) { return msg.replace(new RegExp(`^${prefix}*`, 'g'), '').trim() }
         return false
       case 2:// 匹配关键字并去除
         if (pickreg.test(msg)) { return msg.replace(pickreg, '').trim() }
         return false
-      case 3:// 匹配关键字或前缀#并去除
-        if (pickreg.test(msg) || /^#.*$/g.test(msg)) { return msg.replace(/^#*/g, '').replace(pickreg, '').trim() }
+      case 3:// 匹配关键字或前缀词并去除
+        if (pickreg.test(msg) || testPrefixReg.test(msg)) { return msg.replace(new RegExp(`^${prefix}*`, 'g'), '').replace(pickreg, '').trim() }
         return false
-      case 4:// 匹配关键字和前缀#并去除
-        if (pickreg.test(msg) && /^#.*$/g.test(msg)) { return msg.replace(/^#*/g, '').replace(pickreg, '').trim() }
+      case 4:// 匹配关键字和前缀词并去除
+        if (pickreg.test(msg) && testPrefixReg.test(msg)) { return msg.replace(new RegExp(`^${prefix}*`, 'g'), '').replace(pickreg, '').trim() }
     }
     return false
   }
 
-  async getName (originName, sync, pickmode) {
+  async getName (originName, sync, pickmode, libName) {
     // 检查别名文件是否存在
-    if (fs.existsSync(`${pluginResources}/othername/${sync}.yaml`)) {
-      let YamlObject = YAML.parse(fs.readFileSync(`${pluginResources}/othername/${sync}.yaml`, 'utf8'))
+    if (fs.existsSync(`${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`)) {
+      let YamlObject = YAML.parse(fs.readFileSync(`${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`, 'utf8'))
       for (let element in YamlObject) { if (pickmode) { if (pickmode === 1) { for (let Elementword of YamlObject[element]) { if (Elementword.includes(originName)) { return element } } } else { for (let Elementword of YamlObject[element]) { if (originName.includes(Elementword)) { return element } } } } else { if (YamlObject[element].includes(originName)) { return element } } }
     }
     // 角色相关图鉴交由云崽本体功能进行处理
-    if (sync.includes('role')) {
+    if (sync.includes('role') || libName === "原神") {
       let rolename = gsCfg.getRole(originName)
       if (rolename) return rolename.name
     }
-    // 不存在任何别名直接返回
+    // 没有别名直接返回
     return originName
   }
 }
