@@ -41,8 +41,8 @@ export class atlas extends plugin {
     let hasLibrary = false
     for (let listElement of list) {
       let libResPath = this.getLibraryResourcePath(listElement)
-      if (fs.existsSync(libResPath) && fs.existsSync(`${pluginRoot}/${library[listElement]}`)){
-        if (fs.existsSync(`${pluginRoot}/${library[listElement]}/`)){ hasLibrary = true}
+      if (fs.existsSync(libResPath) && fs.existsSync(`${pluginRoot}/${library[listElement]}/`)){
+        hasLibrary = true
         let path = `${libResPath}rule/`
         let pathDef = `${libResPath}rule_default/`
         const files = fs.readdirSync(pathDef).filter(file => file.endsWith('.yaml'))
@@ -192,7 +192,7 @@ export class atlas extends plugin {
     if ('pick' in Rule) { pickreg = new RegExp(`(${Rule.pick.join('|')})`, 'g') }
 
     // 前缀处理
-    if ('prefix' in Rule) { prefix = Rule.prefix }
+    if ('prefixForReg' in Rule) { prefix = Rule.prefixForReg }
     let testPrefixReg = new RegExp(`^${prefix}.*$`, 'g')
     switch (Rule.condition) {
       case 0:// 去除可能的前缀词
