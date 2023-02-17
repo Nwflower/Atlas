@@ -47,7 +47,7 @@ export class atlas extends plugin {
         let pathDef = `${libResPath}rule_default/`
         const files = fs.readdirSync(pathDef).filter(file => file.endsWith('.yaml'))
         for (let file of files) { if (!fs.existsSync(`${path}${file}`)) { fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`) } }
-        logger.info(`Atlas载入库：${listElement}成功！`)
+        logger.info(`Atlas载入库文件：${listElement}成功！`)
       }
     }
     if (!hasLibrary){ logger.error('Atlas图鉴拓展包没有正确安装或者不是最新版本。请发送指令 #图鉴升级 以获取或升级Atlas图鉴拓展包') }
