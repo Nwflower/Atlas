@@ -192,7 +192,7 @@ export class atlas extends plugin {
     if ('pick' in Rule) { pickreg = new RegExp(`(${Rule.pick.join('|')})`, 'g') }
 
     // 前缀处理
-    if ('prefix' in Rule) { prefix = Rule.prefix }
+    if ('prefixForReg' in Rule) { prefix = Rule.prefixForReg }
     let testPrefixReg = new RegExp(`^${prefix}.*$`, 'g')
     switch (Rule.condition) {
       case 0:// 去除可能的前缀词
