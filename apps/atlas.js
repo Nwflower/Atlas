@@ -41,7 +41,7 @@ export class atlas extends plugin {
     let hasLibrary = false
     for (let listElement of list) {
       let libResPath = this.getLibraryResourcePath(listElement)
-      if (fs.existsSync(libResPath) && fs.existsSync(`${pluginRoot}/${library[listElement]}`)){
+      if (fs.existsSync(libResPath)){
         if (fs.existsSync(`${pluginRoot}/${library[listElement]}/`)){ hasLibrary = true}
         let path = `${libResPath}rule/`
         let pathDef = `${libResPath}rule_default/`
