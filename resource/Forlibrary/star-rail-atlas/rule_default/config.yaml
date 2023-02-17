@@ -7,6 +7,9 @@ condition: 3
 # 指定前缀词，不指定则为#
 prefix: '*'
 
+# 指定前缀正则（同上，但是需要转义）
+prefixForReg: '\*'
+
 # 索引撤回时间
 recallMsg: 40
 
