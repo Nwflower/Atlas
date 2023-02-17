@@ -1,5 +1,7 @@
 <img decoding="async" align=right src="resource/img/logo_atlas.png" width="25%">
 
+# 该版本为测试版本
+
 # Atlas
 Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴插件包，可通过Yunzai-Bot查询[`米游社@听语惊花`](https://bbs.mihoyo.com/ys/accountCenter/postList?id=289918413)制作的游戏图鉴。
 
@@ -9,7 +11,7 @@ Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴插件包，可通过
 
 原神图鉴库：[Genshin-Atlas](https://gitee.com/Nwflower/genshin-atlas)
 
-崩坏：星穹铁道图鉴库：敬请期待
+崩坏：星穹铁道图鉴库：[star-rail-atlas](https://gitee.com/Nwflower/star-rail-atlas)
 
 ## 如何获取
 ### 1、下载插件本体
