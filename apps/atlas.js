@@ -212,11 +212,29 @@ export class atlas extends plugin {
     return false
   }
 
+  // 传入需要处理的名字 返回原始名字
   async getName (originName, sync, pickmode, libName) {
-    // 检查别名文件是否存在
+    // 检查对应库的别名文件是否存在
     if (fs.existsSync(`${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`)) {
+      // 读取别名文件
       let YamlObject = YAML.parse(fs.readFileSync(`${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`, 'utf8'))
-      for (let element in YamlObject) { if (pickmode) { if (pickmode === 1) { for (let Elementword of YamlObject[element]) { if (Elementword.includes(originName)) { return element } } } else { for (let Elementword of YamlObject[element]) { if (originName.includes(Elementword)) { return element } } } } else { if (YamlObject[element].includes(originName)) { return element } } }
+
+      // 开始循环 遍历每一组别名
+      for (let element in YamlObject) {
+        if (pickmode) {
+          if (pickmode === 1) {
+            for (let Elementword of YamlObject[element]) {
+              if (Elementword.includes(originName)) { return element }
+            }
+          } else {
+            for (let Elementword of YamlObject[element]) {
+              if (originName.includes(Elementword)) { return element }
+            }
+          }
+        } else {
+          if (YamlObject[element].includes(originName)) { return element }
+        }
+      }
     }
     // 角色相关图鉴交由云崽本体功能进行处理
     if (sync.includes('role') || libName === "原神") {
