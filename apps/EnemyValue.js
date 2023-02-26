@@ -16,7 +16,7 @@ export class EnemyValue extends plugin {
       event: "message",
       priority: 600,
       rule: [{
-        reg: "^(#|原魔)?.*(生命值|攻击力).*",
+        reg: "^(#|原魔).*(生命值|攻击力).*",
         fnc: "query"
       }]
     });
