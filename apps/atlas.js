@@ -70,7 +70,7 @@ export class atlas extends plugin {
       // 获取图鉴的所有模块
       const imagePath = JSON.parse(fs.readFileSync(`${libpath}/path.json`,'utf-8'))
       const syncFiles = Object.keys(imagePath)
-
+      logger.debug(`【Atlas】 开始查验${msg}`)
       for (let sync of syncFiles) {
         // 口令转名称
         let rule = await this.getRule(sync, listElement)
