@@ -1,6 +1,5 @@
 ﻿import plugin from '../../../lib/plugins/plugin.js'
 import fs from 'node:fs'
-import { segment } from 'oicq'
 import YAML from 'yaml'
 import gsCfg from '../../genshin/model/gsCfg.js'
 import puppeteer from '../../../lib/puppeteer/puppeteer.js'
@@ -87,6 +86,12 @@ export class atlas extends plugin {
             let path = `${libpath}${imagePath[sync][rightname]}`
             if (fs.existsSync(path)) {
               // 回复图片
+              let segment
+              try {
+                segment = (await import('icqq')).segment;
+              } catch (e) {
+                segment = (await import('oicq')).segment;
+              }
               this.reply(segment.image(path))
               this.islog = true
               // 是否交给其他插件处理
