@@ -1,4 +1,6 @@
 // 消息回复处理模块 提供一些消息、转发消息加工以及消息分割等方法
+import Common from "../../../lib/common/common.js";
+
 export default class Reply {
 
   constructor (e) {
@@ -51,19 +53,7 @@ export default class Reply {
 
   // 将组消息处理成转发消息
   async replyByForwardMsg(MsgArray){
-    let massage = []
-    for (let msgArrayElement of MsgArray) {massage.push({
-      message: msgArrayElement,
-      nickname: Bot.nickname,
-      user_id: Bot.uin
-    })}
-    let forwardMsg = await Bot.makeForwardMsg(massage);
-    forwardMsg.data = forwardMsg.data
-      .replace('<?xml version="1.0" encoding="utf-8"?>','<?xml version="1.0" encoding="utf-8" ?>')
-      .replace(/\n/g, '')
-      .replace(/<title color="#777777" size="26">(.+?)<\/title>/g, '___')
-      .replace(/___+/, '<title color="#777777" size="26">请点击查看内容</title>');
-    return await this.e.reply(forwardMsg)
+    return await Common.makeForwardMsg(this.e, MsgArray, '请点击查看内容')
   }
 }
 
