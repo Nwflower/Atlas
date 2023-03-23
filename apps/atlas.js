@@ -86,12 +86,6 @@ export class atlas extends plugin {
             let path = `${libpath}${imagePath[sync][rightname]}`
             if (fs.existsSync(path)) {
               // 回复图片
-              let segment
-              try {
-                segment = (await import('icqq')).segment;
-              } catch (e) {
-                segment = (await import('oicq')).segment;
-              }
               this.reply(segment.image(path))
               this.islog = true
               // 是否交给其他插件处理

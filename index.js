@@ -25,6 +25,10 @@ setTimeout(async function () {
   }
 }, 1000)
 
+if (!global.segment) {
+  global.segment = (await import("oicq")).segment
+}
+
 let index = { atlas: {} }
 export const atlas = index.atlas || {}
 
