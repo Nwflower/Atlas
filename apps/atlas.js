@@ -86,7 +86,7 @@ export class atlas extends plugin {
             let path = `${libpath}${imagePath[sync][rightname]}`
             if (fs.existsSync(path)) {
               // 回复图片
-              this.reply(segment.image(path))
+              this.reply(segment.image('file://'+path))
               this.islog = true
               // 是否交给其他插件处理
               return atlasConfig.success
