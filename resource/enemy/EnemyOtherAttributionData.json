@@ -1,66 +1,233 @@
 {
-  "DefaultHP": [
+  "SpecialHP": [
     {
       "Factors": "2人",
       "HPRatioValue": [{
-		  "enemy":["祸津御建鸣神命","公子(第一阶段)","公子(第二阶段)","公子(第三阶段)","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)"],
-		  "value":1.25
-	  },{
-		  "enemy":[],
-		  "value":1.5
-	  }]
+        "enemy":["祸津御建鸣神命","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)","阿佩普-第一阶段","阿佩普-第二阶段","阿佩普-基础增殖生命体","阿佩普-掠食性增殖生命体","阿佩普-守护的增殖生命体","阿佩普-养育的增殖生命体","阿佩普-破坏的增殖生命体","阿佩普-筑巢的增殖生命体"],
+        "value":1.25
+      },{
+        "enemy":[],
+        "value":1.5
+      }]
     },
     {
       "Factors": "3人",
       "HPRatioValue": [{
-		  "enemy":["祸津御建鸣神命","公子(第一阶段)","公子(第二阶段)","公子(第三阶段)","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)"],
-		  "value":1.5
-	  },{
-		  "enemy":[],
-		  "value":2
-	  }]
+        "enemy":["祸津御建鸣神命","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)","阿佩普-第一阶段","阿佩普-第二阶段","阿佩普-基础增殖生命体","阿佩普-掠食性增殖生命体","阿佩普-守护的增殖生命体","阿佩普-养育的增殖生命体","阿佩普-破坏的增殖生命体","阿佩普-筑巢的增殖生命体"],
+        "value":1.5
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "4人",
       "HPRatioValue": [{
-		  "enemy":["祸津御建鸣神命","公子(第一阶段)","公子(第二阶段)","公子(第三阶段)","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)"],
-		  "value":1.75
-	  },{
-		  "enemy":[],
-		  "value":2.5
-	  }]
+        "enemy":["祸津御建鸣神命","若陀龙王(第一阶段)","若陀龙王(第二阶段)","若陀龙王(第三阶段)","女士(第一阶段)","女士(第二阶段)","七叶寂照秘密主(第一阶段)","七叶寂照秘密主(第二阶段)","阿佩普-第一阶段","阿佩普-第二阶段","阿佩普-基础增殖生命体","阿佩普-掠食性增殖生命体","阿佩普-守护的增殖生命体","阿佩普-养育的增殖生命体","阿佩普-破坏的增殖生命体","阿佩普-筑巢的增殖生命体"],
+        "value":1.75
+      },{
+        "enemy":[],
+        "value":2.5
+      }]
+    }
+  ],
+  "DefaultHP": [
+    {
+      "Factors": ["蒙德天赋本","忘却之峡"],
+      "Level": 88,
+      "HPRatioValue": 1.2
+    },
+    {
+      "Factors": ["璃月天赋本","太山府"],
+      "Level": 88,
+      "HPRatioValue": 1.2
+    },
+    {
+      "Factors": ["稻妻天赋本","堇色之庭"],
+      "Level": 88,
+      "HPRatioValue": [{
+        "enemy":["海乱鬼·炎威","海乱鬼·雷腾"],
+        "value":2
+      },{
+        "enemy":[],
+        "value":1
+      }]
+    },
+    {
+      "Factors": ["须弥天赋本","昏识塔"],
+      "Level": 88,
+      "HPRatioValue": 1.4
+    },
+    {
+      "Factors": ["蒙德武器本","塞西莉亚苗圃"],
+      "Level": 80,
+      "HPRatioValue": 1.2
+    },
+    {
+      "Factors": ["璃月武器本","震雷连山密宫"],
+      "Level": 80,
+      "HPRatioValue": 1.2
+    },
+    {
+      "Factors": ["稻妻武器本","砂流之庭"],
+      "Level": 80,
+      "HPRatioValue": [{
+        "enemy":["雷斧丘丘暴徒"],
+        "value":2
+      },{
+        "enemy":[],
+        "value":1.5
+      }]
+    },
+    {
+      "Factors": ["须弥武器本","有顶塔"],
+      "Level": 80,
+      "HPRatioValue": 1.2
+    },
+    {
+      "Factors": ["雷本","仲夏庭园","如雷本","平雷本"],
+      "Level": 90,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": ["风本","少女本","铭记之谷"],
+      "Level": 90,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": ["冰本","水本","芬德尼尔之顶"],
+      "Level": 90,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": ["岩本","孤云凌霄之处","磐岩本","逆飞本"],
+      "Level": 90,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": ["千岩本","苍白本","山脊守望"],
+      "Level": 90,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": ["火本","无妄引咎密宫","魔女本","渡火本"],
+      "Level": 90,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": ["宗室本","骑士本","华池岩岫"],
+      "Level": 90,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": ["辰砂本","岩中幽谷","余响本"],
+      "Level": 90,
+      "HPRatioValue": [{
+        "enemy":["遗迹重机"],
+        "value":3
+      },{
+        "enemy":[],
+        "value":2
+      }]
+    },
+    {
+      "Factors": ["华馆本","沉眠之庭","海染本"],
+      "Level": 90,
+      "HPRatioValue": 1.5
+    },
+    {
+      "Factors": ["绝缘本","追忆本","椛染之庭"],
+      "Level": 90,
+      "HPRatioValue": [{
+        "enemy":["大型雷史莱姆"],
+        "value":1.5
+      },{
+        "enemy":[],
+        "value":2
+      }]
+    },
+    {
+      "Factors": ["草本","饰金本","缘觉塔"],
+      "Level": 90,
+      "HPRatioValue": 2
+    },
+    {
+      "Factors": ["楼阁本","赤金的城墟","乐园本"],
+      "Level": 90,
+      "HPRatioValue": 2.5
+    },
+    {
+      "Factors": ["花海本","熔铁的孤塞","水仙本"],
+      "Level": 90,
+      "HPRatioValue": 2
     }
   ],
   "SpiralAbyssHP": [
     {
       "Factors": "11-1",
       "Level": 88,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "11-2",
       "Level": 90,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "11-3",
       "Level": 92,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "12-1",
       "Level": 95,
-      "HPRatioValue": 2.5
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2.5
+      }]
     },
     {
       "Factors": "12-2",
       "Level": 98,
-      "HPRatioValue": 2.5
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2.5
+      }]
     },
     {
       "Factors": "12-3",
       "Level": 100,
-      "HPRatioValue": 2.5
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2.5
+      }]
     },
     {
       "Factors": "1-1",
@@ -185,35 +352,71 @@
     {
       "Factors": "9-1",
       "Level": 72,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "9-2",
       "Level": 74,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "9-3",
       "Level": 76,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "10-1",
       "Level": 80,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "10-2",
       "Level": 82,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     },
     {
       "Factors": "10-3",
       "Level": 85,
-      "HPRatioValue": 2
+      "HPRatioValue": [{
+        "enemy":["地脉镇石-深境螺旋"],
+        "value":1
+      },{
+        "enemy":[],
+        "value":2
+      }]
     }
   ],
-  "DefaultATK": [
+  "SpecialATK": [
     {
       "Factors": "2人",
       "ATKRatioValue": 1.1
@@ -225,7 +428,9 @@
     {
       "Factors": "4人",
       "ATKRatioValue": 1.4
-    },
+    }
+  ],
+  "DefaultATK": [
     {
       "Factors": "火元素增幅",
       "ATKRatioValue": 1.4
@@ -235,58 +440,62 @@
       "ATKRatioValue": 1.2
     },
     {
+      "Factors": "强化黑泥",
+      "ATKRatioValue": 1.25
+    },
+    {
       "Factors": "凋零使徒",
       "ATKRatioValue": 1.1
     },
     {
       "Factors": "强化1层",
       "ATKRatioValue": [{
-		  "enemy":["黯色空壳·近卫"],
-		  "value":1.15
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["黯色空壳·近卫"],
+        "value":1.15
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "强化2层",
       "ATKRatioValue": [{
-		  "enemy":["黯色空壳·近卫"],
-		  "value":1.3
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["黯色空壳·近卫"],
+        "value":1.3
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "强化3层",
       "ATKRatioValue": [{
-		  "enemy":["黯色空壳·近卫"],
-		  "value":1.45
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["黯色空壳·近卫"],
+        "value":1.45
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "强化4层",
       "ATKRatioValue": [{
-		  "enemy":["黯色空壳·近卫"],
-		  "value":1.6
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["黯色空壳·近卫"],
+        "value":1.6
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "强化5层",
       "ATKRatioValue": [{
-		  "enemy":["黯色空壳·近卫"],
-		  "value":1.75
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["黯色空壳·近卫"],
+        "value":1.75
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "伸雷灵蕈",
@@ -299,12 +508,12 @@
     {
       "Factors": "嗜魔",
       "ATKRatioValue": [{
-		  "enemy":["黄金王兽"],
-		  "value":1.3
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["黄金王兽"],
+        "value":1.3
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "迅捷",
@@ -313,48 +522,100 @@
     {
       "Factors": "吼叫1层",
       "ATKRatioValue": [{
-		  "enemy":["嗜岩·兽境幼兽","嗜雷·兽境幼兽"],
-		  "value":1.25
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["嗜岩·兽境幼兽","嗜雷·兽境幼兽"],
+        "value":1.25
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "吼叫2层",
       "ATKRatioValue": [{
-		  "enemy":["嗜岩·兽境幼兽","嗜雷·兽境幼兽"],
-		  "value":1.5
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["嗜岩·兽境幼兽","嗜雷·兽境幼兽"],
+        "value":1.5
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "狂暴",
       "ATKRatioValue": [{
-		  "enemy":["大雪猪王"],
-		  "value":1.3
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["大雪猪王"],
+        "value":1.3
+      },{
+        "enemy":[],
+        "value":1
+      }]
     },
     {
       "Factors": "特别凶暴",
       "ATKRatioValue": [{
-		  "enemy":["火斧丘丘暴徒","雷斧丘丘暴徒","冰盾丘丘暴徒","木盾丘丘暴徒","岩盾丘丘暴徒"],
-		  "value":2.2
-	  },{
-		  "enemy":["遗迹守卫"],
-		  "value":2
-	  },{
-		  "enemy":["遗迹猎者"],
-		  "value":3.5
-	  },{
-		  "enemy":[],
-		  "value":1
-	  }]
+        "enemy":["火斧丘丘暴徒","雷斧丘丘暴徒","冰盾丘丘暴徒","木盾丘丘暴徒","岩盾丘丘暴徒"],
+        "value":2.2
+      },{
+        "enemy":["遗迹守卫"],
+        "value":2
+      },{
+        "enemy":["遗迹猎者"],
+        "value":3.5
+      },{
+        "enemy":[],
+        "value":1
+      }]
+    },
+    {
+      "Factors": "变奏0层",
+      "ATKRatioValue": 1.2
+    },
+    {
+      "Factors": "变奏1层",
+      "ATKRatioValue": 1.6
+    },
+    {
+      "Factors": "变奏2层",
+      "ATKRatioValue": 2
+    },
+    {
+      "Factors": "变奏3层",
+      "ATKRatioValue": 2.4
+    },
+    {
+      "Factors": "变奏4层",
+      "ATKRatioValue": 2.8
+    },
+    {
+      "Factors": "变奏5层",
+      "ATKRatioValue": 3.2
+    },
+    {
+      "Factors": "变奏6层",
+      "ATKRatioValue": 3.6
+    },
+    {
+      "Factors": "变奏7层",
+      "ATKRatioValue": 4
+    },
+    {
+      "Factors": "变奏8层",
+      "ATKRatioValue": 4.4
+    },
+    {
+      "Factors": "变奏9层",
+      "ATKRatioValue": 4.8
+    },
+    {
+      "Factors": "变奏10层",
+      "ATKRatioValue": 5.2
+    },
+    {
+      "Factors": "变奏11层",
+      "ATKRatioValue": 5.6
+    },
+    {
+      "Factors": "变奏12层",
+      "ATKRatioValue": 6
     }
   ]
 }

@@ -1126,17 +1126,27 @@ Enemy:
     ATKValue: 0.6
   - Enemy: 野猪
     HPScale: None
-    HPValue: 3
+    HPValue: 2.7168
     ATKScale: BoarATK
     ATKValue: 1
   - Enemy: 雪猪
     HPScale: None
-    HPValue: 3
+    HPValue: 2.7168
     ATKScale: BoarATK
     ATKValue: 1
   - Enemy: 蕈猪
     HPScale: None
-    HPValue: 3
+    HPValue: 2.7168
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 小野猪
+    HPScale: None
+    HPValue: 0.14
+    ATKScale: BoarATK
+    ATKValue: 1
+  - Enemy: 小蕈猪
+    HPScale: None
+    HPValue: 0.14
     ATKScale: BoarATK
     ATKValue: 1
   - Enemy: 长鬓虎
@@ -1359,17 +1369,17 @@ Enemy:
     HPValue: 1.5
     ATKScale: BosaciusATK
     ATKValue: 3.2
-  - Enemy: 圣骸赤鹫
+  - Enemy: 赤炎·圣骸赤鹫
     HPScale: FungusHP
     HPValue: 7
     ATKScale: BosaciusATK
     ATKValue: 6
-  - Enemy: 圣骸毒蝎
+  - Enemy: 苍雷·圣骸毒蝎
     HPScale: FungusHP
     HPValue: 7
     ATKScale: BosaciusATK
     ATKValue: 6
-  - Enemy: 圣骸飞蛇
+  - Enemy: 驭风·圣骸飞蛇
     HPScale: FungusHP
     HPValue: 7
     ATKScale: BosaciusATK
@@ -1570,8 +1580,8 @@ Enemy:
     ATKScale: BosaciusATK
     ATKValue: 2.4
   - Enemy: 特瓦林-剧情
-    HPScale: FungusHP
-    HPValue: 10
+    HPScale: HilichurlHP
+    HPValue: 5
     ATKScale: BosaciusATK
     ATKValue: 3.4
   - Enemy: 安德留斯-剧情
@@ -1714,6 +1724,86 @@ Enemy:
     HPValue: 7.95
     ATKScale: BosaciusATK
     ATKValue: 2.5477
+  - Enemy: 阿佩普-第一阶段
+    HPScale: FungusHP
+    HPValue: 18
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 阿佩普-第二阶段
+    HPScale: FungusHP
+    HPValue: 16
+    ATKScale: BosaciusATK
+    ATKValue: 10
+  - Enemy: 阿佩普-第一阶段-剧情
+    HPScale: FungusHP
+    HPValue: 9
+    ATKScale: BosaciusATK
+    ATKValue: 3
+  - Enemy: 阿佩普-第二阶段-剧情
+    HPScale: FungusHP
+    HPValue: 8
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 深罪浸礼者
+    HPScale: FungusHP
+    HPValue: 10
+    ATKScale: BosaciusATK
+    ATKValue: 8
+  - Enemy: 阿佩普-基础增殖生命体
+    HPScale: FungusHP
+    HPValue: 1.6
+    ATKScale: BosaciusATK
+    ATKValue: 0.2
+  - Enemy: 阿佩普-掠食性增殖生命体
+    HPScale: FungusHP
+    HPValue: 2.4
+    ATKScale: BosaciusATK
+    ATKValue: 4
+  - Enemy: 阿佩普-守护的增殖生命体
+    HPScale: FungusHP
+    HPValue: 3.2
+    ATKScale: BosaciusATK
+    ATKValue: 1
+  - Enemy: 阿佩普-养育的增殖生命体
+    HPScale: FungusHP
+    HPValue: 3.2
+    ATKScale: BosaciusATK
+    ATKValue: 1
+  - Enemy: 阿佩普-破坏的增殖生命体
+    HPScale: FungusHP
+    HPValue: 2
+    ATKScale: BosaciusATK
+    ATKValue: 1
+  - Enemy: 阿佩普-筑巢的增殖生命体
+    HPScale: FungusHP
+    HPValue: 2.4
+    ATKScale: BosaciusATK
+    ATKValue: 1
+  - Enemy: 圣骸牙兽
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 圣骸角鳄
+    HPScale: FungusHP
+    HPValue: 7
+    ATKScale: BosaciusATK
+    ATKValue: 6
+  - Enemy: 丘丘水行游侠
+    HPScale: FungusHP
+    HPValue: 5
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 丘丘风行游侠
+    HPScale: FungusHP
+    HPValue: 5
+    ATKScale: BosaciusATK
+    ATKValue: 5
+  - Enemy: 玳龟
+    HPScale: FungusHP
+    HPValue: 1
+    ATKScale: BosaciusATK
+    ATKValue: 2
 Gadget:
   - Gadget: 菲莉吉丝
     HPScale: HilichurlHP
@@ -1986,6 +2076,36 @@ Gadget:
     ATKScale: BosaciusATK
     ATKValue: 1.8
   - Gadget: 沙漠守护机关
+    HPScale: BoarATK
+    HPValue: 90
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 斯露莎
+    HPScale: BoarATK
+    HPValue: 22.5
+    ATKScale: HilichurlHP
+    ATKValue: 0.3
+  - Gadget: 迪卢克-葡萄架
+    HPScale: HilichurlHP
+    HPValue: 14.7232
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 沙虫·异常躁动
+    HPScale: HilichurlHP
+    HPValue: 100
+    ATKScale: BoarATK
+    ATKValue: 0.8
+  - Gadget: 沙虫炮充能装置
+    HPScale: BoarATK
+    HPValue: 36
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 荼泥黑渊瘤
+    HPScale: HilichurlHP
+    HPValue: 4
+    ATKScale: None
+    ATKValue: 0
+  - Gadget: 灵谷木净化装置
     HPScale: BoarATK
     HPValue: 90
     ATKScale: None

@@ -23,6 +23,9 @@ export class EnemyValue extends plugin {
   }
 
   async query() {
+    if (this.e.user_id === Bot.uin) {
+      return false
+    }
     let text = this.e.msg.toString();
 
     // 取计算类型 返回HP或者ATK
@@ -36,14 +39,14 @@ export class EnemyValue extends plugin {
     // 取预设等级 修饰因子不提供时以这个为准
     let level = await this.getLevel(text);
 
-    // 取修饰因子 返回修饰因子对象
-    let fea = await this.regEnemyOtherData(text, type);
-    if (!fea) {
-      fea = {
+    // 取修饰因子 返回修饰因子对象数组
+    let feas = await this.regEnemyOtherData(text, type);
+    if (!feas.length) {
+      feas = [{
         "Factors": "普通",
         "ATKRatioValue": 1,
         "HPRatioValue": 1
-      }
+      }]
     }
 
     // 修饰符置空
@@ -53,11 +56,13 @@ export class EnemyValue extends plugin {
 
     if (!level) {
       // 未获取等级 从修饰因子里面获取
-      if (typeof fea.Level === 'undefined') fea.Level = 90;
-      level = Number(fea.Level)
+      for (let fea of feas){
+        if (typeof fea.Level === 'number') level = Number(fea.Level);
+      }
+      if (!level) { level = 90 }
     }
 
-    let beilv = await this.getRatioValue(fea,type,enemy.Enemy)
+    let buffs = await this.getRatioValue(feas,type,enemy.Enemy)
 
     // 取副类型模型
     if (type === 'HP'){
@@ -73,23 +78,47 @@ export class EnemyValue extends plugin {
     // 调取线型对应的基础数据
     let CurvesType = await this.getCurvesType(level, subtype);
 
-    // 填充修饰因子名字
-    if (fea) { feature = fea.Factors }
-    this.reply(`${feature}的${level}级${enemy.Enemy}${(type === 'HP')? '生命值':'攻击力'}为${Number(CurvesType).toFixed(1)}*${Number(value).toFixed(2)}*${((isNaN(beilv))? 1:beilv).toFixed(2)}=${(Number(CurvesType) * Number(value) * ((isNaN(beilv))? 1:beilv)).toFixed(1)}`)
+    let beilv = 1
+    let StrBuffs = ['修饰因子:']
+    for (let buff of buffs) {
+      beilv = beilv * buff.value
+      StrBuffs.push(`\n·${buff.Factors}(${buff.value}倍${(type === 'HP')? '生命值':'攻击力'})`)
+    }
+
+    // 消息处理
+    let massage = [
+      `你查询的${level}级${enemy.Enemy}${(type === 'HP')? '生命值':'攻击力'}为`,
+      `${Number(CurvesType).toFixed(1)}*${Number(value).toFixed(2)}*${Number(beilv).toFixed(2)}=`,
+      `${(Number(CurvesType) * Number(value) * ((isNaN(beilv))? 1:beilv)).toFixed(1)}\n`,
+      ...StrBuffs
+    ]
+    this.reply(massage)
     return true
   }
 
-  async getRatioValue(fea, type, enemy){
-    let ValueObject = fea[`${type}RatioValue`]
-    if (typeof ValueObject === "number") return Number(ValueObject)
-    else {
-      for (let valueObjectElement of ValueObject) {
-        if (valueObjectElement.enemy.includes(enemy) || !valueObjectElement.enemy.length) {
-          return Number(valueObjectElement.value)
+  async getRatioValue(feas, type, enemy){
+    let buffs = []
+    b:
+    for (let fea of feas){
+      let ValueObject = fea[`${type}RatioValue`]
+      if (typeof ValueObject === "number") {
+        buffs.push({
+          Factors: Array.isArray(fea.Factors)? fea.Factors[0]:fea.Factors,
+          value: Number(ValueObject)
+        })
+      } else {
+        for (let valueObjectElement of ValueObject) {
+          if (valueObjectElement.enemy.includes(enemy) || !valueObjectElement.enemy.length) {
+            buffs.push({
+              Factors: Array.isArray(fea.Factors)? fea.Factors[0]:fea.Factors,
+              value: Number(valueObjectElement.value)
+            })
+            continue b
+          }
         }
       }
     }
-    return 1
+    return buffs
   }
 
   async getCurvesType(level, type) {
@@ -145,20 +174,33 @@ export class EnemyValue extends plugin {
     return false;
   }
 
-  // 匹配修饰因子
+  // 匹配修饰因子数组
   async regEnemyOtherData(text, type) {
+    let feas = []
+    a:
     for (let key of Object.keys(AttrData)) {
       if (key.includes(type)) {
         //ATK HP强制过滤
         for (let fea of AttrData[key]) {
-          if (text.includes(fea.Factors)) {
-            return fea;
+          switch (typeof fea.Factors) {
+            case "string":
+              if (text.includes(fea.Factors)) {
+                feas.push(fea)
+                continue a
+              }
+              break
+            default:
+              for (let words of fea.Factors) {
+                if (text.includes(words)) {
+                  feas.push(fea)
+                  continue a
+                }
+              }
           }
         }
       }
     }
-    // 没有匹配到
-    return false;
+    return feas;
   }
 
   async getType(text) {
