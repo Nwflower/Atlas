@@ -9,7 +9,7 @@ Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴插件包，可通过
 
 【已完成】原神图鉴库：[Genshin-Atlas](https://gitee.com/Nwflower/genshin-atlas)
 
-【仍在制作】崩坏：星穹铁道图鉴库：[star-rail-atlas](https://gitee.com/Nwflower/star-rail-atlas)
+【正在制作】崩坏：星穹铁道图鉴库：[star-rail-atlas](https://gitee.com/Nwflower/star-rail-atlas)
 
 ## 如何获取
 ### 1、下载插件本体
@@ -61,6 +61,7 @@ git clone --depth=1 https://gitee.com/Nwflower/genshin-atlas.git ./Genshin-Atlas
 **【崩铁默认指令示例】**
 
 1. *+角色名 崩铁角色图鉴 如`*黑塔`、`*希儿`
+2. *+光锥名 崩铁光锥图鉴 如`*于夜色中`、`*以朗道之名`
 
 其他图鉴仍在完善中...
 
@@ -79,7 +80,7 @@ success为匹配指令拦截，默认为TRUE
 规则文件在`resource/Forlibrary/对应图鉴库名/rule/对应分类名.yaml`里查看，如不存在对应文件夹目录名（例如圣遗物artifact的对应yaml不存在，则以默认config.yaml为准）
 
 规则文件中，`mode`为匹配模式。
-以口令`#雾切之回光`为例：
+以原神图鉴库口令`#雾切之回光`为例：
 1. 当模式为不完全匹配（mode:1）时，`#雾切`、`#回光`、`#雾切之回光`均视为该口令，`#雾切之回光是什么武器`不视为该口令。
 2. 当模式为完全匹配（mode:2）时，`#雾切之回光是什么武器`、`#神里面板换雾切之回光`均视为该口令，`#回光`、`#雾切之回`不视为该口令。
 3. 当模式为等同匹配（mode:0）时，仅`#雾切之回光`视为该口令。
@@ -111,9 +112,9 @@ success为匹配指令拦截，默认为TRUE
 
 ### 7、崩铁图鉴注意事项
 
-崩坏星穹铁道仍在施工中，目前暂无图鉴。
+崩坏星穹铁道仍在施工中，图鉴列表请查看崩坏：星穹铁道图鉴库：[star-rail-atlas](https://gitee.com/Nwflower/star-rail-atlas)。
 
-口令默认以*开头识别，如`*希儿`、`*黑塔`
+口令默认以*开头识别，如`*希儿`、`*黑塔`、`*于夜色中`
 
 ## 如何更新
 
