@@ -9,7 +9,7 @@ export class atlasHelp extends plugin {
       event: 'message',
       priority: 45,
       rule: [{
-        reg: '（#|\*)?(图鉴|wiki|百科|Atlas)(帮助|菜单|功能)',
+        reg: '(#|\*)?(图鉴|wiki|百科|Atlas)(帮助|菜单|功能)',
         fnc: 'help'
       }]
     })
