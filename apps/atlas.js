@@ -3,9 +3,9 @@ import fs from 'node:fs'
 import YAML from 'yaml'
 import gsCfg from '../../genshin/model/gsCfg.js'
 import puppeteer from '../../../lib/puppeteer/puppeteer.js'
-import { pluginRoot,pluginResources } from "../model/path.js";
-import Reply from "../model/reply.js";
-import { library, list } from "../model/moreLib.js";
+import { pluginRoot, pluginResources } from '../model/path.js'
+import Reply from '../model/reply.js'
+import { library, list } from '../model/moreLib.js'
 
 let context = {} // 索引表
 let num = {} // 计数器
@@ -40,23 +40,34 @@ export class atlas extends plugin {
     let hasLibrary = false
     for (let listElement of list) {
       let libResPath = this.getLibraryResourcePath(listElement)
-      if (fs.existsSync(libResPath)){
-        if (fs.existsSync(`${pluginRoot}/${library[listElement]}/`)){ hasLibrary = true}
+      if (fs.existsSync(libResPath)) {
+        if (fs.existsSync(`${pluginRoot}/${library[listElement]}/`)) { hasLibrary = true }
         let path = `${libResPath}rule/`
         let pathDef = `${libResPath}rule_default/`
         const files = fs.readdirSync(pathDef).filter(file => file.endsWith('.yaml'))
-        for (let file of files) { if (!fs.existsSync(`${path}${file}`)) { fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`) } }
+        for (let file of files) {
+          if (!fs.existsSync(`${path}${file}`)) {
+            fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`)
+          } else {
+            // 检查匹配规则文件版本
+            let defaultConfigs = YAML.parse(fs.readFileSync(`${pathDef}${file}`, 'utf8'))
+            let UserConfigs = YAML.parse(fs.readFileSync(`${path}${file}`, 'utf8'))
+            if (!defaultConfigs.version || (Number(defaultConfigs.version) === Number(UserConfigs.version))) { /* empty */ } else {
+              fs.copyFileSync(`${pathDef}${file}`, `${path}${file}`)
+            }
+          }
+        }
         logger.info(`Atlas载入库文件：${listElement}成功！`)
       }
     }
-    if (!hasLibrary){ logger.error('Atlas图鉴拓展包没有正确安装或者不是最新版本。请发送指令 #图鉴升级 以获取或升级Atlas图鉴拓展包') }
+    if (!hasLibrary) { logger.error('Atlas图鉴拓展包没有正确安装或者不是最新版本。请发送指令 #图鉴升级 以获取或升级Atlas图鉴拓展包') }
   }
 
   async atlas (e) {
     // 提取有效口令
     let msg
-    try { msg = e.raw_message.trim() } catch (e) { return false }
-    if ((typeof msg!='string')||msg.constructor!==String) { return false }
+    try { msg = e.message.trim() } catch (e) { return false }
+    if ((typeof msg != 'string') || msg.constructor !== String) { return false }
 
     // 检查是否在响应索引
     if (context[this.e.user_id]) { if (await this.select(e)) { delete num[this.e.user_id] } }
@@ -65,9 +76,9 @@ export class atlas extends plugin {
 
     for (let listElement of list) {
       let libpath = `${pluginRoot}/${library[listElement]}`
-      if (!fs.existsSync(`${libpath}/path.json`)) {continue}
+      if (!fs.existsSync(`${libpath}/path.json`)) { continue }
       // 获取图鉴的所有模块
-      const imagePath = JSON.parse(fs.readFileSync(`${libpath}/path.json`,'utf-8'))
+      const imagePath = JSON.parse(fs.readFileSync(`${libpath}/path.json`, 'utf-8'))
       const syncFiles = Object.keys(imagePath)
       // logger.debug(`【Atlas】 开始查验${msg}`)
       for (let sync of syncFiles) {
@@ -86,7 +97,7 @@ export class atlas extends plugin {
             let path = `${libpath}${imagePath[sync][rightname]}`
             if (fs.existsSync(path)) {
               // 回复图片
-              this.reply(segment.image('file://'+path))
+              this.reply(global.segment.image('file://' + path))
               this.islog = true
               // 是否交给其他插件处理
               return atlasConfig.success
@@ -100,13 +111,12 @@ export class atlas extends plugin {
       }
     }
     return this.islog
-
   }
 
   async index (sync, key, rule, libpath) {
     // 获取索引文件目录
     let respath = `${libpath}/index/${sync}.yaml`
-    if (!fs.existsSync(respath)) { return false}
+    if (!fs.existsSync(respath)) { return false }
     let re = YAML.parse(fs.readFileSync(respath, 'utf8'))
     for (let element in re) {
       // 如果口令匹配到
@@ -132,9 +142,9 @@ export class atlas extends plugin {
           re[element][i] = divi + re[element][i]
           sendmsg.push({
             name: re[element][i],
-            Num: Number(i)+1
+            Num: Number(i) + 1
           })
-          MsgArray.push(`${Number(i)+1}、${re[element][i]}`)
+          MsgArray.push(`${Number(i) + 1}、${re[element][i]}`)
         }
         let reply = new Reply(this.e)
         let result = await reply.replyMessageArray(MsgArray)
@@ -168,8 +178,8 @@ export class atlas extends plugin {
     }
 
     // 数字转口令
-    let i = Number(this.e.raw_message.trim())
-    if (isNaN(i)) { return false } else { e.raw_message = context[this.e.user_id][i - 1] }
+    let i = Number(this.e.message.trim())
+    if (isNaN(i)) { return false } else { e.message = context[this.e.user_id][i - 1] }
 
     // 口令处理
     return this.atlas(e)
@@ -236,7 +246,7 @@ export class atlas extends plugin {
       }
     }
     // 角色相关图鉴交由云崽本体功能进行处理
-    if (sync.includes('role') || libName === "原神") {
+    if (sync.includes('role') || libName === '原神') {
       let rolename = gsCfg.getRole(originName)
       if (rolename) return rolename.name
     }

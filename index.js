@@ -1,6 +1,6 @@
-import { pluginName } from "./model/path.js";
-import fs from "fs";
-import common from "../../lib/common/common.js";
+import { pluginName } from './model/path.js'
+import fs from 'fs'
+import common from '../../lib/common/common.js'
 
 let currentVersion = '3.6.0'
 
@@ -26,7 +26,7 @@ setTimeout(async function () {
 }, 1000)
 
 if (!global.segment) {
-  global.segment = (await import("oicq")).segment
+  global.segment = (await import('oicq')).segment
 }
 
 let index = { atlas: {} }
