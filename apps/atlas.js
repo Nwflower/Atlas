@@ -66,7 +66,7 @@ export class atlas extends plugin {
   async atlas (e) {
     // 提取有效口令
     let msg
-    try { msg = e.message.trim() } catch (e) { return false }
+    try { msg = e.msg.trim() } catch (e) { return false }
     if ((typeof msg != 'string') || msg.constructor !== String) { return false }
 
     // 检查是否在响应索引
@@ -178,8 +178,8 @@ export class atlas extends plugin {
     }
 
     // 数字转口令
-    let i = Number(this.e.message.trim())
-    if (isNaN(i)) { return false } else { e.message = context[this.e.user_id][i - 1] }
+    let i = Number(this.e.msg.trim())
+    if (isNaN(i)) { return false } else { e.msg = context[this.e.user_id][i - 1] }
 
     // 口令处理
     return this.atlas(e)
