@@ -5,11 +5,9 @@ Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴查询插件，可通
 
 ## 当前支持图鉴库
 
-【已完成】[`米游社@听语惊花`](https://bbs.mihoyo.com/ys/accountCenter/postList?id=289918413)制作的原神图鉴库：[Genshin-Atlas](https://gitee.com/Nwflower/genshin-atlas)
+【已完成】原神图鉴库：[Genshin-Atlas](https://gitee.com/Nwflower/genshin-atlas)
 
-【已完成】[`米游社@听语惊花`](https://bbs.mihoyo.com/ys/accountCenter/postList?id=289918413)制作的崩坏：星穹铁道图鉴库：[star-rail-atlas](https://gitee.com/Nwflower/star-rail-atlas)
-
-【正在适配】碧蓝航线图鉴库(暂无仓库地址)
+【已完成】崩坏：星穹铁道图鉴库：[star-rail-atlas](https://gitee.com/Nwflower/star-rail-atlas)
 
 ## 如何获取
 ### 1、下载插件本体
@@ -35,7 +33,9 @@ git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 git clone --depth=1 https://gitee.com/Nwflower/genshin-atlas.git ./Genshin-Atlas
 ```
 
-如果你要获取崩坏：星穹铁道的图鉴，请发送`#崩铁图鉴升级`
+如果你要获取崩坏：星穹铁道的图鉴，请发送`#星铁图鉴升级`
+
+图片资源的默认获取为gitee端，如果要从github端获取图片资源，请发送`#github原神图鉴升级`、`#github星铁图鉴升级`
 
 代码部分的更新请使用`#图鉴插件升级`来更新本插件。
 

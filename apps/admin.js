@@ -1,9 +1,9 @@
 ﻿import plugin from '../../../lib/plugins/plugin.js'
 import fs from 'node:fs'
 import { exec } from 'child_process'
-import { pluginRoot } from "../model/path.js";
-import { pull, pullForce, pullHard, pullClean } from  "../model/update.js";
-import { library, link, list } from "../model/moreLib.js";
+import { pluginRoot } from '../model/path.js'
+import { pull, pullForce, pullHard, pullClean } from '../model/update.js'
+import { library, link, list } from '../model/moreLib.js'
 
 export class admin extends plugin {
   constructor () {
@@ -15,7 +15,7 @@ export class admin extends plugin {
       rule: [{
         reg: '^#*(原神|星铁)?图鉴(强行)?(强制)?升级$',
         fnc: 'update'
-      },{
+      }, {
         reg: '^#*图鉴插件(强行)?(强制)?升级$',
         fnc: 'updatePlugin'
       }]
@@ -54,7 +54,7 @@ export class admin extends plugin {
 
     // 获取要更新的仓库
     for (let listElement of list) {
-      if (this.e.msg && this.e.msg.includes(listElement)){ libName = listElement }
+      if (this.e.msg && this.e.msg.includes(listElement)) { libName = listElement }
     }
 
     if (fs.existsSync(this.getPluginResourcePath(libName))) {
@@ -73,15 +73,15 @@ export class admin extends plugin {
     return true
   }
 
-  async getUpdateType (){
+  async getUpdateType () {
     let command = pull
     if (this.e.msg.includes('强行强制')) {
       this.reply('开始强行执行强制更新操作，请稍等')
       command = pullClean
-    } else if (this.e.msg.includes('强行')){
+    } else if (this.e.msg.includes('强行')) {
       this.reply('开始强行执行更新操作，请稍等')
       command = pullHard
-    } else if (this.e.msg.includes('强制')){
+    } else if (this.e.msg.includes('强制')) {
       this.reply('开始执行强制更新操作，请稍等')
       command = pullForce
     } else {
