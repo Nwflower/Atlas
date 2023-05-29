@@ -5,7 +5,7 @@ mode: 0
 condition: 3
 
 # 指定前缀词，不指定则为#
-prefix: '(*|#星铁)'
+prefix: '*'
 
 # 指定前缀正则（同上，但是需要转义）
 prefixForReg: '(\*|#星铁)'
@@ -14,7 +14,7 @@ prefixForReg: '(\*|#星铁)'
 recallMsg: 40
 
 # 版本
-version: 2
+version: 3
 
 # 触发词,可设置多个
 pick:
