@@ -13,7 +13,7 @@ export class admin extends plugin {
       event: 'message',
       priority: 99,
       rule: [{
-        reg: '^#*(原神|星铁)?图鉴(强行)?(强制)?升级$',
+        reg: '^#*(github)?(原神|星铁)?图鉴(强行)?(强制)?升级$',
         fnc: 'update'
       }, {
         reg: '^#*图鉴插件(强行)?(强制)?升级$',
@@ -50,11 +50,14 @@ export class admin extends plugin {
 
   async update (e) {
     if (!e.isMaster) { return false }
-    let libName = list[0]
+    let libName = '原神'
 
     // 获取要更新的仓库
     for (let listElement of list) {
-      if (this.e.msg && this.e.msg.includes(listElement)) { libName = listElement }
+      if (this.e.msg && this.e.msg.includes(listElement)) {
+        libName = listElement
+        break
+      }
     }
 
     if (fs.existsSync(this.getPluginResourcePath(libName))) {
