@@ -1,4 +1,4 @@
-﻿import plugin from '../../../lib/plugins/plugin.js'
+import plugin from '../../../lib/plugins/plugin.js'
 import fs from 'node:fs'
 import { exec } from 'child_process'
 import { pluginRoot } from '../model/path.js'
@@ -13,7 +13,7 @@ export class admin extends plugin {
       event: 'message',
       priority: 99,
       rule: [{
-        reg: '^#*(原神|星铁)?图鉴(强行)?(强制)?升级$',
+        reg: '^#*(github)?(原神|星铁)?图鉴(强行)?(强制)?升级$',
         fnc: 'update'
       }, {
         reg: '^#*图鉴插件(强行)?(强制)?升级$',
