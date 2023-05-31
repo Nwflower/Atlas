@@ -1,4 +1,4 @@
-﻿import plugin from '../../../lib/plugins/plugin.js'
+import plugin from '../../../lib/plugins/plugin.js'
 import fs from 'node:fs'
 import { exec } from 'child_process'
 import { pluginRoot } from '../model/path.js'
