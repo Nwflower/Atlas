@@ -217,6 +217,9 @@ export class atlas extends plugin {
         return false
       case 4:// 匹配关键字和前缀词并去除
         if (pickreg.test(msg) && testPrefixReg.test(msg)) { return msg.replace(new RegExp(`^${prefix}*`, 'g'), '').replace(pickreg, '').trim() }
+        return false
+      case 5:// 匹配关键字并去除关键字和前缀词
+        if (pickreg.test(msg)) { return msg.replace(new RegExp(`^${prefix}*`, 'g'), '').replace(pickreg, '').trim() }
     }
     return false
   }
