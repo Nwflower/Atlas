@@ -14,13 +14,10 @@ prefixForReg: '(\*|#星铁)'
 recallMsg: 40
 
 # 版本
-version: 3
+version: 4
 
 # 触发词,可设置多个
 pick:
   - 攻略0
-  - 指引
-  - 帮助
-  - 光锥
-  - 配队
-  - 加点
+  - 攻略
+  - 指南
