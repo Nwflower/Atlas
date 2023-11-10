@@ -249,7 +249,7 @@ export class atlas extends plugin {
       }
     }
     // 角色相关图鉴交由云崽本体功能进行处理
-    if (sync.includes('role') || libName === '原神') {
+    if (sync.includes('role') && libName === '原神') {
       let rolename = gsCfg.getRole(originName)
       if (rolename) return rolename.name
     }
