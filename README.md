@@ -9,42 +9,64 @@ Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴查询插件，可通
 
 【已完成】崩坏：星穹铁道图鉴库：[star-rail-atlas](https://gitee.com/Nwflower/star-rail-atlas)
 
+【持续更新】绝区零图鉴库：[zzz-atlas](https://gitee.com/Nwflower/zzz-atlas)
+
 ## 如何获取
-### 1、下载插件本体
+### 一、下载插件本体
 
-使用github获取插件
-
-在Yunzai-Bot根目录下，运行cmd，输入以下指令
+在Yunzai-Bot根目录下，运行cmd，输入以下指令即可从Github（代码托管平台）获取插件
 ```
 git clone --depth=1 https://github.com/Nwflower/atlas ./plugins/Atlas/
 ```
 
-如果运行失败，可以使用gitee镜像源，指令如下
+如果服务器布设在国内或者其他未知因素，**上述**链接访问速度可能较慢。
+
+此时建议使用Gitee镜像源，对应cmd指令如下
+
 ```
 git clone --depth=1 https://gitee.com/Nwflower/atlas ./plugins/Atlas/
 ```
 
-### 2、获取图片资源
+你也可以使用[时雨一键脚本](https://trss.me/)获取本插件，可使用的一键脚本有很多，此处不再赘述。
+
+### 二、获取图片资源
+
 安装插件后，发送`#图鉴升级`获取图鉴图片即可正常使用。
 
-如果升级失败了，需要手动拉取。请在Atlas目录下执行以下语句
+如果升级失败了，需要手动拉取。请在**Atlas**目录（而不是Yunzai-Bot根目录）打开cmd，并执行以下语句
 
 ```
 git clone --depth=1 https://gitee.com/Nwflower/genshin-atlas.git ./Genshin-Atlas
 ```
 
-如果你要获取崩坏：星穹铁道的图鉴，请发送`#星铁图鉴升级`
+上述口令和指令均为原神的图鉴仓库。
 
-图片资源的默认获取为gitee端，如果要从github端获取图片资源，请发送`#github原神图鉴升级`、`#github星铁图鉴升级`
+如果你要获取崩坏：星穹铁道、绝区零的图鉴，请发送`#星铁图鉴升级`、`#绝区零图鉴升级`，或依照本教程的开头找到图鉴仓库地址拉取对应的图鉴。
+
+图片资源的默认获取为Gitee端，如果要从Github端获取图片资源，请发送`#github原神图鉴升级`、`#github星铁图鉴升级`、`#github绝区零图鉴升级`，只需要在初始安装时发送一次，后续便能从github端搜索更新。
 
 代码部分的更新请使用`#图鉴插件升级`来更新本插件。
 
-### 3、图鉴指令
+### 三、图鉴指令
 获取图鉴图片后，可以根据相应的指令获取图鉴。
 
-<img decoding="async" src="resource/img/help.png" width="75%">
-
-
+| 指令示例        | 指令说明                         | 所属图鉴 |
+| --------------- | -------------------------------- | -------- |
+| #芙宁娜材料     | 查询角色突破材料信息             | 原神     |
+| #黄金剧团       | 查询圣遗物信息                   | 原神     |
+| #苍古自由之誓   | 查询武器信息                     | 原神     |
+| #七圣珊瑚宫心海 | 查询七圣卡牌（**已停更**）       | 原神     |
+| #甜甜花酿鸡     | 查询食物信息（更新频率较慢）     | 原神     |
+| #无相之草       | 查询敌对单位信息（更新频率较慢） | 原神     |
+| #鸣草           | 查询区域特产信息（更新频率较慢） | 原神     |
+| *阮梅           | 查询角色信息                     | 星穹铁道 |
+| *阮梅攻略       | 查询角色攻略指南                 | 星穹铁道 |
+| *镜中故我       | 查询光锥信息                     | 星穹铁道 |
+| *不老者的仙舟   | 查询遗器信息                     | 星穹铁道 |
+| *外宇宙之冰     | 查询敌对单位信息（更新频率较慢） | 星穹铁道 |
+| %格莉丝·霍华德  | 查询角色信息                     | 绝区零   |
+| %加农转子       | 查询音擎信息                     | 绝区零   |
+| 待添加...       | 查询驱动盘信息                   | 绝区零   |
 
 此外，如果对某些物品的名字记忆模糊，可以根据对应索引查询：
 1. `#武器索引`口令唤出武器索引，逐级查询想要找的武器
@@ -52,17 +74,27 @@ git clone --depth=1 https://gitee.com/Nwflower/genshin-atlas.git ./Genshin-Atlas
 3. `#圣遗物`口令唤出圣遗物一级索引，直接查询想要找的圣遗物
 4. `七圣召唤`口令唤出七圣召唤卡牌索引，逐级查询想要找的七圣召唤卡牌
 
-### 4、兼容性更改
+### 四、兼容性
 本插件支持动态优先级。
 
+因此，如果Atlas和其他插件的指令冲突，请找到对应的文件修改优先级。
+
 如要更改插件优先级，请找到文件`Atlas\resource\config.yaml`下的相应属性：
-priority为优先级，默认为10
-success为匹配指令拦截，默认为TRUE
+priority为优先级，默认为10，优先级越小，插件越不容易被抢指令，并且优先级**可以为负数**。
+success为匹配指令拦截，默认为TRUE。更改为FALSE后，即使响应了指令、发送了图片，也会把指令继续传递给其他图鉴。
 
 如果你对上述规则不满意，可以查阅第五点：
 
-### 5、拓展：修改图鉴匹配规则（可以不修改）
-如果你对当前图鉴匹配效果不满意，可以修改图鉴匹配规则以让插件更频繁或更少触发
+### 五、拓展：修改图鉴匹配规则（可以不修改）
+如果你对当前图鉴匹配效果**不满意**，可以修改图鉴匹配规则以让插件更频繁或更少触发。
+
+一般来说，默认的图鉴匹配规则是最优的，如非必要，否则不建议修改。
+
+**如果你的图鉴无法被触发，请优先检查是否被其他插件抢了指令，不要贸然修改匹配规则！！！**
+
+**如果你的图鉴无法被触发，请优先检查是否被其他插件抢了指令，不要贸然修改匹配规则！！！**
+
+**如果你的图鉴无法被触发，请优先检查是否被其他插件抢了指令，不要贸然修改匹配规则！！！**
 
 规则文件在`resource/Forlibrary/对应图鉴库名/rule/对应分类名.yaml`里查看，如不存在对应文件夹目录名（例如圣遗物artifact的对应yaml不存在，则以默认config.yaml为准）
 
@@ -122,7 +154,11 @@ success为匹配指令拦截，默认为TRUE
 
 [发起PR](https://github.com/Nwflower/Atlas/pulls)
 
-当然，你也可以使用QQ群组功能反馈。**点击加入[Atlas交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)**。
+当然，你也可以使用QQ群组功能反馈。
+
+**点击加入[Atlas交流群](https://qm.qq.com/cgi-bin/qm/qr?k=XOTZhBWpv68F1sfsMIzKJpg28NBPKJgg&jump_from=webapi&authKey=/XagQoLiUhOi+t67MCkWOSRLlXe+ywVmrkCHdoD3CjwqNzAUYspTrqYklkwb3W0R)**。
+
+不接受除了ISSUE、QQ反馈之外的反馈方式，感谢理解。
 
 ## 其他
 
