@@ -226,10 +226,12 @@ export class atlas extends plugin {
 
   // 传入需要处理的名字 返回原始名字
   async getName (originName, sync, pickmode, libName) {
+    let OtherNamePath = `${pluginRoot}/${library[libName]}/othername/${sync}.yaml`
+    if (!fs.existsSync(OtherNamePath)) OtherNamePath = `${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`
     // 检查对应库的别名文件是否存在
-    if (fs.existsSync(`${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`)) {
+    if (fs.existsSync(OtherNamePath)) {
       // 读取别名文件
-      let YamlObject = YAML.parse(fs.readFileSync(`${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`, 'utf8'))
+      let YamlObject = YAML.parse(fs.readFileSync(OtherNamePath, 'utf8'))
 
       // 开始循环 遍历每一组别名
       for (let element in YamlObject) {
@@ -248,7 +250,7 @@ export class atlas extends plugin {
         }
       }
     }
-    // 角色相关图鉴交由云崽本体功能进行处理
+    // 原神角色相关图鉴交由云崽本体功能进行处理
     if (sync.includes('role') && libName === '原神') {
       let rolename = gsCfg.getRole(originName)
       if (rolename) return rolename.name
