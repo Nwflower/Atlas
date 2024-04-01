@@ -3,6 +3,10 @@
 # Atlas
 Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴查询插件，可通过Yunzai-Bot查询游戏图鉴，插件代码严格遵循ES6规范。
 
+【注意】本项目的所有反馈渠道仅受理Atlas应用端相关问题，且仅保证能在Miao-Yunzai、TRSS-Yunzai及原版V3-Yunzai项目上装载，如何在Yunzai-Bot的其它衍生项目上使用以及机器人协议段问题均不受理，请自行解决或PR。
+
+【另注】开发者已经将近一年没有更新过本插件的主要代码了，仅针对资源仓库在维护，主仓库任何新增功能等建议均存在忽视等风险。
+
 ## 当前支持图鉴库
 
 【已完成】原神图鉴库：[Genshin-Atlas](https://gitee.com/Nwflower/genshin-atlas)
