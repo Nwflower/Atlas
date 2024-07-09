@@ -8,7 +8,7 @@ condition: 3
 prefix: '%'
 
 # 指定前缀正则（同上，但是需要转义）
-prefixForReg: '(%|#绝区|绝区零)'
+prefixForReg: '(%|#绝区零|绝区零)'
 
 # 索引撤回时间
 recallMsg: 40
