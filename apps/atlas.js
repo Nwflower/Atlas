@@ -17,7 +17,7 @@ let atlasConfig = YAML.parse(fs.readFileSync(`${pluginResources}/config.yaml`, '
 export class atlas extends plugin {
   constructor () {
     let rule = {
-      reg: '#?.+(图鉴)*',
+      reg: '^[#/]?.+(图鉴)*',
       fnc: 'atlas'
     }
     super({
