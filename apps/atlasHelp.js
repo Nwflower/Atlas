@@ -8,10 +8,12 @@ export class atlasHelp extends plugin {
       dsc: 'Atlas图鉴的帮助',
       event: 'message',
       priority: 9,
-      rule: [{
-        reg: '(#|\\\*)?(图鉴|wiki|百科|Atlas)(帮助|菜单|功能)',
-        fnc: 'atlasHelp'
-      }]
+      rule: [
+        {
+          reg: '^[#/](图鉴|wiki|百科|Atlas)(\\s*)(帮助|菜单|功能|help)',
+          fnc: 'atlasHelp'
+        }
+      ]
     })
   }
 

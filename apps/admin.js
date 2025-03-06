@@ -12,13 +12,16 @@ export class admin extends plugin {
       dsc: '更新、升级图鉴拓展包及其插件',
       event: 'message',
       priority: 99,
-      rule: [{
-        reg: '^#*(github)?(原神|星铁|绝区零)?图鉴(强行)?(强制)?升级$',
-        fnc: 'update'
-      }, {
-        reg: '^#*图鉴插件(强行)?(强制)?升级$',
-        fnc: 'updatePlugin'
-      }]
+      rule: [
+        {
+          reg: '^[#/]*(github)?(原神|星铁|绝区零)?图鉴(强行)?(强制)?升级$',
+          fnc: 'update'
+        }, 
+        {
+          reg: '^[#/]*图鉴插件(强行)?(强制)?升级$',
+          fnc: 'updatePlugin'
+        }
+      ]
     })
     this._path = process.cwd().replace(/\\/g, '/')
     this.task = {

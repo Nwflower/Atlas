@@ -15,10 +15,12 @@ export class EnemyValue extends plugin {
       dsc: "查询原魔生命值和攻击力",
       event: "message",
       priority: 600,
-      rule: [{
-        reg: "^(#|原魔).*(生命值|攻击力).*",
-        fnc: "query"
-      }]
+      rule: [
+        {
+          reg: "^[#/](原魔).*(生命值|攻击力).*",
+          fnc: "query"
+        }
+      ]
     });
   }
 
