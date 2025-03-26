@@ -12,7 +12,7 @@ const library = {
 }
 
 const link = {
-  原神: 'https://gitee.com/Nwflower/genshin-atlas',
+  原神: 'https://gitee.com/IKUN-HUANG/genshin-atlas',
   星铁: 'https://gitee.com/Nwflower/star-rail-atlas',
   绝区零: 'https://gitee.com/Nwflower/zzz-atlas',
   github原神: 'https://github.com/Nwflower/genshin-atlas',
