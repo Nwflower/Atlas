@@ -228,34 +228,138 @@ export class atlas extends plugin {
   async getName (originName, sync, pickmode, libName) {
     let OtherNamePath = `${pluginRoot}/${library[libName]}/othername/${sync}.yaml`
     if (!fs.existsSync(OtherNamePath)) OtherNamePath = `${this.getLibraryResourcePath(libName)}othername/${sync}.yaml`
+
+    let YamlObject = null
     // 检查对应库的别名文件是否存在
     if (fs.existsSync(OtherNamePath)) {
-      // 读取别名文件
-      let YamlObject = YAML.parse(fs.readFileSync(OtherNamePath, 'utf8'))
+      YamlObject = YAML.parse(fs.readFileSync(OtherNamePath, "utf8"))
+    }
 
+    // 提取本地检索逻辑为函数，方便复用
+    const checkAtlasAlias = (nameToMatch) => {
+      if (!YamlObject) return null
       // 开始循环 遍历每一组别名
       for (let element in YamlObject) {
         if (pickmode) {
           if (pickmode === 1) {
             for (let Elementword of YamlObject[element]) {
-              if (Elementword.includes(originName)) { return element }
+              if (Elementword.includes(nameToMatch)) return element
             }
           } else {
             for (let Elementword of YamlObject[element]) {
-              if (originName.includes(Elementword)) { return element }
+              if (nameToMatch.includes(Elementword)) return element
             }
           }
         } else {
-          if (YamlObject[element].includes(originName)) { return element }
+          if (YamlObject[element].includes(nameToMatch)) return element
+        }
+      }
+      return null
+    }
+
+    // 1. 先用原始输入查 Atlas 本地字典
+    let res1 = checkAtlasAlias(originName)
+    if (res1) return res1
+
+    // 2. 如果没查到，去外部插件加载角色别名进行部分替换 (例如：迷迷专武 -> 昔涟专武)
+    let replacedName = originName
+    let hasReplaced = false
+    const cwd = process.cwd().replace(/\\/g, "/")
+    let extAliasFiles = []
+
+    if (libName.includes("原神") || libName.includes("星铁") || libName.includes("星穹")) {
+      extAliasFiles.push(`${cwd}/plugins/miao-plugin/config/roleName.yaml`)
+    } else if (libName.includes("绝区零") || libName.toLowerCase().includes("zzz")) {
+      extAliasFiles.push(`${cwd}/plugins/ZZZ-Plugin/config/alias.yaml`)
+      extAliasFiles.push(`${cwd}/plugins/ZZZ-Plugin/defSet/alias.yaml`)
+    }
+
+    if (extAliasFiles.length > 0) {
+      let allAliases = []
+      for (let file of extAliasFiles) {
+        if (fs.existsSync(file)) {
+          try {
+            let extYaml = YAML.parse(fs.readFileSync(file, "utf8"))
+            // 针对最多只有两层的结构（无前缀分类 或 带有 gs/sr 前缀分类）
+            for (let key in extYaml) {
+              let val = extYaml[key]
+              if (Array.isArray(val)) {
+                // 第一层即为数组
+                let trueName = /^\d+$/.test(key) ? val[0] : key
+                for (let alias of val) {
+                  if (alias && typeof alias === "string") {
+                    allAliases.push({ alias: alias, trueName: trueName })
+                  }
+                }
+              } else if (val && typeof val === "object") {
+                // 第二层才是数组
+                for (let subKey in val) {
+                  let subVal = val[subKey]
+                  if (Array.isArray(subVal)) {
+                    let trueName = /^\d+$/.test(subKey) ? subVal[0] : subKey
+                    for (let alias of subVal) {
+                      if (alias && typeof alias === "string") {
+                        allAliases.push({ alias: alias, trueName: trueName })
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          } catch (e) {
+            // 仅保留真正的异常报错
+            logger.error(`[Atlas别名] 读取外部文件报错: ${file}\n${e}`)
+          }
+        }
+      }
+
+      if (allAliases.length > 0) {
+        // 按别名长度降序排列，防止短词误匹配 (如 "迷" 抢在 "迷迷" 前面被替换)
+        allAliases.sort((a, b) => b.alias.length - a.alias.length)
+
+        for (let item of allAliases) {
+          let isMatch = false
+          if (pickmode) {
+            if (pickmode === 1) {
+              isMatch = item.alias.includes(replacedName)
+            } else {
+              isMatch = replacedName.includes(item.alias)
+            }
+          } else {
+            // 图鉴未开启包含模式时，必须精确匹配，防止错误截取替换
+            isMatch = (replacedName === item.alias)
+          }
+
+          if (isMatch) {
+            if (pickmode && pickmode !== 1) {
+              // 只有图鉴允许部分包含时，才进行子串替换
+              replacedName = replacedName.replace(item.alias, item.trueName)
+            } else {
+              // 否则直接全量替换为真实名称
+              replacedName = item.trueName
+            }
+            hasReplaced = true
+            break
+          }
         }
       }
     }
-    // 原神角色相关图鉴交由云崽本体功能进行处理
-    if (sync.includes('role') && libName === '原神') {
-      let rolename = gsCfg.getRole(originName)
+
+    // 3. 如果成功替换了角色别名，用新名字再去查一次 Atlas 本地字典
+    if (hasReplaced) {
+      let res2 = checkAtlasAlias(replacedName)
+      if (res2) return res2
+    }
+
+    // 4. 原神角色相关图鉴交由云崽本体功能进行处理
+    let finalName = hasReplaced ? replacedName : originName
+    if (sync.includes("role") && libName.includes("原神")) {
+      let rolename = gsCfg.getRole(finalName)
+      if (!rolename && hasReplaced) rolename = gsCfg.getRole(originName) // 兜底
       if (rolename) return rolename.name
     }
-    // 没有别名直接返回
-    return originName
+
+    // 5. 都没有，直接返回处理后的名字
+    return finalName
   }
 }
